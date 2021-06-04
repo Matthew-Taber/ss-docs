@@ -8,7 +8,7 @@
 
 ## Introduction
 
-SS can allow users to enter a ticket number when viewing a secret. This number can be validated through a regular expression, and can also be marked as required, if needed. SS can integrate with third party ticket systems. For more information on the ticket system integration, see [Ticket System Integration with SS](https://thycotic.force.com/support/s/article/Ticket-System-Integration-With-Secret-Server) (KBA).
+SS can allow users to enter a ticket number when viewing a secret. This number can be validated through a regular expression, and can also be marked as required, if needed. SS can integrate with third party ticket systems. See below for more information.
 
 ## Ticket System Tab
 
@@ -60,7 +60,8 @@ Secret Server can integrate into third-party ticket systems as well. Those suppo
 
  The third-party integrations:
 
-- [Atlassian JIRA](https://thycotic.force.com/support/s/article/Ticket-System-Integration-Atlassian-JIRA) (KBA)
+- [Atlassian JIRA](./atlassian-jira/index.md)
 - [BMC Remedy](./bmc-remedy-integration/index.md)
-- [ManageEngine](https://thycotic.force.com/support/s/article/Ticket-System-Integration-ManageEngine) (KBA)
+- [ManageEngine](./manageengine-servicedesk/index.md)
+- [PowerShell](./powershell-integration/index.md)
 - [ServiceNow](./servicenow-integration/index.md)
