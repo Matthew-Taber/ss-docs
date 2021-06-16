@@ -1,8 +1,34 @@
-[title]: # (Secret Template Text-Entry Field and Control Settings)
-[tags]: # (Template)
-[priority]: # (1000)
+[title]: # "Secret Template Fields"
+[tags]: # "template, template fields, template field settings"
+[priority]: # "1000"
 
-# Secret Template Text-Entry Field and Control Settings
+# Secret Template Fields
+
+> **Note:** If you want to programmatically manipulate fields, see [Field Slug Names](../field-slug-names/index.md).
+
+> **Note:** To use a custom SSH RPC port, add a field named "Port" to your secret template. Empty port fields are equivalent to the default port, 22.
+
+## Field Types
+
+Template fields can be specified as one of several different types to enhance customization:
+
+- **File:** File attachment link. File attachments are stored in the Microsoft SQL Server database.
+- **General List:** Preconfigured selectable list for launcher enhancement or general use. See [Secret Template List Fields](../secret-list-fields/index.md).
+- **Notes:** Multi-line text-entry field.
+- **Password:** Password type text-entry field.
+- **Text:** Single-line text-entry field.
+- **URL:** Clickable hyperlink.
+- **URL List:** Preconfigured selectable list for general use. See [Secret Template List Fields](../secret-list-fields/index.md).
+
+## Editing Fields
+
+The secret template designer provides several settings to customize secret template text-entry fields:
+
+- To add a secret text-entry field, fill out the values and click the **+** button.
+- To delete a text-entry field, click the ![1553806254291](images/1553806254291.png) icon. There is a confirmation dialog box before deletion takes place.
+- To edit a text-entry field, click the ![1553806315006](images/1553806315006.png)icon. Click either the ![1553806340594](images/1553806340594.png) icon to save or the **X** icon to discard the changes.
+
+## Text-Entry Field and Control Settings
 
 The settings available for text-entry fields are:
 

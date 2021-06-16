@@ -1,5 +1,5 @@
-[title]: # (Secret Server Role Permission List)
-[tags]: # (Roles,Permissions)
+[title]: # "Secret Server Role Permission List"
+[tags]: # "Roles,Permissions"
 [priority]: #
 
 # Secret Server Role Permissions List
@@ -487,9 +487,10 @@ Allows a user to only view which Secrets exist in the system.
 
 Allows a user to view Secret Audit.
 
-**View Secret Password History**
+**View Secret Password and Private Key History**
 
-Allows a user to view previous passwords for a secret.
+Allows a user to see the history of passwords, private keys, or passphrases in
+both old and new UI.
 
 **View Secret Policy**
 

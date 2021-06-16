@@ -1,6 +1,6 @@
-[title]: # (Creating a Unix Discovery Source)
-[tags]: # (discovery,unix,discovery source)
-[priority]: # (1000)
+[title]: # "Creating a Unix Discovery Source"
+[tags]: # "discovery,unix,discovery source"
+[priority]: # "1000"
 
 # Creating a Unix Discovery Source
 
@@ -82,14 +82,16 @@ Discovery sources define a set of discovery operations. You must create one base
 
     **Table:** Unix Scanner Summary
 
-    | Scanner                              | Input Template   | Output Template   |
-    | ------------------------------------ | ---------------- | ----------------- |
-    | Manual Host Range (Find Host Ranges) | Discovery Source | Host Range        |
-    | Unix Machine (Find Machines)         | Host Range       | Computer          |
-    | Unix Non-Daemon User (Find Accounts) | Computer         | SSH Local Account |
-    | None (Find Dependencies)             | None             | None              |
+    | Scanner                                | Input Template   | Output Template   |
+    | -------------------------------------- | ---------------- | ----------------- |
+    | Manual Host Range (Find Host Ranges)   | Discovery Source | Host Range        |
+    | Unix Machine (Find Machines)           | Host Range       | Computer          |
+    | Unix User (Find Accounts)              | Computer         | SSH Local Account |
+    | Unix Non-Daemon User (Find Accounts)   | Computer         | SSH Local Account |
+    | SSH Public Key Scanner (Find Accounts) | Computer         | SSH Public Key    |
+    | None (Find Dependencies)               | None             | None              |
     []()
-    Notice that there is no dependency scanner defined, and it was not an option in the discovery source wizard used to create this scanner set, so if you want to discover dependencies,  you *have* to manually edit the scanner set.
+    Notice that there is no dependency scanner defined, and it was not an option in the discovery source wizard used to create this scanner set, so if you want to discover dependencies,  you *must* manually edit the scanner set.
 
     > **Note:** If no dependency scanners are available with an input template matching an output scan template from the previous step that has not already been used by another scanner in this step, you cannot add a dependency scanner. The output template must be unique for each scanner but the input template may be shared.
 
@@ -135,12 +137,21 @@ Discovery sources define a set of discovery operations. You must create one base
 
 1. Note the following:
 
-    - The **Secret Credentials** secret is the same one used for the Unix Machine scanner, but it is possible to use a different one.
+   - The **Secret Credentials** secret is the same one used for the Unix Machine scanner, but it is possible to use a different one.
+   - As earlier, the **Ports** text box is a comma-separated list of port values (1-65535). SSH generally uses port 22. The default port used when attempting to scan a machine for users. This may be overridden by a specific port found during machine scanning.
+   - The **User Regex Format** text box contains a regular expression that finds the lines of text received during the scan that are valid for user parsing. The matched groups in the regular expression should correspond to the comma-separated items in the parse format.
+   - The **Parse Format** text box defines the order of values retrieved during a scan. If the parse names match the fields defined in the imported secret, the values will be populated from the data collected on the scan.
+   - The **Newline Separator Character** text box defines the character that divides the lines in the output received during a scan.
 
-    - As earlier, the **Ports** text box is a comma-separated list of port values (1-65535). SSH generally uses port 22. The default port used when attempting to scan a machine for users. This may be overridden by a specific port found during machine scanning.
+1. The next scanner, SSH Public Key Scanner, has the following configurations available:
 
-    - The **User Regex Format** text box contains a regular expression that finds the lines of text received during the scan that are valid for user parsing. The matched groups in the regular expression should correspond to the comma-separated items in the parse format.
+     ![image-20210611154431858](images/image-20210611154431858.png)
 
-    - The **Parse Format** text box defines the order of values retrieved during a scan. If the parse names match the fields defined in the imported secret, the values will be populated from the data collected on the scan.
+1. Note the following:
 
-    - The **Newline Separator Character** text box defines the character that divides the lines in the output received during a scan.
+   - The Secret Credentials secret is the same one used for the Unix Machine scanner, but it is possible to use a different one. To discover user SSH public keys, the secret user should have sudo or su permissions.
+   - As earlier, the Ports text box is a comma-separated list of port values (1-65535). SSH generally uses port 22. The default port used when attempting to scan a machine for users. This may be overridden by a specific port found during machine scanning.
+   - The User Regex Format text box contains a regular expression that finds the lines of text received during the scan that are valid for SSH public key parsing. The matched groups in the regular expression should correspond to the comma-separated items in the parse format.
+   - The Parse Format text box defines the order of values retrieved during a scan. If the parse names match the fields defined in the imported secret, the values will be populated from the data collected on the scan.
+   - The Newline Separator Character text box defines the character that divides the lines in the output received during a scan.
+

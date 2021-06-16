@@ -1,7 +1,7 @@
-[title]: # (Custom Launcher Process Arguments)
-[tags]: # (Launcher, Process Arguments)
-[priority]: # (1000)
-[redirect]: # (CustomLauncherProcessArguments,MacCustomLauncherProcessArguments)
+[title]: # "Custom Launcher Process Arguments"
+[tags]: # "Launcher, Process Arguments"
+[priority]: # "1000"
+[redirect]: # "CustomLauncherProcessArguments,MacCustomLauncherProcessArguments"
 
 # Custom Launcher Process Arguments
 
@@ -10,7 +10,7 @@ Custom launcher process arguments can use a combination of parameters from:
 - A field value from the secret.
 - A field value from a linked secret.
 - User input obtained from a prompt prior to launching.
-- `$Host` and `$Port` (for use with a proxied SSH process)
+- `$Host` and `$Port` (for use with a proxied SSH process or SSH tunneling)
 
 > **Note:** For more information, see the [Dependency Token List](../../../api-scripting/dependency-tokens/index.md).
 

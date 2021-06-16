@@ -1,6 +1,6 @@
-[title]: # (Creating or Editing Secret Templates)
-[tags]: # (Template)
-[priority]: # (1000)
+[title]: # "Creating or Editing Secret Templates"
+[tags]: # "Template"
+[priority]: # "1000"
 
 # Creating or Editing Secret Templates
 
@@ -30,7 +30,9 @@ If creating a new template:
 
    The Secret Template Designer page provides all the options for configuring a secret template, as well as which text-entry fields appear on any secret created from that template.
 
-1. Add template fields as desired. See [Secret Template Settings](../../secret-template-settings/index.md).
+1. Add template fields as desired. See [Secret Template Fields](../../secret-template-settings/secret-template-fields/index.md).
+
+   > **Note:** To use a custom SSH RPC port, add a field named "Port" to your secret template. Empty port fields are equivalent to the default port, 22.
 
 1. Click the **Edit** button to customize the template general settings. The Secret Template Designer appears:
 
