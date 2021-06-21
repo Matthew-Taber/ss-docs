@@ -22,7 +22,7 @@ To view the scanners:
 
 1. Click the **Scanner Settings** button in the top right of the page. The Discovery Source Scanner Settings page appears, which lists the scanners:
 
-   ![image-20210611105055019](images/image-20210611105055019.png)
+   ![image-20210618115816193](images/image-20210618115816193.png)
 
 ## Task 2: Adding the SSH Public Key Scanner for the Unix Discovery Source
 
@@ -31,8 +31,6 @@ To view the scanners:
    ![image-20210611111016016](images/image-20210611111016016.png)
 
 1. Click the **SSH Public Key Scanner**.
-
-   NEED A GRAB OF THIS
 
 1. Click the **Add Secret** link and choose secret(s) that have Unix sudo or su permissions for the host range selected in the discovery source. These permissions are necessary to navigate each user’s home directory on a machine in search of SSH public key entries in the user’s `<user home directory>/.ssh/authorized_keys` file. 
 
@@ -51,11 +49,11 @@ To Import an SSH public key or keys:
 
 1. Click the **Discovery Network View** button. The Discovery Network View page appears.
 
-   NEED GRAB WITH PK TAB
+   ![image-20210618120607620](images/image-20210618120607620.png)
 
 1. Click the **Public Keys** tab.
 
-   NEED GRAB
+   ![image-20210618134002279](images/image-20210618134002279.png)
 
 1. Click to select the public keys to import.
 
@@ -96,9 +94,9 @@ To Import an SSH public key or keys:
 
    - If you chose the **I want to change the public SSH key on the Account** selection button, the selected secrets are all taken over and each given a random new SSH key.
 
-1. Click the **Next** button. The Initial Takeover page appears—while the wizard is still on the Import Key step:
+1. Click the **Next** button. The Initial Takeover page appears:
 
-   ![image-20210611114437424](images/image-20210611114437424.png)
+   ![image-20210618134157720](images/image-20210618134157720.png)
 
 1. Click the **Add Secret** link to choose a Unix sudo or su secret to take over the public key on the account. This removes the public key from the user’s authorized keys file and adds a new random SSH key.
 
@@ -120,11 +118,11 @@ Discovery rules automatically create secrets and send emails when local accounts
 
 1. Click the **Discovery Network View** button. The Discovery Network View page appears:
 
-   NEED A GRAB WITH THE PK TAB.
+   ![image-20210618120622327](images/image-20210618120622327.png)
 
 1. Click the **Public Keys** tab:
 
-   NEED A GRAB
+   ![image-20210618134020390](images/image-20210618134020390.png)
 
 1. Click the **Create Rule** button. The New Rule wizard begins:
 
@@ -183,15 +181,17 @@ Discovery rules automatically create secrets and send emails when local accounts
 
          1. Click the **Next** button. The Key Rotation page of the wizard appears (see below).
 
-      - If you chose the **I want to change the public SSH key on the Account** selection button, an initial takeover page appears on the same Import Key tab:
+      - If you chose the **I want to change the public SSH key on the Account** selection button, an initial takeover page appears:
 
-        ![image-20210611143557360](images/image-20210611143557360.png)
+        ![image-20210618134602915](images/image-20210618134602915.png)
 
         1. Click the **Add Secret** link to add a Unix sudo or su secret to take over the public key on a discovered account. This will remove the public key from the user's authorized keys file and adds a new random SSH key.
 
         1. Click the **Next** button. The Key Rotation page of the wizard appears.
+        
+           ![image-20210618134422807](images/image-20210618134422807.png)
 
-      ![image-20210611150320558](images/image-20210611150320558.png)
+      
 
 1. Click the **Add Secret** link to add an optional Unix sudo or su secret for future key rotation.
 
