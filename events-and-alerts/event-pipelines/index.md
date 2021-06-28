@@ -1,6 +1,6 @@
-[title]: # (Event Pipelines)
-[tags]: # (Event Pipelines)
-[priority]: # (1000)
+[title]: # "Event Pipelines"
+[tags]: # "Event Pipelines"
+[priority]: # "1000"
 
 # Event Pipelines
 
@@ -87,7 +87,7 @@ Some filters prompt you for additional information when you select them.
 
 ### Event Pipeline Policy Targets
 
-EP policy *targets* are SS folders, secret policies, or user groups that are the *subject* and EP policy is applied to. For secret EP types, the secrets inside the folders or secrets under the secret policies trigger the EPs in an EP policy. As targets, folders are not recursive—only the secrets directly in the folder can trigger an EP. For user EP types, only users in the selected groups can trigger an EP.
+EP policy *targets* are SS folders, secret policies, or user groups that are the *subject* an EP policy is applied to. For secret EP types, the secrets inside the folders or secrets under the secret policies trigger the EPs in an EP policy. As targets, folders are not recursive—only the secrets directly in the folder can trigger an EP. For user EP types, only users in the selected groups can trigger an EP.
 
 > **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
 

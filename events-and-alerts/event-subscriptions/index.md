@@ -1,16 +1,28 @@
-[title]: # (Event Subscription Page)
-[tags]: # (Event Subscription)
+[title]: # "Event Subscriptions"
+[tags]: # "Event Subscription"
 [priority]: #
 
-# Event Subscription Page
+# Event Subscriptions
 
 > **Note:** Please click the table of contents on the left to see the sub-pages to this one. Click the table of contents on the right to see headings on this page.
+
+Event subscriptions trigger notifications of defined events within the system. These notifications are sent to the inbox and from there can be sent externally via email or Slack. 
+
+> **Note:** The notifications are an alert of specific events and not for archived reporting.
+
+Go to **Admin \> Event Subscriptions** to view the Event Subscriptions page:
+
+![image-20210625105437735](../event-subscription-page/images/image-20210625105437735.png)
+
+Click the name of one of the subscriptions to see its page:
+
+![image-20210625115101822](../event-subscription-page/images/image-20210625115101822.png)
 
 The Event Subscription Page includes:
 
 - **Additional Email Recipients:** List of additional email addresses to send the email to.
 
-> **Note:** These entries are meant to be outside of the users' email addresses as known to SS. One of these might be, for example, the user's home email address.
+> **Note:** These entries can be external to Secret Server. One of these might be, for example, the user's home email address.
 
 - **Send Email Alerts:** Sends an email to both users and all the users contained in the groups for this subscription. It also sends an email to all email addresses in the Additional Email Recipients list (see below).
 - **Send Email with High Priority:** Sends the email for this subscription with high priority set.

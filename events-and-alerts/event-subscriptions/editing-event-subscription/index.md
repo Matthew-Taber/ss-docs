@@ -1,8 +1,8 @@
-[title]: # (Editing a Subscription)
-[tags]: # (Editing a Subscription)
-[priority]: # (1000)
+[title]: # "Editing an Event Subscription"
+[tags]: # "Editing a Subscription"
+[priority]: # "1000"
 
-# Editing a Subscription
+# Editing an Event Subscription
 
 To edit an event subscription:
 
@@ -13,3 +13,4 @@ To edit an event subscription:
 3. To add entries to either list, see [Creating Event Subscriptions](../creating-event-subscriptions/index.md).
 
 4. Click **Save** to save all changes.
+
