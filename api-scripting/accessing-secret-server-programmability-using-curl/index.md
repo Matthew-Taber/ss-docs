@@ -6,9 +6,9 @@
 
 [cURL]( http://curl.haxx.se/) is a command-line tool for transferring data with URL syntax.
 
-The download wizard for the executable can be found [here](http://curl.haxx.se/dlwiz/?type=bin).
+Click to access the [curl Download Wizard](http://curl.haxx.se/dlwiz/?type=bin).
 
->**Note**: When using Curl with Secret Server's web services, it is important to use legacy methods whenever possible.
+>**Note**: When using curl with Secret Server's web services, it is important to use legacy methods whenever possible.
 For example, use `GetSecretLegacy` instead of `GetSecret`.
 
 ## Using cURL with Method 1
