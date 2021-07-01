@@ -16,7 +16,7 @@ For example, use `GetSecretLegacy` instead of `GetSecret`.
 Use the <http://your-secret-server-url/webservices/sswebservice.asmx> web service.
  >**Note**: A call to Authenticate must be made first. The token returned by this method is required by all the other methods.
 
-### Step 1
+### Step 1: Authenticate
 
 `curl -v -H "Content-Type: application/x-www-form-urlencoded" -d "username={NAME}&password={PASSWORD}&organization=&domain=" --url "http://your-secret-server-url/webservices/sswebservice.asmx/Authenticate""`
 
@@ -33,7 +33,7 @@ xsd="http://www.w3.org/2001/XMLSchema"" xmlns="urn:thesecretserver.com">
 
 ```
 
-### Step 2
+### Step 2: Get Secret
 
 `curl -v -H "Content-Type: application/x-www-form-urlencoded" -d "secretId={SECRET ID}&token={TOKEN}" --url "http://your-secret-server-url/webservices/sswebservice.asmx/GetSecretLegacy""`
 
