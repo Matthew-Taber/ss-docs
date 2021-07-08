@@ -7,20 +7,18 @@
 
 ## Overview
 
-Connect As Command is an advanced setting for the PuTTY launcher type where SSH proxy automatically runs the su or sudo commands from a Unix root account secret after the user launches a PuTTY session. This provides a user elevated privileges without giving the user direct access to the credentials. 
-
-==What are some typical scenarios where customers might want to do this? Why does a user need to login as root only to be immediately switched back to a regular account?==
+Connect As Command is an advanced setting for the PuTTY launcher type where SSH proxy automatically runs the su command for a Unix root account secret after the user launches a PuTTY session. This provides a user elevated privileges without allowing a remote root connection or giving the user direct access to the credentials. 
 
 The connection procedure is as follows:
 
 1. An admin uses this instruction to set up secret A (a Unix root account secret) to use secret B (a regular Unix account secret) as its "connect as" secret.
-1. A user launches secret B.
-1. SSH proxy connects using secret A's credentials.
-1. SSH proxy issues the su or sudo command to switch the user back to secret B. 
+1. A user launches secret A.
+1. SSH proxy connects using secret B's credentials.
+1. SSH proxy issues the su command to switch the user back to secret A. 
 
 The procedure is performed once at the beginning of the session.
 
-As noted, to implement this feature, you need a Unix *root* account secret and a Unix *regular* account secret. The session typically launches as the Unix *regular* account secret that is specified in the **Secret To Use** field on a Unix *root* account secret's **Settings** page.
+As noted, to implement this feature, you typically use a Unix *root* account secret and a Unix *regular* account secret. The session usually launches as the Unix *regular* account secret that is specified in the **Secret To Use** field on a Unix *root* account secret's **Settings** page.
 
 ## Setting up SSH Proxy to Use the Connect As Feature
 

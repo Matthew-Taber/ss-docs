@@ -21,20 +21,20 @@ First, let us open a system inbox template to look at:
 
    ![image-20210625142113962](images/image-20210625142113962.png)
 
-1. Note that most, if not all, of the templates are system templates. These are **read-only** templates that you can clone to create custom templates. That is, system templates are templates for your templates. Most of the templates are email templates, and one is a Slack template. 
+1. Note that most, if not all, of the inbox templates are system templates. These are **read-only** templates that you can clone to create custom templates. That is, system templates are templates for your templates. Most of the templates are email templates, and one is a Slack template. 
 
 1. Click the Template Name for the Event Subscription template. The template's page appears:
 
-   ![image-20210625145853151](../inbox-email-templates/images/image-20210625145853151.png)
+   ![image-20210625145853151](images/image-20210625145853151.png)
 
 Note that each template has:
 
 - A details section that contains the name, a system template flag, and a template type (email or Slack).
 - A body section that defines the subject, language used, and the canned text for the message. The message contains variables that are drawn from the alert or event. The body is read only in system templates and is editable in custom templates cloned (copied) from system templates.
-- Zero or more associated inbox rules. These are the built-in rules that use the template. Rules define filters for the alerts or events (what characteristics trigger the rule)  and who gets externally notified via email or Slack (the subscribed users or groups). The following table lists the system templates and their associated inbox rules that use them.
+- Zero or more associated inbox rules. These are the inbox rule types that use this inbox template (message type). Rules define filters for the alerts or events (what characteristics trigger the rule) and who gets externally notified via email or Slack (the subscribed users or groups). The following table lists the system templates and their associated inbox rules that use them.
 - Zero or more resources. These are items, such as images, that go along with any email based on the template. 
 
-**Table:** System Rules by Template
+**Table:** System Inbox Rules by Inbox Template
 
 | System Inbox Template            | Type  | Associated Inbox Rules                                       |
 | -------------------------------- | ----- | ------------------------------------------------------------ |
@@ -154,11 +154,13 @@ Note the Body section is HTML for emails and Slack template text. For the Event 
 
 Rendered, the body looks like this:
 
-![image-20210625155751264](../inbox-email-templates/images/image-20210625155751264.png)
+![image-20210625155751264](images/image-20210625155751264.png)
+
+![image-20210630171927781](images/image-20210630171927781.png)
 
 Note the variables starting with $ that are in the message. These are replaced by Secret Server when it sends the message. For example:
 
-![image-20210625160145057](../inbox-email-templates/images/image-20210625160145057.png)
+![image-20210625160145057](images/image-20210625160145057.png)
 
 The variables here include:
 
@@ -168,4 +170,6 @@ The variables here include:
 - `$SubscriptionName` was replaced by the event subscription name.
 - `$SystemLogo` was replaced by the image resource containing the Thycotic logo. 
 
-Nearly the entire template HTML is customizable once you make a customized clone of the system te 
+==Are there other variables not listed here? For example, can a user get one for the line items appearing in $MessageDataTable? Are these the same as the event variables in event pipelines?==
+
+Nearly the entire template HTML is customizable once you make a customized clone of the system template. 

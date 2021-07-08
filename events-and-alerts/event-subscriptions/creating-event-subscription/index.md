@@ -10,7 +10,7 @@ Event subscriptions trigger notifications of defined events within the system. T
 
 To add an event subscription:
 
-## Task 1: Creating the Event Subscription
+## Task 1: Creating an Event Subscription
 
 1. Navigate to **Administration > Event Subscriptions**:
 
@@ -79,5 +79,5 @@ The event subscription subscribers defines who *potentially* receives the event 
 > **Note:** Notifications can be triggered by defined conditions and not a specific event subscription. Those rules may not appear in this list.
 
 1. Scroll down to the **Associated Rules** section. Note that a link to your new event subscription inbox rule already appears at the bottom.
-1. If you want to edit the rule, click the link for the inbox rule. See [Creating and Editing Inbox Rules](/../../inbox/inbox-rules/index.md).
+1. If you want to edit the rule, click the link for the inbox rule. See [Using Inbox Rules](../../inbox/inbox-rules/index.md).
 

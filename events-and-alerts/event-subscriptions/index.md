@@ -1,6 +1,6 @@
 [title]: # "Event Subscriptions"
 [tags]: # "Event Subscription"
-[priority]: #
+[priority]: #	"1000"
 
 # Event Subscriptions
 
@@ -12,11 +12,11 @@ Event subscriptions trigger notifications of defined events within the system. T
 
 Go to **Admin \> Event Subscriptions** to view the Event Subscriptions page:
 
-![image-20210625105437735](../event-subscription-page/images/image-20210625105437735.png)
+![image-20210625105437735](./event-subscription-page/images/image-20210625105437735.png)
 
 Click the name of one of the subscriptions to see its page:
 
-![image-20210625115101822](../event-subscription-page/images/image-20210625115101822.png)
+![image-20210625115101822](./event-subscription-page/images/image-20210625115101822.png)
 
 The Event Subscription Page includes:
 
