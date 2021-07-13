@@ -1,8 +1,8 @@
-[title]: # "Creating an Event Subscription"
+[title]: # "Creating Event Subscriptions"
 [tags]: # "event subscription"
 [priority]: # "1000"
 
-# Creating an Event Subscription
+# Creating Event Subscriptions
 
 Event subscriptions trigger notifications of defined events within the system. These notifications are sent to the inbox, which may send them externally via email or Slack, depending on your configuration. 
 
@@ -72,9 +72,9 @@ Subscribers are users that are explicitly defined or are a subscribed group memb
 
 ## Task 4: Associating Inbox Rules
 
-Inbox rules filter a specified event subscription (or other alerts)—in this case, the one you just created. They can be updated or reviewed to change the actions, email template, or other communication preferences. 
+Inbox rules filter a specified event subscription (or other alerts)—in this case, the one you just created. When you create an event subscription, an inbox rule based on the event subscription system rule is automatically created. It can be updated or reviewed to change the actions, email template, or other communication preferences. 
 
-The event subscription subscribers defines who *potentially* receives the event alert. The associated inbox rules filters which events are shared with those subscribers via Slack or email messages. Inbox rules search for specified text strings in specified locations in the incoming notification. Without an inbox rule, all subscribers receive Slack or email messages for every event subscription notification.
+The event subscription subscribers defines who *potentially* receives the event alert. The associated inbox rules filters which events are shared with those subscribers via Slack or email messages. Inbox rules search for specified text strings in specified locations in the incoming notification. 
 
 > **Note:** Notifications can be triggered by defined conditions and not a specific event subscription. Those rules may not appear in this list.
 

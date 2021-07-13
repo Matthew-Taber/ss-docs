@@ -249,9 +249,9 @@ Allows a user to copy secrets when that user also has Own Secret role permission
 
 Allows a user to create new folders at the root level of the folder structure.
 
-**Delete Secret**
+**Deactivate Secret**
 
-Allows a user to mark secrets as deleted.
+Allows a user to mark secrets as deactivated.
 
 **Delete Secrets from Reports**
 
@@ -261,13 +261,17 @@ Allows a user to run the delete Secrets action from a report.
 
 Allows a user to edit secrets. Note that they still require the "Edit" or  "Owner" permissions on the individual secrets they are editing.
 
+**Erase Secret**
+
+Allows a user to permanently erase (as opposed to deactivate, which is reversible) a secret.
+
 **Expire Secrets from Reports**
 
 Allows a user to expire Secrets listed in a report.''
 
 **Force Check In**
 
-Allows a user to force a Secret that is checked out by another user to be checked in.
+Allows a user to force a secret that is checked out by another user to be checked in.
 
 <!--**No Teams-related Permissions**-->
 

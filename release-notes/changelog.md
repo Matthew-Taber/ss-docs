@@ -1,11 +1,21 @@
-[title]: # (Documentation Change Log)
-[tags]: # (Release Notes,documentation)
+[title]: # "Documentation Change Log"
+[tags]: # "Release Notes,documentation"
 [priority]: #
-[display]: # (search,content,print)
+[display]: # "search,content,print"
 
 # Documentation Change Log
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
+
+## July to December 2021
+
+Created or made significant changes to these topics:
+
+- Creating Event Subscriptions
+- Deactivating and Reactivating Secrets
+- Running Bulk Operations
+- Using Inbox Rules
+- Using Inbox Templates
 
 ## January to June 2021
 
@@ -64,7 +74,7 @@ Created the following topics from Salesforce articles or PDFs (often including s
 - Setting up SAML SSO for Active Directory
 - Setting up SAML SSO for Azure Active Directory
 
-## August to  December 2020
+## August to December 2020
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 

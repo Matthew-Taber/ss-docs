@@ -13,10 +13,9 @@ First, let us open a system inbox template to look at:
 1. If necessary, click the view link to switch to **Alphabetized View**.
 
 1. Click the **Notification Rules and Templates** link. The Notification Settings page appears:
-   ==I'm really surprised there's no link in the inbox to get here.==
-
+   
    ![image-20210625135517694](images/image-20210625135517694.png)
-
+   
 1. Click the **Templates** tab:
 
    ![image-20210625142113962](images/image-20210625142113962.png)
@@ -25,14 +24,14 @@ First, let us open a system inbox template to look at:
 
 1. Click the Template Name for the Event Subscription template. The template's page appears:
 
-   ![image-20210625145853151](images/image-20210625145853151.png)
+    ![image-20210709162114744](images/image-20210709162114744.png)
 
-Note that each template has:
+1. Note that each template has:
 
-- A details section that contains the name, a system template flag, and a template type (email or Slack).
-- A body section that defines the subject, language used, and the canned text for the message. The message contains variables that are drawn from the alert or event. The body is read only in system templates and is editable in custom templates cloned (copied) from system templates.
-- Zero or more associated inbox rules. These are the inbox rule types that use this inbox template (message type). Rules define filters for the alerts or events (what characteristics trigger the rule) and who gets externally notified via email or Slack (the subscribed users or groups). The following table lists the system templates and their associated inbox rules that use them.
-- Zero or more resources. These are items, such as images, that go along with any email based on the template. 
+    - A details section that contains the name, a system template flag, and a template type (email or Slack).
+    - A body section that defines the subject, language used, and the canned text for the message. The message contains variables that are drawn from the alert or event. The body is read only in system templates and is editable in custom templates cloned (copied) from system templates.
+    - Zero or more associated inbox rules. These are the inbox rule types that use this inbox template (message type). Rules define filters for the alerts or events (what characteristics trigger the rule) and who gets externally notified via email or Slack (the subscribed users or groups). The following table lists the system templates and their associated inbox rules that use them.
+    - Zero or more resources. These are items, such as images, that go along with any email based on the template. 
 
 **Table:** System Inbox Rules by Inbox Template
 
@@ -47,7 +46,7 @@ Note that each template has:
 | Standard Slack                   | Slack |                                                              |
 | Workflow Access Approval Request | Email | Workflow Access Approval Request                             |
 
-Note the Body section is HTML for emails and Slack template text. For the Event Subscription template it looks like this:
+8. Note the Body section is HTML for emails and Slack template text. For the Event Subscription template it looks like this:
 
 ```html
 
@@ -149,27 +148,58 @@ Note the Body section is HTML for emails and Slack template text. For the Event 
   </td></tr></table>
 </body>
 </html>
-
 ```
 
-Rendered, the body looks like this:
+9. Rendered, the body looks like this:
+   
+    ![image-20210630171927781](images/image-20210630171927781.png)
+    
+    Note the variables starting with $ that are in the message. These are replaced by Secret Server when it sends the message. For example:
+    
+    ![image-20210625160145057](images/image-20210625160145057.png)
+    
+10. The variables here include:
+    
+    - `$InboxMessageTypeName` was replaced by the inbox template type.
+    - `$InboxRuleName` was replaced by the inbox rule that sent the message. In this case, it is the same name as the inbox template type—Event Subscription.
+    - `$MessageDataTable` was replaced by an entire table that summarized the message.
+    - `$SubscriptionName` was replaced by the event subscription name.
+    - `$SystemLogo` was replaced by the image resource containing the Thycotic logo. 
 
-![image-20210625155751264](images/image-20210625155751264.png)
+      > **Note:** For a complete list of variables for the template, go to the template editor (see below).
+    
+11. Nearly the entire template HTML is customizable once you make a customized clone of the system template. To clone the template click the **Copy Template** button at the top. The Copy Template popup appears:
 
-![image-20210630171927781](images/image-20210630171927781.png)
+     ![image-20210709162959642](images/image-20210709162959642.png)
 
-Note the variables starting with $ that are in the message. These are replaced by Secret Server when it sends the message. For example:
+12. Type the name of the new template in the **New Template Name** text box.
 
-![image-20210625160145057](images/image-20210625160145057.png)
+13. Click the **Copy Template** button. The template page reappears, but this time it is editable and named differently. 
 
-The variables here include:
+14. Click the **Edit** link next to **Template Body**. The section becomes editable:
 
-- `$InboxMessageTypeName` was replaced by the inbox template type.
-- `$InboxRuleName` was replaced by the inbox rule that sent the message. In this case, it is the same name as the inbox template type—Event Subscription.
-- `$MessageDataTable` was replaced by an entire table that summarized the message.
-- `$SubscriptionName` was replaced by the event subscription name.
-- `$SystemLogo` was replaced by the image resource containing the Thycotic logo. 
+     ![image-20210709163305775](images/image-20210709163305775.png)
 
-==Are there other variables not listed here? For example, can a user get one for the line items appearing in $MessageDataTable? Are these the same as the event variables in event pipelines?==
+15. You can directly edit the HTML, but if you intend to add variables for Secret Server to fill in, click the **Template Editor** link. The Inbox Template Editor popup appears:
 
-Nearly the entire template HTML is customizable once you make a customized clone of the system template. 
+     ![image-20210709163720511](images/image-20210709163720511.png)
+
+16. In addition to directly editing the HTML, you can insert variables by clicking the **Search or pick one** dropdown list:
+
+     ![image-20210709164101063](images/image-20210709164101063.png)
+
+17. You have three categories of variables: message, global, and digest.
+
+18. Click the desired variable. The dropdown changes to show your choice:
+
+     ![image-20210709164514433](images/image-20210709164514433.png)
+
+19. The variable appears immediately below the dropdown list, as well as a description of the variable.
+
+20. Copy or type the variable in the desired location in the HTML.
+
+21. Edit and insert more variables as desired.
+
+22. Click the **Apply** button. The popup disappears.
+
+23. Click the **Save** button.
