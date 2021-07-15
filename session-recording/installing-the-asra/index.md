@@ -28,11 +28,11 @@ If you are licensed for session recording, you can install unlimited numbers of 
 1. On the Session Monitoring page, additional icons are presented based on what extra metadata is present for that session, such as keystroke data for both RDP and SSH, and process data for Remote Desktop Protocol (RDP).
 1. Once the session recording has been processed, on the Session Playback page the additional metadata is visible:
 
-   ![session-playback-metadata](images/session-playback-metadata.png “Session Playback Metadata”)
+   ![session-playback-metadata](images/session-playback-metadata.png)
 
 And on the Session Monitoring page:
 
-   ![session-monitoring-page](images/session-monitoring-page.png “Session Monitoring Page”)
+![session-monitoring-page](images/session-monitoring-page.png)
 
 In this example, we searched for activity where the user typed in the word “powershell.”
 
@@ -105,14 +105,19 @@ For a normal manual installation, you extract the zip file, and run setup.exe. T
 1. Extract the ASRA zip file into its own folder.
 1. Right click on the MSI file (gsresvc.msi) in the folder where you extracted the zip and select **Properties** to verify that there is a **Digital Signatures** tab indicating that the MSI was signed by Thycotic Software.
 1. Launch Orca.
-   ![launch-orca](images/launch-orca.png “Launch Orca”)
+
+   ![launch-orca](images/launch-orca.png)
+
 1. Open the extracted MSI file (gsresvc.msi). The Tables list appears.
 1. Click the **Transform** menu at the top 
 1. Select **New Transform**.
 1. In the **Tables** list, click **ServiceInstall**. Only one row should be listed on the right.
-   ![service-install](images/service-install.png “Service Install”)
+
+   ![service-install](images/service-install.png)
+
    >**Note**: This screen shot shows the Arguments column dragged wider to see its contents. When you initially see it, it will be very narrow, barely showing the contents.
 1. Scroll to the **Arguments** column and copy and paste its contents into a text editor. It should look like this example. Be sure to select the entire column. You might need to adjust the column width.
+
    >**Note**: The entire string of text is essentially a CLI command with parameters that begin with a hyphen. For illustration purposes we put each parameter on its own line below.
 
    runSessionRecordingAgent
@@ -130,6 +135,7 @@ For a normal manual installation, you extract the zip file, and run setup.exe. T
    -E2S.OrganizationId=[E2S.ORGANIZATIONID]
 
 Everything highlighted is what we will customize. The fields in brackets are what setup.exe would normally customize.
+
 1. In your text editor, open the setup.exe.config XML file from the zip. You will get the Globally Unique Identifier (GUID) from it.
 1. In your text editor, replace each of these with the correct values as listed below. The GUID will require looking in setup.exe.config in the <appSettings> XML block. The values are as follows:
    * **ProductCode** should always be: “{A7FA0ADA-BEED-4841-9D3E-9D700B36F653}” (not in setup.exe.config).
@@ -138,8 +144,11 @@ Everything highlighted is what we will customize. The fields in brackets are wha
    * **E2S.UseSsl** is True or False, based on if you are using HTTP:// or HTTPS:// for the callback URL (Secret ServerL should always be used in production).
    * **E2S.AuthorizationGuid** is a unique GUID specific to the ASRA collection that you downloaded the installer file from. You can find it in the setup.exe.config file (in setup.exe.config). This is unique for each ASRA Collection.
    * **E2S.OrganizationId** should always be: 1.
+
 For example:
-   ![organization-id](images/organization-id.png “Organization ID”)
+
+  ![organization-id](images/organization-id.png)
+
 1. Back in Orca, delete everything in the ServiceInstall Arguments column.
 1. Copy and paste the customized version you just created from your text editor into the Arguments column.
 1. Click the **Transform** menu.
