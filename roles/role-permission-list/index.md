@@ -28,6 +28,10 @@ Allows a user to make a custom audit entry when accessing a Secret using the web
 
 Allows a user to view domains, edit existing domains, delete domains, and add  new domains. Also allows a user to force synchronization or set the  synchronization interval.
 
+**Administer Automatic Export**
+
+The user can do everything the other automatic export permissions allow *and* edit the automatic export configuration.
+
 **Administer Backup**
 
 Allows a  user to view and configure automated backups for Secret Server. Users  with this role permission can change the backup path, disable backups,  and set the backup schedule.
@@ -257,6 +261,10 @@ Allows a user to mark secrets as deactivated.
 
 Allows a user to run the delete Secrets action from a report.
 
+**Download Automatic Export**
+
+The user can view all of the automatic export tabs *and* download exports from cloud storage (cloud customers only).
+
 **Edit Secret**
 
 Allows a user to edit secrets. Note that they still require the "Edit" or  "Owner" permissions on the individual secrets they are editing.
@@ -323,6 +331,10 @@ Grants access to the session recording of a secret to a user with at least "List
 
 >**Note:** Users also need the "View Session Monitoring" permission to view the recordings in SS.
 
+**Run Automatic Export**
+
+The user can view all of the automatic export tabs *and* run the export manually by clicking the Run Export button.
+
 **Unlimited Administrator**
 
 Allows a user to view and edit all secrets in the system, regardless of  permissions, when Unlimited Admin Mode is on. Note that another user  with the "Administer Unlimited Admin Configuration" role permission  would still need to turn this mode on.
@@ -350,6 +362,10 @@ Allows a user to view advanced dashboard. Without this permission, users will on
 **View Advanced Secret Options**
 
 Allows a user to view the Remote Password Changing, Security, and Dependency tabs on a Secret they have access to.
+
+**View Automatic Export** 
+
+The user can view all of the automatic export tabs. 
 
 **View Backup**
 

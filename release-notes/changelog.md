@@ -11,9 +11,12 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created or made significant changes to these topics:
 
+- Automatic Sudo or Su Privilege Elevation
 - Creating Event Subscriptions
 - Deactivating and Reactivating Secrets
+- Event List
 - Running Bulk Operations
+- Secret Server Role Permissions List
 - Using Inbox Rules
 - Using Inbox Templates
 

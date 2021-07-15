@@ -10,6 +10,8 @@ You can perform bulk operations from the Dashboard on multiple secrets:
 
    ![image-20210713091921323](images/image-20210713091921323.png)
 
+   > **Note:** You can also run a bulk operation on the All Secrets page.
+
 1. Click the **Current Folder** link if you want to display the secrets in subfolders too. If so, the link changes to Include Subfolders. 
 
 1. Click to select the secrets you wish to include. To check them all, check the check box in the column header row. The bulk operations toolbar appears at the top:

@@ -151,7 +151,7 @@ First, let us open a system inbox template to look at:
 ```
 
 9. Rendered, the body looks like this:
-   
+
     ![image-20210630171927781](images/image-20210630171927781.png)
     
     Note the variables starting with $ that are in the message. These are replaced by Secret Server when it sends the message. For example:
@@ -178,21 +178,21 @@ First, let us open a system inbox template to look at:
 
 14. Click the **Edit** link next to **Template Body**. The section becomes editable:
 
-     ![image-20210709163305775](images/image-20210709163305775.png)
-
+    ![image-20210709163305775](images/image-20210709163305775.png)
+    
 15. You can directly edit the HTML, but if you intend to add variables for Secret Server to fill in, click the **Template Editor** link. The Inbox Template Editor popup appears:
 
-     ![image-20210709163720511](images/image-20210709163720511.png)
+    ![image-20210709163720511](images/image-20210709163720511.png)
 
 16. In addition to directly editing the HTML, you can insert variables by clicking the **Search or pick one** dropdown list:
 
-     ![image-20210709164101063](images/image-20210709164101063.png)
+    ![image-20210709164101063](images/image-20210709164101063.png)
 
 17. You have three categories of variables: message, global, and digest.
 
 18. Click the desired variable. The dropdown changes to show your choice:
 
-     ![image-20210709164514433](images/image-20210709164514433.png)
+    ![image-20210709164514433](images/image-20210709164514433.png)
 
 19. The variable appears immediately below the dropdown list, as well as a description of the variable.
 

@@ -87,6 +87,7 @@ The following events are available:
 
 | **Entity**                                  | Event                                                        |
 | ------------------------------------------- | ------------------------------------------------------------ |
+| Automatic Export                            | Download, Edit, Export, Run Export                           |
 | Configuration                               | Edit                                                         |
 | Dual Controls                               | Create, Delete, Edit                                         |
 | Encryption                                  | HSM Disable, HSM Enable, Rotate Secret Keys, Rotate Secret  Keys Cancel Requested, Rotate Secret Keys Failure, Rotate Secret Keys Success |
@@ -108,3 +109,4 @@ The following events are available:
 | Site Connector                              | Create, Credential View, Disable, Edit, Enable               |
 | Unlimited Administrator                     | Disable, Enable                                              |
 | User Audit                                  | Expire Now                                                   |
+
