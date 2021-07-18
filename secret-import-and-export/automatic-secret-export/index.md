@@ -6,11 +6,11 @@
 
 This feature allows you to automatically export secrets on a schedule to an external location in an encrypted, password-protected archive.
 
-The secret export settings and XML export format matches the existing Export/Import tool (Admin > Export / Import).  This feature lets simply automates that export process.
+The secret export settings and XML export format matches the existing Export/Import tool (Admin > Export / Import).  This feature lets lets you automate that export process.
 
 To access this feature, your user must have at least one automatic export permission where you can then ﬁnd it at **Admin > Automatic Export**.
 
-The export is performed using the permissions of the user that set up the automatic export, this means only secrets that user can access can be exported.
+The export is performed using the permissions of the user last that set up the automatic export, this means only secrets that user can access can be exported.
 
 All actions, successful or not, related to this feature are audited and logged.
 
@@ -43,8 +43,15 @@ The Automatic Export page shows the following information and configurations:
 Those unique to automatic exports:
 
 - **Enabled**: Whether the feature is enabled.
+
 - **Last Exported:** The last time an automatic export successfully ran.
+
+- **Export Path:** The path the export archives are saved to. 
+
+  > **Note:** On-premises Secret Server customers must have write permissions to the directory. 
+
 - **Export User:** The user the secret export runs as. Thus, only secrets this user has access to can be exported. This setting is updated automatically to the last user who saved automatic export conﬁguration changes.
+
 - **Frequency (Days):** Number of days between automatic exports.
 
 Those in common with the secret export tool:
@@ -54,10 +61,6 @@ Those in common with the secret export tool:
 - **Export Folder Paths:** Whether the export should include folder paths. 
 
 - **Export Password:** The secret whose password value will be used to password-protect the export archive.
-
-- **Export Path:** The path the export archives are saved to. 
-
-  > **Note:** On-premises Secret Server customers must have write permissions to the directory. 
 
 - **Export TOTP Settings:** Whether the export should include Time-based One-Time Password (TOTP) settings. 
 
@@ -69,7 +72,7 @@ Once the XML export is encrypted and archived in a ZIP ﬁle, the ﬁle is store
 
 On-Premises storage export archives are saved in the directory in the Export Path configuration. Secret Server must have write permissions to this folder.
 
-Cloud export archives are listed for viewing and downloading on the Automatic Export Storage tab. You can automate downloading these export archives using the  REST API Automatic Export function. ==Or is this a separate API?==
+Cloud export archives are listed for viewing and downloading on the Automatic Export Storage tab. You can automate downloading these export archives using the REST API Automatic Export. See the [REST Web Services API Reference](../../api-scripting/rest-api-reference-download/index.md).
 
 ## Security
 

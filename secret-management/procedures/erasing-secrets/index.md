@@ -78,12 +78,12 @@
     - Is not checked out by another user
     - Is not a discovery secret
     - Is not a domain sync secret
-    
+
 1. For purposes of this instruction, create a secret for testing in your personal folder. For now, do not use an existing one to ensure all the requirements are met. 
 
     > **Note:** Secret erasure uses secret bulk operations, even if you want to erase only one. If you click the Options button for a secret, erase is not an option.
 
-1. You can erase the secret via a dashboard bulk operation or from the **Options** button on the **General** tab of the secret itself. For a bulk operation, Erase is accessed by the **More Bulk Options** button. Erase Secrets is in the **Security** section of the **More Bulk Options** popup. See [Running Dashboard Bulk Operations](../../../admin/application-dashboard/running-dashboard-bulk-operations/index.md#running-dashboard-bulk-operations).
+1. You can erase the secret via a dashboard bulk operation or from the **Options** button on the **General** tab of the secret itself. For a bulk operation, erase is accessed by the **More Bulk Options** button. **Erase Secrets** is in the **Security** section of the **More Bulk Options** popup. See [Running Dashboard Bulk Operations](../../../admin/application-dashboard/running-dashboard-bulk-operations/index.md#running-dashboard-bulk-operations).
 
     > **Note:** If the "Erase Secrets" link does not appear in the Security section (when erasing from the dashboard) or "Erase" is not available on the Option button (when erasing from the General tab) you may have not properly configured secret erase (see Task 1) or the secret might not meet one of the requirements above.
 
@@ -106,4 +106,3 @@
 1. Click the **Erase Secrets Forever** button.
 
 1. When the erase is approved, the secret or secrets will be erased by an automated process after the "erase after" date and time arrives. 
-

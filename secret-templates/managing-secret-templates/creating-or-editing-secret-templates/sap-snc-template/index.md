@@ -1,8 +1,6 @@
 [title]: # "SAP SNC Account Secret Template"
 [tags]: # "sap,snc,secret template"
 [priority]: # "1000"
-[ redirect ]: # "AutomaticExportKnowledgeBase, AutomaticExportRestApiKnowledgeBase"
-
 # SAP SNC Account Secret Template
 
 ##  Introduction
@@ -34,13 +32,79 @@ The following is an introduction to the new template fields (in addition to thos
 
 ### Prerequisites
 
-- **SAP Server Setup:** Follow the latest SAP documentation for configuring the SAP server and your SAP users to use SNC. 
+#### SAP Server Setup
 
-- **SAP NCO Files:** As with the original SAP Account template, you include the `SAPNCO.dll` and `SAPNCO_UTILS.dll` files in your Secret Server or distributed engine installation. See [SAP Heartbeat and Password Changing](../../../../remote-password-changing/sap-heartbeat-and-password-changing/index.md) for more information. 
+Follow the latest SAP documentation for configuring the SAP server and your SAP users to use SNC. For example:
 
-- **SAP Cryptographic Library:** In addition to the SAP NCO DLL files, you need to obtain the SAP Cryptographic Library. This should include the library DLL (`sapcrypto.dll`), the license ticket, and the configuration tool (`sapgenpse.exe`). Add the DLL file to your Secret Server or distributed engine installation following the same steps as the SAP NCO files. For more information on this library, see the [SAP Identity Management Configuration Guide](https://help.sap.com/viewer/4773a9ae1296411a9d5c24873a8d418c/8.0/en-US/3d4ece540ae64e30997498025e37f686.html) . 
+1. SSH into your SAP server.
 
-- **SAP Server Certificate:** Download your SAP’s server certificate from the STRUST transaction. Assuming you setup your SAP server correctly, this should be located at **STRUST \> SNC SAPCryptolib \> Subject Own Certificate**. Click the **Export Certificate** icon button at the bottom to open a dialog box, which allows you to download the certificate.
+1. Edit the configuration file:  `/sapmnt/<SystemID>//profile/profilename.pfl`
+
+1. Add the SNC settings to the end of this file. For example:
+
+   `snc/enable = 1`
+
+   `snc/gssapi_lib = /usr/sap/NPL/SYS/exe/run/libsapcrypto.so`
+
+   `snc/identity/as = p:CN=vhcalnplci,OU=Test,O=Thycotic,C=US`
+
+   `snc/accept_insecure_cpic = 1`
+
+   `snc/accept_insecure_gui = 1`
+
+   `snc/accept_insecure_r3int_rfc = 1`
+
+   `snc/accept_insecure_rfc = 1`
+
+   `snc/permit_insecure_start = 1`
+
+   `snc/extid_login_diag = 1`
+
+   `snc/extid_login_rfc = 1`
+
+   `snc/data_protection/min = 1`
+
+1. Verify that the library file path exists on your server (make sure that `libsapcrypto.so` is actually in that directory).
+
+1. Reboot your server.
+
+1. When the server is finished, reconnect and restart the SAP server with these commands:
+
+   `su npladm`
+
+   `startsap all`
+
+#### SAP NCO Files
+
+As with the original SAP Account template, you include the `SAPNCO.dll` and `SAPNCO_UTILS.dll` files in your Secret Server or distributed engine installation. See [SAP Heartbeat and Password Changing](../../../../remote-password-changing/sap-heartbeat-and-password-changing/index.md) for more information. 
+
+#### SAP Cryptographic Library
+
+In addition to the SAP NCO DLL files, you need to obtain the SAP Cryptographic Library. This should include the library DLL (`sapcrypto.dll`), the license ticket, and the configuration tool (`sapgenpse.exe`). Add the DLL file to your Secret Server or distributed engine installation following the same steps as the SAP NCO files. For more information on this library, see the [SAP Identity Management Configuration Guide](https://help.sap.com/viewer/4773a9ae1296411a9d5c24873a8d418c/8.0/en-US/3d4ece540ae64e30997498025e37f686.html) . 
+
+#### SAP Server Certificate
+
+1. Open SAP Trust Manager (STRUST).
+
+1. Download your SAP’s server certificate from the STRUST transaction. Assuming you setup your SAP server correctly, this should be located in the  **SNC SAPCryptolib** folder.
+
+1. If nothing exists under SNC SAPCryptolib, right click on the folder and select **Create** to create a new PSE under **SNC SAPCryptolib**.  
+
+1. Open the PSE.
+
+1. Enter a password if prompted. (If not, use the **Password** button to set a password).
+
+1. Click the SNC SAPCryptolib folder.
+
+1. Double click the **Subject** under **Own Certificate**.
+
+1. Confirm the certificate details appear in the **Certificate** section.
+
+1. Click the **Export Certificate** icon button at the bottom to open a dialog box, which allows you to download the certificate.
+
+   > **Note:** If the button is not enabled, you may need to click the Display or Edit (pencil and glasses) button and click the Base64 selection button when prompted and then the green checkmark button to complete the download.
+
+1. 
 
 ### Personal Security Environment Setup
 
@@ -78,9 +142,31 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
 1. As above, refer to SAP’s documentation for details on getting your PSE recognized by your SAP server. This is just an example.
 
-1. Import the certificate you created above ('target.crt' in my example) through the STRUST transaction in the SAP GUI: **STRUST \> SNC SAPCryptolib \> Import Certificate \> Add Certificate to List \> Save**.
+1. Import the certificate you created above ('target.crt' in my example) through the STRUST transaction in the SAP GUI:
 
-   ![img](images/clip_image008.png)
+   1. Go to **STRUST \\> SNC SAPCryptolib**.
+
+   1. Click the entry below the SNC SAP Cryptolib folder. In the example below it is vhcalnplci_NPL_00.
+
+      ![img](images/clip_image008.png)
+
+   1. If prompted for a password, type it and then click the green checkmark button.
+
+   1. Click the Import Certificate icon on the far left on the bottom (hover over). The Import Certificate dialog box appears.
+
+   1. Type your certificate's file path.
+
+   1. Click the green checkmark button. The dialog disappears.
+
+   1. Confirm the certificate details are now in the **Certificate** section.
+
+   1. Click **Add to Certificate List**.
+
+      >**Note:** If the button is not enabled, you may need to click the Display or Edit (pencil and glasses) button.
+
+   1. Confirm the certificate now appears in the **Certificate List** section.
+
+   1. Save and exit.
 
 1. Go to the **SU01** function.
 
@@ -94,9 +180,9 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
    ![img](images/clip_image011.png)
 
-1. Save and exit the **SU01** function.
+1. Save and exit the **SU01** transaction.
 
-1. Go to the **SM30** function.
+1. Go to the **SM30** transaction.
 
    ![image-20210715162401606](images/image-20210715162401606.png)
 
@@ -108,17 +194,23 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
 1. Select **DN** as the work area.
 
-1. ==Click the check mark icon?==
+1. Click the check mark icon button.
 
    ![img](images/clip_image015.png)
 
-1.  Click the **New Entries** link. ==Something happens==
+1.  Click the **New Entries** button. The Change View "Assignment of External ID to Users" panel appears:
+
+    ![image-20210718115657240](images/image-20210718115657240.png)
+
+1. Click the Details (magnifying glass) icon. A details panel appears.
 
 1. Fill out the fields as follows:
 
-   1. Replace the **External ID** with your own
-   1. Click to select the **Activated** check box.
-   1. Save and exit.
+    1. Replace the **External ID** with your own
+    1. Click to select the **Activated** check box.
+    1. Type your SAP username in the User text box.
+    1. Type a sequence number in the **Seq. No.** (sequence number) text box. For example, `000`.
+    1. Save and exit.
 
 1. Return to the SM30 function.
 
@@ -126,17 +218,23 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
 1. Type `VSNCSYSACL` in the **Table/View** text box.
 
-1. ==Click the Maintain button? A dialog box appears:==
+1. Click the Maintain button. A dialog box appears:
 
    ![image-20210715175247856](images/image-20210715175247856.png)
 
 1. Select **E** as the work area.
 
-1.  ==Click the check mark icon?==
+1.  Click the check mark icon button. The dialog box disappears.
 
-1. The System ID should match the system ID in your configuration file path at the beginning of this instruction. The SNC name should be the distinguished name of the server. There should only be one entry in this table for the server.
+1.  Click the **New Entries** button. The Change View "SNC: Access Control List (ACL) for Systems" panel appears:
+
+    ![image-20210718120831887](images/image-20210718120831887.png)
+
+1. Click the Details (magnifying glass) icon. A details panel appears.
 
    ![img](images/clip_image019.png)
+
+1. The System ID should match the system ID of your SAP instance. The SNC name should be the distinguished name of the server. There should only be one entry in this table for the server.
 
 1. Confirm that a “Canonical name defined” message appears.
 

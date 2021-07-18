@@ -17,6 +17,8 @@ Teams (Admin > Teams) – The team details page
 
 ## Adding a New List Field
 
+### Task 1: Create the List
+
 1. Go to **Admin \> Lists**. The List page appears:
 
    ![image-20210614120542379](images/image-20210614120542379.png)
@@ -85,6 +87,8 @@ Teams (Admin > Teams) – The team details page
 
    > **Note:** If you ever want to view past changes to a list or category, click the Audit tab for the list.
 
+### Task 2: Create a Template Using the List
+
 1. Go to **Admin \> Secret Templates**. The Manage Secret Templates page appears:
 
    ![image-20210714100409728](images/image-20210714100409728.png)
@@ -113,9 +117,17 @@ Teams (Admin > Teams) – The team details page
 
    ![image-20210714112730406](images/image-20210714112730406.png)
 
-1. Click the **Add New Launcher** button.
+1. Click the **Add New Launcher** button. The Secret Template Edit Launcher Configuration page appears:
+
+   ![image-20210716150256710](images/image-20210716150256710.png)
+
+1. 
+
+1. 
 
 1. Click the **Home** button in the main menu to return to the Secret Server dashboard.
+
+### Task 3: Create a Secret
 
 1. Click the **+** next to **Secrets** on the main menu to create a new secret based on the template you just created. The Create New Secret popup appears:
 
@@ -126,5 +138,4 @@ Teams (Admin > Teams) – The team details page
    ![image-20210714110704615](images/image-20210714110704615.png)
 
 1. Note that one of the dropdown lists has the same name as the list field you created earlier. Click it, and you see the list categories you created. The list is available for that secret's launcher.
-
 
