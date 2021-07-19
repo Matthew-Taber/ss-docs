@@ -7,8 +7,12 @@
 ## Overview
 
 By default, Secret Server session recording creates videos of launched sessions. Secret Server supports logging additional metadata, keystrokes for RDP and SSH sessions, and process activity for Remote Desktop Protocol (RDP) sessions. When these options are enabled, users can search for keystrokes or applications across sessions and the session playback interface displays the additional information.
-SSH metadata relies on the Secret Server SSH proxy. As of Secret Server 10.6, recording Remote Desktop session metadata requires the installation of an Advanced Session Recording Agent (ASRA) on the target server. In this scenario Secret Server’s protocol handler is still used to launch the session and record the session video, and the ASRA records the metadata only.
-As of 10.6.24, ASRA can optionally record any session on the target server. If enabled and the session was not launched from Secret Server, the ASRA will record both video and metadata for the session and upload both to Secret Server once the session is disconnected. This works even if someone logs into the console directly or Remote Desktops to the server without using Secret Server at all. Live viewing of this type of session is not supported.
+SSH metadata relies on the Secret Server SSH proxy.
+
+As of Secret Server 10.6, recording Remote Desktop session metadata requires the installation of an Advanced Session Recording Agent (ASRA) on the target server. In this scenario Secret Server’s protocol handler is still used to launch the session and record the session video, and the ASRA records the metadata only.
+
+As of 10.6.24, ASRA can optionally record any session on the target server. If enabled and the session was not launched from Secret Server, the ASRA will record both video and metadata for the session and upload both to Secret Server once the session is disconnected. This works even if someone logs into the console directly or Remote Desktops into the server without using Secret Server at all. Live viewing of this type of session is not supported.
+
 If you are licensed for session recording, you can install unlimited numbers of ASRAs.
 
 ## How Advanced Session Recording Agents Work
@@ -43,12 +47,11 @@ When recording all sessions, they appear on the Session Monitoring page. They ar
 
 ## Secret Server Configuration
 
-First, session recording must be enabled (**ADMIN \> Configuration \> Session Recording**). As that page warns, Thycotic highly recommends using RabbitMQ when using session recording in any production environments. See the Configuring Session Recording KB article for more information. Broken: https://thycotic.force.com/support/s/article/Configuring-Session-Recording
-https://docs.thycotic.com/ss/10.9.0/session-recording/configuring-session-recording/index.md
+First, session recording must be enabled (**ADMIN \> Configuration \> Session Recording**). As that page warns, Thycotic highly recommends using RabbitMQ when using session recording in any production environments. See [Configuring Session Recording](../configuring-session-recording/index.md) for more information.
 
 ### SSH Metadata
 
-To record SSH keystroke data, enable the SSH proxy (**ADMIN \> SSH Proxy**). Individual secrets then require configuration of the Enable Proxy setting and the Enable Session Recording setting. Then when the SSH session is launched and recorded, keystroke data is recorded, which can be searched and is displayed in the session playback interface. See the SSH Proxy configuration KB article for more information. Deprecated: https://thycotic.force.com/support/s/article/SSH-Proxy-Bandwidth https://docs.thycotic.com/ss/10.9.0/networking/ssh-proxy-configuration/index.md
+To record SSH keystroke data, enable the SSH proxy (**ADMIN \> SSH Proxy**). Individual secrets then require configuration of the Enable Proxy setting and the Enable Session Recording setting. Then when the SSH session is launched and recorded, keystroke data is recorded, which can be searched and is displayed in the session playback interface. See [SSH Proxy configuration](../../networking/ssh-proxy-configuration/index.md) for more information.
 
 ### Remote Desktop Metadata
 
