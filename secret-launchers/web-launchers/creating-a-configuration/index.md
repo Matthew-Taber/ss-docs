@@ -1,6 +1,6 @@
-[title]: # "Creating a Configuration"
-[tags]: # "Launcher"
-[priority]: # "1000"
+[title]: # (Creating a Configuration)
+[tags]: # (Launcher)
+[priority]: # (1000)
 
 # Creating a Configuration
 

@@ -1,6 +1,6 @@
-[title]: # "Automatic Secret Export"
-[tags]: # "Export secret, migration"
-[priority]: # "1000"
+[title]: # (Automatic Secret Export)
+[tags]: # (Export secret, migration)
+[priority]: # (1000)
 
 # Automatic Secret Export
 

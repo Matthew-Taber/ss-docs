@@ -1,6 +1,6 @@
-[title]: # "SAP SNC Account Secret Template"
-[tags]: # "sap,snc,secret template"
-[priority]: # "1000"
+[title]: # (SAP SNC Account Secret Template)
+[tags]: # (sap,snc,secret template)
+[priority]: # (1000)
 # SAP SNC Account Secret Template
 
 ##  Introduction

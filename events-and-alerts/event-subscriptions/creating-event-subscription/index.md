@@ -1,6 +1,6 @@
-[title]: # "Creating Event Subscriptions"
-[tags]: # "event subscription"
-[priority]: # "1000"
+[title]: # (Creating Event Subscriptions)
+[tags]: # (event subscription)
+[priority]: # (1000)
 
 # Creating Event Subscriptions
 

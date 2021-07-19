@@ -1,6 +1,6 @@
-[title]: # "Deleting and Undeleting Secrets"
-[tags]: # "Secret"
-[priority]: # "1000"
+[title]: # (Deleting and Undeleting Secrets)
+[tags]: # (Secret)
+[priority]: # (1000)
 
 # Deactivating and Reactivating Secrets
 

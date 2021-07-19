@@ -1,6 +1,6 @@
-[title]: # "Discovering SSH Private Keys"
-[tags]: # "discovery,unix,ssh,ssh private keys"
-[priority]: # "1000"
+[title]: # (Discovering SSH Private Keys)
+[tags]: # (discovery,unix,ssh,ssh private keys)
+[priority]: # (1000)
 
 # Discovering SSH Public Keys
 

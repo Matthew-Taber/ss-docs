@@ -1,6 +1,6 @@
-[title]: # "Deleting an Event Subscription"
-[tags]: # "Deleting,event subscription"
-[priority]: # "1000"
+[title]: # (Deleting an Event Subscription)
+[tags]: # (Deleting,event subscription)
+[priority]: # (1000)
 
 # Deleting an Event Subscription
 

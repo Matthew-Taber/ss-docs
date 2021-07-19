@@ -1,6 +1,6 @@
-[title]: # "Marking Alerts as Viewed"
-[tags]: # "Alert, Inbox"
-[priority]: #	"1000"
+[title]: # (Marking Alerts as Viewed)
+[tags]: # (Alert, Inbox)
+[priority]: #	(1000)
 
 # Marking Alerts as Viewed
 

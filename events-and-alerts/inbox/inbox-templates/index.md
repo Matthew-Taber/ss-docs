@@ -1,6 +1,6 @@
-[title]: # "Using Inbox Templates"
-[tags]: # "inbox templates,email,slack"
-[priority]: # "1000"
+[title]: # (Using Inbox Templates)
+[tags]: # (inbox templates,email,slack)
+[priority]: # (1000)
 
 # Using Inbox Templates
 

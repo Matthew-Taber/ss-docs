@@ -1,6 +1,6 @@
-[title]: # "Secret Template List Fields"
-[tags]: # "template, template fields, template field settings,secret list fields"
-[priority]: # "1000"
+[title]: # (Secret Template List Fields)
+[tags]: # (template, template fields, template field settings,secret list fields)
+[priority]: # (1000)
 
 # Secret Template List Fields
 
@@ -181,5 +181,5 @@ Teams (Admin > Teams) – The team details page
 
    ![image-20210714110704615](images/image-20210714110704615.png)
 
-1. Note that one of the dropdown lists has the same name as the list field you created earlier. Click it, and you see the list categories you created. The list is available for that secret's launcher. The list and other fields are also available to any secret launchers you choose to attach to the template. In addition, you can use a list to provide the allow and deny lists for restricted user input based on the user's selection of the list in the secret.
+1. Note that one of the dropdown lists has the same name as the list field you created earlier. Click it, and you see the list categories you created. The list is available for that secret's launcher.  In addition, you can use a list to provide the allow and deny lists for restricted user input based on the user's selection of the list in the secret.
 

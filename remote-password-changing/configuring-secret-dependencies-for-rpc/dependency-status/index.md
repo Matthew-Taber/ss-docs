@@ -1,6 +1,6 @@
-[title]: # "Secret Dependency Status"
-[tags]: # "secret dependency,status,report"
-[priority]: # "1000"
+[title]: # (Secret Dependency Status)
+[tags]: # (secret dependency,status,report)
+[priority]: # (1000)
 
 # Secret Dependency Status
 

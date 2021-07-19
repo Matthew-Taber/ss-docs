@@ -1,6 +1,6 @@
-[title]: # "Inbox"
-[tags]: # "Alert, Inbox,Alert Notification Center"
-[priority]: #	"1000"
+[title]: # (Inbox)
+[tags]: # (Alert, Inbox,Alert Notification Center)
+[priority]: #	(1000)
 
 # Inbox
 

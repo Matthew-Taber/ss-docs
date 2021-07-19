@@ -1,6 +1,6 @@
-[title]: # "Erasing Secrets"
-[tags]: # "secret, deleting secrets, erasing secrets"
-[priority]: # "1000"
+[title]: # (Erasing Secrets)
+[tags]: # (secret, deleting secrets, erasing secrets)
+[priority]: # (1000)
 
 # Erasing Secrets
 

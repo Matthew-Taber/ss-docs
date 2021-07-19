@@ -1,6 +1,6 @@
-[title]: # "Using Inbox Rules"
-[tags]: # "inbox rules, notification digest, inbox, notify external email, subscribers"
-[priority]: # "1000"
+[title]: # (Using Inbox Rules)
+[tags]: # (inbox rules, notification digest, inbox, notify external email, subscribers)
+[priority]: # (1000)
 
 # Using Inbox Rules
 

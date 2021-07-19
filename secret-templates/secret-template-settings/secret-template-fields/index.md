@@ -1,6 +1,6 @@
-[title]: # "Secret Template Fields"
-[tags]: # "template, template fields, template field settings"
-[priority]: # "1000"
+[title]: # (Secret Template Fields)
+[tags]: # (template, template fields, template field settings)
+[priority]: # (1000)
 
 # Secret Template Fields
 

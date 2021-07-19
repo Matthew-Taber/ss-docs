@@ -1,6 +1,6 @@
-[title]: # "Creating Teams"
-[tags]: # "Teams,lists"
-[priority]: # "1000"
+[title]: # (Creating Teams)
+[tags]: # (Teams,lists)
+[priority]: # (1000)
 
 # Creating Teams
 

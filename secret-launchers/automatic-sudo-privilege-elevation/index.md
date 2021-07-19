@@ -1,6 +1,6 @@
-[title]: # "Automatic Sudo or Su Privilege Elevation"
-[tags]: # "Sudo or Su Elevation,SSH proxy,Unix, root account"
-[priority]: # "1000"
+[title]: # (Automatic Sudo or Su Privilege Elevation)
+[tags]: # (Sudo or Su Elevation,SSH proxy,Unix, root account)
+[priority]: # (1000)
 
 # Automatic Sudo or Su Privilege Elevation
 

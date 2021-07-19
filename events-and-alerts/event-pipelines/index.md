@@ -1,6 +1,6 @@
-[title]: # "Event Pipelines"
-[tags]: # "Event Pipelines"
-[priority]: # "1000"
+[title]: # (Event Pipelines)
+[tags]: # (Event Pipelines)
+[priority]: # (1000)
 
 # Event Pipelines
 
