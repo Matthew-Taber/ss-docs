@@ -6,9 +6,25 @@
 
 You can perform bulk operations from the Dashboard on multiple secrets:
 
-1. Click to select the secrets you wish to include. To check them all, check the check box in the column header row.
+1. Navigate to the folder containing the secrets you wish to perform a bulk operation on:
 
-1. Click to select the bulk operation from the dropdown list below the list of secrets. Available bulk operations include:
+   ![image-20210713091921323](images/image-20210713091921323.png)
+
+   > **Note:** You can also run a bulk operation on the All Secrets page.
+
+1. Click the **Current Folder** link if you want to display the secrets in subfolders too. If so, the link changes to Include Subfolders. 
+
+1. Click to select the secrets you wish to include. To check them all, check the check box in the column header row. The bulk operations toolbar appears at the top:
+
+   ![image-20210713092027275](images/image-20210713092027275.png)
+
+   The most common operations have icons. Hover over each to to see a text label. The sideway ellipsis (three stacked dots) icon opens a text menu of all the bulk operations:
+
+   ![image-20210713092816021](images/image-20210713092816021.png)
+
+   > **Note:** Many of the available operations (below) are accessed via menus that appear when you click the links. For example, to disable check out, you click Change Security Options.
+
+1. Click to select the bulk operation via either an icon or the **More Bulk Operations** menu . Available bulk operations include:
 
    - Add share
    - Assign secret policy
@@ -16,7 +32,7 @@ You can perform bulk operations from the Dashboard on multiple secrets:
    - Change password remotely
    - Change to inherit permissions
    - Convert secret template
-   - Delete
+   - Deactivate (was "Delete" in earlier versions)
    - Disable autochange
    - Disable check out
    - Disable comment on view
@@ -26,6 +42,7 @@ You can perform bulk operations from the Dashboard on multiple secrets:
    - Enable check out
    - Enable comment on view
    - Enable heartbeat
+   - Erase secrets
    - Hide launcher password
    - Move to folder
    - Run heartbeat

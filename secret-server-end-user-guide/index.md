@@ -74,7 +74,7 @@ Some important basic information about secrets:
 - [Creating Secrets](../secret-management/procedures/creating-secrets/index.md)
 - [Secret Configuration Options](../secret-management/secret-configuration-options/index.md)
 - [Editing Secrets](../secret-management/procedures/editing-secrets/index.md) (includes manually changing passwords, instead of waiting for expiration)
-- [Deleting and Undeleting Secrets](../secret-management/procedures/deleting-and-undeleting-secrets/index.md)
+- [Deleting and Undeleting Secrets](../secret-management/procedures/deactivating-and-reactivating-secrets/index.md)
 
 ## Secret Folders
 

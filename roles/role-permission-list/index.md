@@ -28,6 +28,10 @@ Allows a user to make a custom audit entry when accessing a Secret using the web
 
 Allows a user to view domains, edit existing domains, delete domains, and add  new domains. Also allows a user to force synchronization or set the  synchronization interval.
 
+**Administer Automatic Export**
+
+The user can do everything the other automatic export permissions allow *and* edit the automatic export configuration.
+
 **Administer Backup**
 
 Allows a  user to view and configure automated backups for Secret Server. Users  with this role permission can change the backup path, disable backups,  and set the backup schedule.
@@ -249,17 +253,25 @@ Allows a user to copy secrets when that user also has Own Secret role permission
 
 Allows a user to create new folders at the root level of the folder structure.
 
-**Delete Secret**
+**Deactivate Secret**
 
-Allows a user to mark secrets as deleted.
+Allows a user to mark secrets as deactivated.
 
 **Delete Secrets from Reports**
 
 Allows a user to run the delete Secrets action from a report.
 
+**Download Automatic Export**
+
+The user can view all of the automatic export tabs *and* download exports from cloud storage (cloud customers only).
+
 **Edit Secret**
 
 Allows a user to edit secrets. Note that they still require the "Edit" or  "Owner" permissions on the individual secrets they are editing.
+
+**Erase Secret**
+
+Allows a user to permanently erase (as opposed to deactivate, which is reversible) a secret.
 
 **Expire Secrets from Reports**
 
@@ -267,7 +279,7 @@ Allows a user to expire Secrets listed in a report.''
 
 **Force Check In**
 
-Allows a user to force a Secret that is checked out by another user to be checked in.
+Allows a user to force a secret that is checked out by another user to be checked in.
 
 <!--**No Teams-related Permissions**-->
 
@@ -319,6 +331,10 @@ Grants access to the session recording of a secret to a user with at least "List
 
 >**Note:** Users also need the "View Session Monitoring" permission to view the recordings in SS.
 
+**Run Automatic Export**
+
+The user can view all of the automatic export tabs *and* run the export manually by clicking the Run Export button.
+
 **Unlimited Administrator**
 
 Allows a user to view and edit all secrets in the system, regardless of  permissions, when Unlimited Admin Mode is on. Note that another user  with the "Administer Unlimited Admin Configuration" role permission  would still need to turn this mode on.
@@ -346,6 +362,10 @@ Allows a user to view advanced dashboard. Without this permission, users will on
 **View Advanced Secret Options**
 
 Allows a user to view the Remote Password Changing, Security, and Dependency tabs on a Secret they have access to.
+
+**View Automatic Export** 
+
+The user can view all of the automatic export tabs. 
 
 **View Backup**
 
@@ -487,9 +507,10 @@ Allows a user to only view which Secrets exist in the system.
 
 Allows a user to view Secret Audit.
 
-**View Secret Password History**
+**View Secret Password and Private Key History**
 
-Allows a user to view previous passwords for a secret.
+Allows a user to see the history of passwords, private keys, or passphrases in
+both old and new UI.
 
 **View Secret Policy**
 

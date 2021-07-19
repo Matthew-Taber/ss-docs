@@ -8,23 +8,23 @@
 
 *Event pipelines* (EPs) are a named group of triggers, filters, and tasks to manage events and responses to them. Event pipelines themselves can be grouped into EP policies. The SS EP system is essentially a flexible instruction set builder and manager for controlling events and responses.
 
-## Definitions
+## Event Pipeline Components
 
-Custom Task Variables
+### Definitions
 
-### Event Pipelines
+#### Event Pipeline
 
-An EP is a single named group of triggers, filters, and tasks. The same EP can be in multiple EP policies. Changing an EP affects all EP policies that EP is a part of. EPs do nothing if not assigned to an EP policy.
+An EP is a single named group of triggers, filters, and tasks. The same EP can be in multiple EP policies. Changing an EP affects all EP policies that EP is a part of. EPs do nothing if not assigned to an EP policy. There are two types of event pipelines—secret and user. To run an EP, include it in an active EP policy of that same type (secret or user) with set EP policy targets, such as user groups or folders.
 
-### Event Pipeline Policies
+#### Event Pipeline Policy
 
-An EP *policy* is a named grouping of EPs. There are two types of policies: *secret* or *user*.  Secret EP policies target secret policies or folders, and User EP policies target users in Groups. EP policies have no effect if the EP policy has no target. Similarly, an EP policy with no assigned EPs does nothing.
+An *EP* *policy* is a named group of EPs that are run at the same time (in sequential order). Similar to EPs, there are two types of EP policies: *secret* or *user*.  Secret EP policies target secret policies or folders and can only contain secret EPs. User EP policies target users in Groups and can only contain user EPs. EP policies must have an assigned EP policy target to work. Similarly, an EP policy with no assigned EPs does nothing.
 
-### Event Pipeline Filters
+#### Event Pipeline Filter
 
-EP *Filters* are parameters that limit when an EP runs. All Filters have settings and can be added to an EP multiple times. The filters are:
+EP *Filters* are parameters that limit when an EP task runs. All Filters have settings and can be added to an EP multiple times. The filters are:
 
-#### Secret Policy Filters
+##### Secret Policy Filters
 
 The current secret policy filters:
 
@@ -55,7 +55,7 @@ The current secret policy filters:
 - Target User: Two Factor Type
 - Two Factor Type
 
-#### User Policy Filters
+##### User Policy Filters
 
 The current user policy filters:
 
@@ -85,19 +85,19 @@ The current user policy filters:
 
 Some filters prompt you for additional information when you select them.
 
-### Event Pipeline Policy Targets
+#### Event Pipeline Policy Target
 
-EP policy *targets* are SS folders, secret policies, or user groups that are the *subject* and EP policy is applied to. For secret EP types, the secrets inside the folders or secrets under the secret policies trigger the EPs in an EP policy. As targets, folders are not recursive—only the secrets directly in the folder can trigger an EP. For user EP types, only users in the selected groups can trigger an EP.
+EP policy *targets* are SS folders, secret policies, or user groups that are the *subject* an EP policy is applied to. For secret EP types, the secrets inside the folders or secrets under the secret policies trigger the EPs in an EP policy. As targets, folders are not recursive—only the secrets directly in the folder can trigger an EP. For user EP types, only users in the selected groups can trigger an EP.
 
-> **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
+> **Note:** EP policy targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
 
 > **Note:** Event users are different than target users: The event user triggers the event. The target user is the recipient of the event.
 
-### Event Pipeline Tasks
+#### Event Pipeline Task
 
 > **Important:** Tasks are powerful and can potentially do a lot of damage, so we highly recommend testing EPs in a safe environment before using them on production secrets.
 
-EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met. Tasks can edit secrets, move secrets, change permissions, send  notifications, and more.
+EP *tasks* are actions that are triggered in an EP, assuming any filtering conditions are met. Tasks can edit secrets, move secrets, change permissions, send notifications, and more.
 
 Tasks run in order of their appearance on the Task tab of the Event Pipeline details page. To change the task running order, hover the mouse pointer over the one you want to move, and use  the anchor on the left of its card to drag the task to the order you want it to run. If a task fails, the follow-on tasks will not run.
 
@@ -105,7 +105,7 @@ Tasks run in order of their appearance on the Task tab of the Event Pipeline det
 
 > **Note:** To reference the additional secrets in the script's Args field for the update secret with a script task or run script, use `$[ADD:1]` before the token. For example:  `$[ADD:1]$USERNAME` to reference additional secret one and `$[ADD:2]$USERNAME` to reference additional secret two.)
 
-#### Secret Tasks
+##### Secret Tasks
 
 The secret tasks are:
 
@@ -177,7 +177,7 @@ The secret tasks are:
 - Update Secret with a script
 - Update Secrets to automatically change the password
 
-#### User Tasks
+##### User Tasks
 
 The user tasks are:
 
@@ -211,11 +211,105 @@ The user tasks are:
 - Target User: Send Email to Target User
 - Target User: Unlock User
 
-### Event Users
+#### Event User
 
 An event user is the user making the action. For example: Admin updated user Jane’s email. Admin is the event user.
 
-### Event Variables
+#### Event Variable
+
+An event variable is a place holder for a piece of information that will manifest when the event occurs, for example the user initiating the event ($ByUser) or whether or not the applicable secret is active ($secret.active). 
+
+#### Target User
+
+A target user is the affected user. Example: Admin updated user Jane’s email. Jane is the target user.
+
+#### Triggers
+
+EP *triggers* are events in SS that cause the EP to begin processing. All triggers have no settings and can only be added to an EP once. The triggers are:
+
+##### Secret Triggers
+
+- Access Approved
+- Access Denied
+- Cache View
+- Check In
+- Check Out
+- Copy
+- Create
+- Custom Audit
+- Custom Password Requirement Added To Field
+- Custom Password Requirement Removed From Field
+- Delete
+- Dependency Added
+- Dependency Deleted
+- Dependency Failure
+- Edit
+- Expired Today
+- Expires in 1 Day
+- Expires in 15 Days
+- Expires in 3 Days
+- Expires in 30 Days
+- Expires in 45 Days
+- Expires in 60 Days
+- Expires in 7 Days
+- Export
+- File Save
+- Heartbeat Failure
+- Heartbeat Success
+- Hook Create
+- Hook Delete
+- Hook Edit
+- Hook Failure
+- Hook Success
+- Launch
+- Password Change
+- Password Change Failed
+- Password Change Maximum Attempts Reached
+- Password Displayed
+- Pre-Check In
+
+>**Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
+
+- Pre-Check Out
+- Secret Policy Change
+- Session Recording View
+- Undelete
+- View
+- Viewed Secret Edit
+- Web Password Fill
+
+##### User Triggers
+
+- Added to Group
+- Challenge Applied
+- Challenge Cleared
+- Disable
+- Enable
+- Lockout
+- Login
+- Login Failure
+- Logout
+- Owners Modified
+- Remove Personally Identifiable Information
+- Removed From Group
+- Two Factor Changed
+- Two Factor Reset Failure
+- Two Factor Reset Success
+- User: Create
+- User: Edit
+- User: Password Change
+
+### Component Relationships
+
+The following diagram shows how the components in the Definitions section relate. 
+
+> **Note:** Please refer to the Definition section when viewing this diagram.
+
+**Figure:** Component Relationships
+
+![image-20210630135454215](images/image-20210630135454215.png)
+
+## Event Variables
 
 Event variables are used in EP filters or tasks. They are:
 
@@ -227,16 +321,16 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 
 **Table:** Event Setting Tokens with Filter Values
 
-| Token Name | Purpose | Values |
-|--|--|--|
-| $ByUser | Username that initiated the event | Text |
-| $ByUserDisplayName | Display name of user that initiated event | Text |
-| $ContainerName | Folder name for the event | Text |
-| $EventAction | Action that occurred on the event entity type. See list of triggers. | Text |
-| $EventDetails | Event notes. For heartbeats and RPC, this contains the status and any error message. | Text |
-| $EventUserKnownAs | Username for user that caused the event. If a domain account exists, then this appears as domain\username. | Text |
-| $ItemId | Secret ID for the event | Text |
-| $ItemNameForDisplay | Event secret name | Text |
+| Token Name          | Purpose                                                      | Values |
+| ------------------- | ------------------------------------------------------------ | ------ |
+| $ByUser             | Username that initiated the event                            | Text   |
+| $ByUserDisplayName  | Display name of user that initiated event                    | Text   |
+| $ContainerName      | Folder name for the event                                    | Text   |
+| $EventAction        | Action that occurred on the event entity type. See list of triggers. | Text   |
+| $EventDetails       | Event notes. For heartbeats and RPC, this contains the status and any error message. | Text   |
+| $EventUserKnownAs   | Username for user that caused the event. If a domain account exists, then this appears as domain\username. | Text   |
+| $ItemId             | Secret ID for the event                                      | Text   |
+| $ItemNameForDisplay | Event secret name                                            | Text   |
 
 []()
 
@@ -244,34 +338,34 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 
 **Table:** Secret Setting Tokens with Filter Values
 
-| Token Name | Purpose | Values |
-|--|--|--|
-| $Secret.Active | Active | Boolean |
-| $Secret.AutoChangeOnExpiration | Auto change on expiration | Boolean |
-| $Secret.ChangePasswordNow | Change password now | Boolean |
-| $Secret.CheckOutChangePassword | Checkout change password | Boolean |
-| $Secret.CheckOutEnabled | Checkout enabled | Boolean |
-| $Secret.EnableInheritPermissions | Enable inherit permissions | Boolean |
-| $Secret.EnableInheritSecretPolicy | Enable inherit secret policy | Boolean |
-| $Secret.Expired | Expired | Boolean |
-| $Secret.HideLauncherPassword | Hide launcher password | Boolean |
-| $Secret.IsDoubleLock | Double lock | Boolean |
-| $Secret.IsSessionRecordingEnabled | Session recording enabled | Boolean |
-| $Secret.IsSSHProxyEnabled | SSH proxy enabled | Boolean |
-| $Secret.LastHeartBeatStatus | Status of last heartbeat | AccessDenied; AccountLockedOut; ArgumentError; Disabled; DnsMismatch; Failed; IncompatibleHost; Pending; Processing; Success; UnableToConnect;    UnableToValidateServerPublicKey; UnknownError |
-| $Secret.PasswordChangeFailed | Password change failed | Bolean |
-| $Secret.PasswordChangeOutOfSync | Password change out of sync | Boolean |
-| $Secret.PasswordChangeStatus | Password change status | None; Pending; Processing |
-| $Secret.PasswordComplianceCode | Password compliance code | Pending; Pass; Fail |
-| $Secret.RequireApprovalForAccess | Require approval for access | Boolean |
-| $Secret.RequireApprovalForAccessForEditors | Require approval for access for editors | Boolean |
-| $Secret.RequireApprovalForAccessForOwnersAndApprovers | Require approval for access for owners and approvers | Boolean |
-| $Secret.RequireViewComment | Require view comment | Boolean |
-| $Secret.RestrictSshCommands | Restrict SSH commands | Boolean |
-| $Secret.RPCAttemptCount | RPC attempt count | Boolean |
-| $Secret.SecretId | Secret ID | Text |
-| $Secret.SecretPolicyId | Secret policy ID | Text |
-| $Secret.SecretTemplateName | Secret template name | Text |
+| Token Name                                            | Purpose                                              | Values                                                       |
+| ----------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| $Secret.Active                                        | Active                                               | Boolean                                                      |
+| $Secret.AutoChangeOnExpiration                        | Auto change on expiration                            | Boolean                                                      |
+| $Secret.ChangePasswordNow                             | Change password now                                  | Boolean                                                      |
+| $Secret.CheckOutChangePassword                        | Checkout change password                             | Boolean                                                      |
+| $Secret.CheckOutEnabled                               | Checkout enabled                                     | Boolean                                                      |
+| $Secret.EnableInheritPermissions                      | Enable inherit permissions                           | Boolean                                                      |
+| $Secret.EnableInheritSecretPolicy                     | Enable inherit secret policy                         | Boolean                                                      |
+| $Secret.Expired                                       | Expired                                              | Boolean                                                      |
+| $Secret.HideLauncherPassword                          | Hide launcher password                               | Boolean                                                      |
+| $Secret.IsDoubleLock                                  | Double lock                                          | Boolean                                                      |
+| $Secret.IsSessionRecordingEnabled                     | Session recording enabled                            | Boolean                                                      |
+| $Secret.IsSSHProxyEnabled                             | SSH proxy enabled                                    | Boolean                                                      |
+| $Secret.LastHeartBeatStatus                           | Status of last heartbeat                             | AccessDenied; AccountLockedOut; ArgumentError; Disabled; DnsMismatch; Failed; IncompatibleHost; Pending; Processing; Success; UnableToConnect;    UnableToValidateServerPublicKey; UnknownError |
+| $Secret.PasswordChangeFailed                          | Password change failed                               | Bolean                                                       |
+| $Secret.PasswordChangeOutOfSync                       | Password change out of sync                          | Boolean                                                      |
+| $Secret.PasswordChangeStatus                          | Password change status                               | None; Pending; Processing                                    |
+| $Secret.PasswordComplianceCode                        | Password compliance code                             | Pending; Pass; Fail                                          |
+| $Secret.RequireApprovalForAccess                      | Require approval for access                          | Boolean                                                      |
+| $Secret.RequireApprovalForAccessForEditors            | Require approval for access for editors              | Boolean                                                      |
+| $Secret.RequireApprovalForAccessForOwnersAndApprovers | Require approval for access for owners and approvers | Boolean                                                      |
+| $Secret.RequireViewComment                            | Require view comment                                 | Boolean                                                      |
+| $Secret.RestrictSshCommands                           | Restrict SSH commands                                | Boolean                                                      |
+| $Secret.RPCAttemptCount                               | RPC attempt count                                    | Boolean                                                      |
+| $Secret.SecretId                                      | Secret ID                                            | Text                                                         |
+| $Secret.SecretPolicyId                                | Secret policy ID                                     | Text                                                         |
+| $Secret.SecretTemplateName                            | Secret template name                                 | Text                                                         |
 
 []()
 
@@ -328,86 +422,6 @@ These are variables created with the EP task. There are two types, global and it
 
 > **Note:** The first time an EP task is invoked, an item variable is not  translated, but subsequent invocations have the variable. Global variables are immediately available.
 
-### Target User
-
-A target user is the affected user. Example: Admin updated user Jane’s email. Jane is the target user.
-
-### Triggers
-
-EP *triggers* are events in SS that cause the EP to begin processing. All triggers have no settings and can only be added to an EP once. The triggers are:
-
-#### Secret Triggers
-
-- Access Approved
-- Access Denied
-- Cache View
-- Check In
-- Check Out
-- Copy
-- Create
-- Custom Audit
-- Custom Password Requirement Added To Field
-- Custom Password Requirement Removed From Field
-- Delete
-- Dependency Added
-- Dependency Deleted
-- Dependency Failure
-- Edit
-- Expired Today
-- Expires in 1 Day
-- Expires in 15 Days
-- Expires in 3 Days
-- Expires in 30 Days
-- Expires in 45 Days
-- Expires in 60 Days
-- Expires in 7 Days
-- Export
-- File Save
-- Heartbeat Failure
-- Heartbeat Success
-- Hook Create
-- Hook Delete
-- Hook Edit
-- Hook Failure
-- Hook Success
-- Launch
-- Password Change
-- Password Change Failed
-- Password Change Maximum Attempts Reached
-- Password Displayed
-- Pre-Check In
-
->**Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
-
-- Pre-Check Out
-- Secret Policy Change
-- Session Recording View
-- Undelete
-- View
-- Viewed Secret Edit
-- Web Password Fill
-
-#### User Triggers
-
-- Added to Group
-- Challenge Applied
-- Challenge Cleared
-- Disable
-- Enable
-- Lockout
-- Login
-- Login Failure
-- Logout
-- Owners Modified
-- Remove Personally Identifiable Information
-- Removed From Group
-- Two Factor Changed
-- Two Factor Reset Failure
-- Two Factor Reset Success
-- User: Create
-- User: Edit
-- User: Password Change
-
 ## Permissions
 
 There are three permissions:
@@ -444,21 +458,23 @@ To create a new EP:
 
 1. Go to the **Event Pipeline** page.
 
-1. If necessary, click the **Pipelines** tab. The Event Pipeline Pipelines page appears.
+1. If necessary, click the **Pipelines** tab. The Event Pipeline Pipelines page appears:
 
-1. Click the **Add Pipeline** button. The New Pipeline popup page appears.
+   ![image-20210629161249799](images/image-20210629161249799.png)
 
-1. Click to select the EP type: **Secret** or **User**.
+1. Click the **Add Pipeline** button. The New Pipeline popup page appears:
 
-1. Click to select the **Create New Pipeline** selection button.
+   ![image-20210629161321414](images/image-20210629161321414.png)
 
-1. Click the **Create** button. The New Pipeline wizard appears on the Choose Triggers page.
+1. Click the **Pipeline Type** dropdown list to select the EP type: **Secret** or **User**. For this instruction, we chose User.
+
+1. Click the **Create** button. The New Pipeline wizard appears on the Choose Triggers page:
+
+   ![image-20210629161639003](images/image-20210629161639003.png)
 
 ##### Step Two: Add Triggers
 
->**Important:** The pre-check-in trigger is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
-
-> **Note:** When using the pre-check-in trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
+>**Note:** When using the pre-check-in trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
 
 1. In the **Add Triggers** section, click the **+** button next to the triggers you desire. You can also search for a trigger by typing in the search text box. The selected triggers appear in the Selected Triggers list. Consider the following when selecting triggers:
 
@@ -467,7 +483,13 @@ To create a new EP:
    - You can limit when the EP runs by adding filters.
    - Multiple triggers are logically ORed (not XORed) together. Each trigger is considered individually, and only one needs to apply for the EP to run—if concurrent triggers do not apply, it does not matter. If multiple triggers do apply, the EP will only run once per EP policy.
 
-1. Click the **Next** button. The Choose Filters page of the wizard appears.
+   The added trigger appears in the Selected User Triggers box and the Details Triggers section:
+   
+   ![image-20210629162044105](images/image-20210629162044105.png)
+
+1. Click the **Next** button. The Choose Filters page of the wizard appears:
+
+   ![image-20210629162144011](images/image-20210629162144011.png)
 
 ##### Step Three: Add Filters
 
@@ -477,17 +499,27 @@ To create a new EP:
    - Because the same filter can differ by its settings, you can add the same filter multiple times to an EP.
    - Filters are logically ANDed together—all filters apply at once and all matter.
 
-1. Click the **Next** button. The Choose Tasks page of the wizard appears.
+    The selected filters appear in the Selected User Filters section:
+
+   ![image-20210629162522265](images/image-20210629162522265.png)
+
+1. Click the **Next** button. The Choose Tasks page of the wizard appears:
+
+   ![image-20210629162619260](images/image-20210629162619260.png)
 
 ##### Step Four: Choose Tasks
 
-1. Use the exact same method to add tasks to the EP. Many tasks present a popup page for you to provide additional information when you click on them.
+1. Use the exact same method to add tasks to the EP. Many tasks present a popup page for you to provide additional information when you click on them. The selected user tasks appear:
 
-1. Set the task order. Tasks run in order of their appearance in the **Task** tab of the **Event Pipeline** page. To change the task running order, hover the mouse pointer over the one you want to move, and use the anchor on the left of its card to drag the task to the order you wish it to run. If a Task fails, then the following tasks will not run.
+   ![image-20210629162813043](images/image-20210629162813043.png)
+
+1. Set the task order if you selected more than one. Tasks run in order of their appearance in the **Task** tab of the **Event Pipeline** page. To change the task running order, hover the mouse pointer over the one you want to move, and use the anchor on the left of its card to drag the task to the order you wish it to run. If a Task fails, then the following tasks will not run.
 
    > **Warning:** Tasks are very powerful and thus can be dangerous. You can alter SS in dramatic, sometimes irreversible ways. We strongly recommend testing EPs in a safe sandbox environment before applying them to production SS servers.
 
-1. Click the **Next** button. The Name Pipeline page of the wizard appears.
+1. Click the **Next** button. The Name Pipeline page of the wizard appears:
+
+   ![image-20210629162937440](images/image-20210629162937440.png)
 
 1. Type the EP's name in the **Pipeline** text box.
 
@@ -515,7 +547,7 @@ Because EPs are not directly tied to a single EP policy, they can be viewed thro
 
 #### Activating or Deactivating Event Pipeline Policies
 
-To control if an EP policies is available, you can toggle the EP policy's active status:
+To control if an EP policy is available, you can toggle its active status:
 
 1. Go to the **Event Pipelines** page.
 
@@ -531,7 +563,9 @@ To control if an EP policies is available, you can toggle the EP policy's active
 
 #### Adding an Existing Event Pipeline
 
-**Note:** Adding Existing Pipeline enables the pipeline to be used in other policies.  Only pipelines of the same type (Secret or User) can be added. Note:  This does not create a copy of the existing pipeline, it creates a link. Thus, any changes to the pipeline will affect the other policies that  use it.
+> **Note:**  Adding an existing pipeline enables that pipeline to be used in other policies.  Only pipelines of the same type (secret or user) can be added. 
+
+> **Note:**  This does not create a copy of the existing pipeline, it creates a link. Thus, any changes to the pipeline will affect the other policies that  use it.
 
 1. Go to the **Event Pipelines** page.
 
@@ -624,7 +658,21 @@ To remove an EP from an EP:
 
 > **Note:** The button removes the EP from the EP policy, but it does not remove it from SS. Other EP policies using the EP still have access to it.
 
-## Infinite Loops
+## Advanced Settings and Troubleshooting
+
+### Configuring Advanced Settings
+
+There are a few new advanced settings you can use with EP polices:
+
+- **Event Pipeline Activity Log entries removed after (days)**: The EP activity log entries stay in the log for this many days. Default value: 90.
+- **Event Pipelines: Allow Confidential Secret Fields to be used in Scripts**: Allows confidential secret fields to be used in EP script, such as $password. Default value: False.
+- **Event Pipelines Infinite Loop Time (Minutes)**: If an EP executes the number of times specified in the infinite loop  threshold during the Infinite Loop Time period, it is marked as an infinite loop. Default Value: 5 (on premises), 20 (cloud).
+- **Event Pipelines Infinite Loop Threshold:** Number of times that an EP can execute within the infinite loop time on an individual item before it is considered to be an infinite loop. Default Value: 5.
+- **Event Pipelines Log Skipped Policies**: If true, the the pipeline activity log will log filtered policies runs. Default value: False.
+- **Event Pipelines Maximum Script Run Time (Minutes)**: Scripts ran by EP tasks are stopped after this many minutes. Default Value: 5 minutes.
+- **Heartbeat: Include UnableToConnect as Heartbeat Failure Event**: Adds the ability to trigger EPs on heartbeat UnableToConnect status. When toggled to true, this setting allows the user to include UnableToConnect as part of the heartbeat failure EPs. It defaults to false.
+
+### Infinite Loops
 
 It is possible for EPs to trigger each other over and over in an endless loop. For example:
 
@@ -637,17 +685,3 @@ It is possible for EPs to trigger each other over and over in an endless loop. F
 Fortunately, SS detects these loops and automatically deactivates the involved EPs. So, if you have EPs that seem to be deactivating themselves, look for circular logic paths involving the EPs.
 
 > **Note:** By default, pipelines are configured to consider any event that executes five tasks within five minutes from the same trigger as an infinite loop. For example, "secret edit" is selected as a pipeline trigger, and "remote password change" is selected as the task. After the first edit is made on a secret, an RPC is triggered. Every time the RPC completes, a new edit is triggered, which, in turn, triggers another RPC. If this happens five times within five minutes, then an infinite loop is declared. If the RPC is slow, taking more than five minutes for five password changes to occur, then an infinite loop is **not** declared. In this case, use the "configuration advanced" page to change "event pipelines infinite loop time (minutes)" to a longer time.
-
-## Configuring Advanced Settings
-
-**Configuration Advanced Settings**
-
-There are a few new Advanced Setting that can be used with EP polices:
-
-- **Event Pipeline Activity Log entries removed after (days)**: The EP activity log entries stay in the log for this many days. Default value: 90.
-- **Event Pipelines: Allow Confidential Secret Fields to be used in Scripts**: Allows confidential secret fields to be used in EP script, such as $password. Default value: False.
-- **Event Pipelines Infinite Loop Time (Minutes)**: If an EP executes the number of times specified in the infinite loop  threshold during the Infinite Loop Time period, it is marked as an infinite loop. Default Value: 5 (on premises), 20 (cloud).
-- **Event Pipelines Infinite Loop Threshold:** Number of times that an EP can execute within the infinite loop time on an individual item before it is considered to be an infinite loop. Default Value: 5.
-- **Event Pipelines Log Skipped Policies**: If true, the the pipeline activity log will log filtered policies runs. Default value: False.
-- **Event Pipelines Maximum Script Run Time (Minutes)**: Scripts ran by EP tasks are stopped after this many minutes. Default Value: 5 minutes.
-- **Heartbeat: Include UnableToConnect as Heartbeat Failure Event**: Adds the ability to trigger EPs on heartbeat UnableToConnect status. When toggled to true, this setting allows the user to include UnableToConnect as part of the heartbeat failure EPs. It defaults to false.
