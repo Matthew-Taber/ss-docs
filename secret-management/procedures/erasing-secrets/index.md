@@ -81,8 +81,6 @@
 
 1. For purposes of this instruction, create a secret for testing in your personal folder. For now, do not use an existing one to ensure all the requirements are met. 
 
-    > **Note:** Secret erasure uses secret bulk operations, even if you want to erase only one. If you click the Options button for a secret, erase is not an option.
-
 1. You can erase the secret via a dashboard bulk operation or from the **Options** button on the **General** tab of the secret itself. For a bulk operation, erase is accessed by the **More Bulk Options** button. **Erase Secrets** is in the **Security** section of the **More Bulk Options** popup. See [Running Dashboard Bulk Operations](../../../admin/application-dashboard/running-dashboard-bulk-operations/index.md#running-dashboard-bulk-operations).
 
     > **Note:** If the "Erase Secrets" link does not appear in the Security section (when erasing from the dashboard) or "Erase" is not available on the Option button (when erasing from the General tab) you may have not properly configured secret erase (see Task 1) or the secret might not meet one of the requirements above.
@@ -95,7 +93,7 @@
 
 1. Use the calendar and time widgets to set the **Erase After Date**. It must be minimum of 24 hours away to give the erase secrets request time to process. If you set it to less than that, you cannot continue the process.
 
-1. Type your reasoning for permanently erasing the secret or secrets in the **Reason** text box. This is not tedium—the granter will need this to decide whether to let you take this irreversible operation, destroying the audit trail of the secret. Specifically, explain why a deactivation is not sufficient.
+1. Type your reasoning for permanently erasing the secret or secrets in the **Reason** text box. This is not tedium—the granter will need this to decide whether to let you take this irreversible, destructive action. Specifically, explain why a deactivation is not sufficient.
 
 1. Click the **Erase** button. A confirmation popup appears:
 
@@ -105,4 +103,4 @@
 
 1. Click the **Erase Secrets Forever** button.
 
-1. When the erase is approved, the secret or secrets will be erased by an automated process after the "erase after" date and time arrives. 
+1. When the erase request is approved, the secret or secrets will be erased by an automated process after the "erase after" date and time arrives. 
