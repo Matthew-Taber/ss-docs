@@ -16,6 +16,7 @@ Created or made significant changes to these topics:
 - Deactivating and Reactivating Secrets
 - Event List
 - Running Bulk Operations
+- SAP SNC Account Secret Template
 - Secret Server Role Permissions List
 - Using Inbox Rules
 - Using Inbox Templates

@@ -107,11 +107,47 @@ Teams (Admin > Teams) – The team details page
 
    ![image-20210714102124242](images/image-20210714102124242.png)
 
-1. Type `Server` in the **Field Name** text box for the first (and currently only) field.
+1. Complete the following steps for 
+
+1. Type `My Server List` in the **Field Name** text box for the first (and currently only) field.
 
 1. Click the **Type** dropdown list for the field and select **List**.
 
-1. Click the blue floppy disk (save) icon on the far right of the table row.
+1. Click to select the **Is Required** check box.
+
+1. Click the **+** on the far right of the table row.
+
+1. Type `Password` in the **Field Name** text box for the second field.
+
+1. Click the **Type** dropdown list for the field and select **Password**.
+
+1. Click to select the **Is Required** check box.
+
+1. Click the **+** on the far right of the table row.
+
+1. Type `Username` in the **Field Name** text box for the third field.
+
+1. Click the **Type** dropdown list for the field and select **Text**.
+
+1. Click to select the **Is Required** check box.
+
+1. Click the **+** on the far right of the table row.
+
+1. Type `Computer` in the **Field Name** text box for the forth field.
+
+1. Click the **Type** dropdown list for the field and select **Text**.
+
+1. Click to select the **Is Required** check box.
+
+1. Click the **+** on the far right of the table row.
+
+1. Type `Domain` in the **Field Name** text box for the fifth field.
+
+1. Click the **Type** dropdown list for the field and select **Text**.
+
+1. Click to select the **Is Required** check box.
+
+1. Click the **+** on the far right of the table row.
 
 1. Click the **Configure Launcher** button. The Secret Template Edit Launcher Configuration page appears:
 
@@ -121,9 +157,17 @@ Teams (Admin > Teams) – The team details page
 
    ![image-20210716150256710](images/image-20210716150256710.png)
 
-1. 
+1. Click the **Launcher Type to Use** dropdown list and select **Remote Desktop**.
 
-1. 
+1. Click each of the four following dropdown lists and select the matching value. 
+
+1. Click to select the Restrict User Input check box. A new section appears:
+
+   ![image-20210718133000802](images/image-20210718133000802.png)
+
+1. Click the **Allow List** dropdown list to select **My Server List**.
+
+1. Click the Save button.
 
 1. Click the **Home** button in the main menu to return to the Secret Server dashboard.
 
@@ -137,5 +181,5 @@ Teams (Admin > Teams) – The team details page
 
    ![image-20210714110704615](images/image-20210714110704615.png)
 
-1. Note that one of the dropdown lists has the same name as the list field you created earlier. Click it, and you see the list categories you created. The list is available for that secret's launcher.
+1. Note that one of the dropdown lists has the same name as the list field you created earlier. Click it, and you see the list categories you created. The list is available for that secret's launcher. The list and other fields are also available to any secret launchers you choose to attach to the template. In addition, you can use a list to provide the allow and deny lists for restricted user input based on the user's selection of the list in the secret.
 

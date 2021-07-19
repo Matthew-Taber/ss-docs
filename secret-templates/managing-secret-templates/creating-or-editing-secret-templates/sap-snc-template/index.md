@@ -104,7 +104,6 @@ In addition to the SAP NCO DLL files, you need to obtain the SAP Cryptographic L
 
    > **Note:** If the button is not enabled, you may need to click the Display or Edit (pencil and glasses) button and click the Base64 selection button when prompted and then the green checkmark button to complete the download.
 
-1. 
 
 ### Personal Security Environment Setup
 
@@ -234,7 +233,7 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
    ![img](images/clip_image019.png)
 
-1. The System ID should match the system ID of your SAP instance. The SNC name should be the distinguished name of the server. There should only be one entry in this table for the server.
+1. The **System ID** should match the system ID of your SAP instance. The **SNC name** should be the distinguished name of the server. There should only be one entry in this table for the server.
 
 1. Confirm that a “Canonical name defined” message appears.
 

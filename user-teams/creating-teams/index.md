@@ -1,16 +1,14 @@
-[title]: # (Creating Teams)
-[tags]: # (Teams)
-[priority]: # (1000)
+[title]: # "Creating Teams"
+[tags]: # "Teams,lists"
+[priority]: # "1000"
 
 # Creating Teams
 
 1. Navigate to **Admin \> See All**. The Administration page appears:
 
-   ![image-20191114142009435](images/image-20191114142009435.png)
+1. Click **Teams** in the list. The Teams page appears:
 
-1. Type and then click **Teams** in the list. The Teams page appears:
-
-   ![1558127603496](images/1558127603496.png)
+   ![image-20210718170525517](images/image-20210718170525517.png)
 
 1. Click the **Create Team** button. The Create Team popup page appears:
 
@@ -20,44 +18,55 @@
 
 1. (Optional) Type a description in the **Team Description** text box.
 
-1. Click the **Create Team** button. The new team appears on the Teams page:
+1. Click the **Create Team** button. The new team's Members tab appears:
 
-   ![1558127637461](images/1558127637461.png)
+   ![image-20210718171033202](images/image-20210718171033202.png)
 
-1. Click the table row for the newly created team. That team's page appears:
+1. Click the **Edit** link. An Add Groups / Users section appears:
 
-   ![1558127645339](images/1558127645339.png)
+   ![image-20210718171324955](images/image-20210718171324955.png)
 
-1. Click the **Sites** button on the left. The Sites page appears:
+1. Click the dropdown list to select a group of users.
 
-   ![1558127661591](images/1558127661591.png)
+1. Type the name of desired users or groups in the search box.
 
-1. Click the **Edit** button. The page becomes editable:
+1. The user or group appears in the Users and Groups box.
 
-   ![1558127675330](images/1558127675330.png)
-
-1. Click to select the **Should Restrict Sites** check box. A Site dropdown list appears:
-
-    ![1558127687626](images/1558127687626.png)
-
-1. Click the **Site** list to select a site to restrict the team to. The selected site appears in the Site table:
-
-    ![1558127700605](images/1558127700605.png)
+1. Repeat the process for additional users and groups.
 
 1. Click the **Save** button.
 
-1. Click the **Members** button on the left. The Members page appears:
+1. Click the **Sites** tab:
 
-    ![1558127715481](images/1558127715481.png)
+   ![image-20210718171748157](images/image-20210718171748157.png)
 
-1. Click the **Edit** button. The page becomes editable:
+1. Click the **Edit** link. The page becomes editable:
 
-    ![1558127723443](images/1558127723443.png)
+   ![image-20210718171852266](images/image-20210718171852266.png)
 
-1. Type the name of the desired user or group to add in the **Add Groups / User** search box. When you begin typing, a list of available groups and users appear below. Select one. The user or group appears in the Users and Groups table:
+1. Click to select the **Should Restrict Sites** check box. A Site dropdown list appears:
 
-    ![1558127738218](images/1558127738218.png)
+    ![image-20210718171924876](images/image-20210718171924876.png)
 
-1. Click the **Save** button. The member appears on the Members page:
+1. Click the **Add Site** list to select a site to restrict the team to. The selected site appears in the Allowed Sites box.
 
-    ![1558127745726](images/1558127745726.png)
+1. Click the **Save** button.
+
+1. Click the **Lists** tab:
+
+     ![image-20210718172226084](images/image-20210718172226084.png)
+
+1. Click the **Edit** link. The page becomes editable:
+
+     ![image-20210718172321733](images/image-20210718172321733.png)
+
+1. Click the **Should Restrict Lists** check box.
+
+     ![image-20210718172420300](images/image-20210718172420300.png)
+
+1. Click the **Add List** dropdown list to select what lists the team members have access to. The chosen list appears in the Allowed Lists box.
+
+1. Repeat the process for any additional lists.
+
+1. Click the **Save** button.
+
