@@ -11,6 +11,8 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created or made significant changes to these topics:
 
+- Automatic Secret Export
+- Automatic Secret Export REST API
 - Automatic Sudo or Su Privilege Elevation
 - Creating Event Subscriptions
 - Deactivating and Reactivating Secrets
