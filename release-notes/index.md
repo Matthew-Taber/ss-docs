@@ -1,6 +1,6 @@
-[title]: # "Secret Server Release Notes"
-[tags]: # "Release Notes"
-[priority]: # "2000"
+[title]: # (Secret Server Release Notes)
+[tags]: # (Release Notes)
+[priority]: # (2000)
 
 # Secret Server Release Notes
 
