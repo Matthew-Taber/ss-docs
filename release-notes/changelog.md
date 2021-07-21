@@ -7,6 +7,22 @@
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
 
+## July to December 2021
+
+Created or made significant changes to these topics:
+
+- Automatic Secret Export
+- Automatic Secret Export REST API
+- Automatic Sudo or Su Privilege Elevation
+- Creating Event Subscriptions
+- Deactivating and Reactivating Secrets
+- Event List
+- Running Bulk Operations
+- SAP SNC Account Secret Template
+- Secret Server Role Permissions List
+- Using Inbox Rules
+- Using Inbox Templates
+
 ## January to June 2021
 
 Created or made significant changes to these topics:
@@ -64,7 +80,7 @@ Created the following topics from Salesforce articles or PDFs (often including s
 - Setting up SAML SSO for Active Directory
 - Setting up SAML SSO for Azure Active Directory
 
-## August to  December 2020
+## August to December 2020
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 

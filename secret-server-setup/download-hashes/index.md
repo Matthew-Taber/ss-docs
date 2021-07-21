@@ -4,7 +4,23 @@
 
 # Secret Server Download Hashes
 
-## 10.9.000064 (Current Version)
+## 11.0.000000 (Current Version)
+
+> **Note:** Calculated on 2021-07-19 21:30:36-04:00.
+
+ThycoticSetup.exe:
+
+- SHA1 = 08eea1697a9526bd616c20079ec39ece4b1fdfde
+- SHA256 = 8d85475c6c99d1b384aacd1a5b0153a4a374123543cb314c56e70a12f499a50e
+
+Version_11_0_000000.zip:
+
+- SHA1 = f85f971c9579ec288f761e74fc670a680609f62d
+- SHA256 = e3bc353cc5a2213344026a4a3066a93ebdfe31a9a9289ab2d7365b053c3b2034
+
+## Earlier Versions
+
+### 10.9.000064
 
 > **Note:** Calculated on 2021-06-02 19:32:10-04:00.
 
@@ -17,8 +33,6 @@ Version_10_9_000064.zip:
 
 - SHA1 = aec38df961ccc88650188ee4158c15b6a7a4a107
 - SHA256 = b896ef24904beb2414edcfc259ef14c9eadb2fdd442289a2781d3e1ac8fa411b
-
-## Earlier Versions
 
 Below are the hashes for the step-upgrade version. When upgrading from a version prior to 8.4.000004, the upgrade process will upgrade Secret Server to 8.4.000004.
 

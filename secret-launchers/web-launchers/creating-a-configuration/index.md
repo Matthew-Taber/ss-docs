@@ -10,9 +10,8 @@ When configuring the Web Launcher:
 
   - `https://login.yahoo.com/config/login`
 
-
   - `https://MyServer/Billing/login.aspx`
-
+    
   - `https://firewall07/login/`
 
 > **Note:** The Login URL is typically a secure site with a prefix of `https://`. If allowed to access the site, SS automatically detects if https should be used to ensure the credentials are passed securely.
