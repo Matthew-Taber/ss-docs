@@ -1,6 +1,6 @@
-[title]: # (Secret Server Release Notes)
-[tags]: # (Release Notes)
-[priority]: # (2000)
+[title]: # "Secret Server Release Notes"
+[tags]: # "Release Notes"
+[priority]: # "2000"
 
 # Secret Server Release Notes
 
@@ -8,21 +8,24 @@
 
 ## Current
 
->**Important:** These notes cover the General Availability release of version 10.9.000064 and Early Adopter release of version 10.9.000063. The general  availability release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version. If you are not part of the Early Adopter release program, or are in a Secret Server Cloud region that has not yet received the 10.9.00064 release, please use the [Secret Server 10.9.000033](ss-rn-10-9-000033.md) notes instead.
+>**Important:** These notes cover the early adopter (on-premises only) release of version 11.0.000000. The general availability release is not till August 17, 2021 for the on-premises version and between August 21st and 28th, depending on region, for the cloud version. If you are not part of the early adopter release program, or are in a Secret Server Cloud region that has not yet received the 11.0.00000 release, please use the [Secret Server 10.9.000064](ss-rn-10-9-000064.md) notes instead.
 >
-> Updates:
->- April 3rd: 10.9.000064 released to Secret Server Cloud in the Canada and Southeast Asia regions.
->- April 10th: 10.9.000064 released to Secret Server Cloud in the Australia region.
->- April 13th: 10.9.000064 On-Premises released.
->- April 24th: 10.9.000064 released to half of the United States region customers.
+>The tentative dates are:
+>
+>- 17th August 2021 (On-premises)
+>- 21st August 2021 (Cloud – CA, SG, AU, EU)
+>- 28th August (Cloud – US)
+>
+>Once the actual dates are manifest, we will post them in an update in this note.
 
-- [Secret Server 10.9.000063](ss-rn-10-9-000063.md) (Early Adopter)
-- [Secret Server 10.9.000064](ss-rn-10-9-000064.md) (General Availability)
+- **[Secret Server 11.0.000000](ss-rn-11-0-000000.md) (early adopter)**
+- General availability coming soon!
 
 >**Note:** The system requirements last changed with version 10.7.000000. See [that version's release notes](./ss-rn-10-7-000000.md) for details.
 
 ## Secret Server On-Premises Legacy
 
+- [Secret Server 10.9.000064](ss-rn-10-9-000064.md) 
 - [Secret Server 10.9.000033](ss-rn-10-9-000033.md)
 - [Secret Server 10.9.000032](ss-rn-10-9-000005.md)
 - [Secret Server 10.9.000002](ss-rn-10-9-000002.md)
