@@ -22,7 +22,7 @@ This guide provides the information an administrator needs to configure SS 10.4 
 
 ### Audience
 
-This document is for administrators who are responsible for installing, configuring, and operating enterprise infrastructure for their organization. To use this guide, you must have knowledge of your organization’s network infrastructure and applicable policies. In addition, you must have administrative access to configure your operational environment.
+This document is for administrators who are responsible for installing, configuring, and operating enterprise infrastructure for their organization. To use this guide, you must have knowledge of your organization's network infrastructure and applicable policies. In addition, you must have administrative access to configure your operational environment.
 
 ### What Is Common Criteria?
 
@@ -148,7 +148,7 @@ For Common Criteria compliance, when a user first logs in, the login banner must
 
 ### Configuring Account Lockout
 
-To access SS, users must login with local or domain credentials. To comply with Common Criteria, Secret Server must use "account lockouts" to prevent repeated unsuccessful login attempts. Configurable by an Secret Server admin, an account becomes inaccessible after a defined number of unsuccessful authentication attempts until an admin unlocks the user’s account.
+To access SS, users must login with local or domain credentials. To comply with Common Criteria, Secret Server must use "account lockouts" to prevent repeated unsuccessful login attempts. Configurable by an Secret Server admin, an account becomes inaccessible after a defined number of unsuccessful authentication attempts until an admin unlocks the user's account.
 
 To configure settings for account lockouts:
 
@@ -157,16 +157,16 @@ To configure settings for account lockouts:
 1. Click the **Edit** button.
 1. Adjust the number in the **Maximum Login Failures** text box. The default is five attempts.
 
-To Unlock a user’s account:
+To Unlock a user's account:
 
 1. Navigate to **Admin \> Users \> Select the User**.
 1. Click the **Edit** button.
 1. Click to deselect the **Locked Out** check box.
 1. Click the **Save** button.
 
-### Disabling “Remember Me” Logins
+### Disabling "Remember Me" Logins
 
-A browser's "remember me" login function stores the user's login name and password so the user does not need to enter it again on that browser, which is both convenient and insecure. To disable “Allow Remember Me” during logins, follow the instructions in the "How to Disable Allow Remember Me during Logins" section of the [Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf).
+A browser's "remember me" login function stores the user's login name and password so the user does not need to enter it again on that browser, which is both convenient and insecure. To disable "Allow Remember Me" during logins, follow the instructions in the "How to Disable Allow Remember Me during Logins" section of the [Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf).
 
 ### Configuring SQL Server
 

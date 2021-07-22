@@ -18,9 +18,9 @@ Existing customers have 30 days to activate their licenses after upgrading. New 
 **How is license activation implemented in Secret Server?**
 Activation is per license and Web server (the combination of the two). Therefore, even if a Web server was already activated, if you bring up a new Web server, it also needs activation. The activation process gathers the name, email, and phone number of the individual activating, for internal purposes only. No other personal information is sent to Thycotic.
 
-**What will happen if we don’t activate our licenses?**
+**What will happen if we don't activate our licenses?**
 
-Secret Server will go into Limited Mode if you don’t activate your licenses. Limited Mode allows you to view passwords but many other features are disabled such as creating Secrets, editing Secrets, changing permissions and using web services. Simply activate your licenses to get out of Limited Mode.
+Secret Server will go into Limited Mode if you don't activate your licenses. Limited Mode allows you to view passwords but many other features are disabled such as creating Secrets, editing Secrets, changing permissions and using web services. Simply activate your licenses to get out of Limited Mode.
 
 **We have several license keys. Do we need to activate each license key individually?**
 

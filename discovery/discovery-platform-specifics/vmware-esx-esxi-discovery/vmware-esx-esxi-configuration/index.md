@@ -17,7 +17,7 @@ Either must be installed on the servers running discovery—your local SS machin
 
 ## Details
 
-Secret Server searches the machine’s Windows path PATH for the VMWare SDK, therefore installing the correct version of it is all that is needed. On the machine you install VMware PowerCLI, update the Windows "Path" environment variable to include the folder where the file `VMware.Vim.dll` is located.
+Secret Server searches the machine's Windows path PATH for the VMWare SDK, therefore installing the correct version of it is all that is needed. On the machine you install VMware PowerCLI, update the Windows "Path" environment variable to include the folder where the file `VMware.Vim.dll` is located.
 
 > **Note:** After installing the VMware PowerCLI, the default installation path is: `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45`. The PowerCLI installation path **must be** in the system PATH variable.
 
@@ -51,7 +51,7 @@ Download supported versions of PowerCLI from VMware:
 
 - We recommend not using an outdated SDK with an updated version of VMWare.
 
-- Secret Server’s VMWare password changer rejects self-signed SSL certificates. Make sure your VMWare servers have valid SSL certificates (see below for settings).
+- Secret Server's VMWare password changer rejects self-signed SSL certificates. Make sure your VMWare servers have valid SSL certificates (see below for settings).
 
 - The error "Exception: The remote certificate is invalid according to the validation procedure" indicates that vCenter server root certificates needs to be installed. More info [here.](https://kb.vmware.com/s/article/2108294)
 

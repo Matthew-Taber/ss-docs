@@ -32,7 +32,7 @@ A distributed Engine server is required to communicate with SSC. Distributed eng
 
 [SSC's Architecture Diagram](https://thycotic.force.com/support/s/article/Secret-Server-Cloud-Architecture) (KB) shows the network topology of your cloud instance.  Your on-premises distributed  engines do not need any inbound TCP/IP ports open (unless using RADIUS authentication). If you do not have outbound firewall policies in place, no firewall configuration is necessary. If you do, the distributed engines need outbound access to:
 
-- SSC’s multi-tenant front-end Web server
+- SSC's multi-tenant front-end Web server
 - A shared service bus
 - A customer-specific service bus
 - A Content Delivery Network (CDN)
@@ -45,7 +45,7 @@ After you sign up for a trial, you can choose your URL name and provision your i
 
 > **Note:** To see additional documentation for SS features, please refer to the support resources section at the end of this document.
 
-1. After you sign signed up for a SSC trial, you received an email from Thycotic Sales titled “Secret Server Cloud Trial.”  Click the **Cloud Portal** link in that email to begin your setup. The Setup Page appears in your browser.
+1. After you sign signed up for a SSC trial, you received an email from Thycotic Sales titled "Secret Server Cloud Trial."  Click the **Cloud Portal** link in that email to begin your setup. The Setup Page appears in your browser.
 
 1. Choose your location in the **Cloud Environment** dropdown list.
 
@@ -55,7 +55,7 @@ After you sign up for a trial, you can choose your URL name and provision your i
 
 1. After confirming the password, click the **Set Password and Login** button. The Thycotic log on page appears.
 
-   > **Note:** This is the backup admin account that you may need in a “break the glass” or unlimited admin situation. Thycotic recommends you store the password in a secured physical location such as a safe or locked file cabinet. You can reset the password using an email reset, but **if this password is forgotten or you no longer have access to the email account, Thycotic will cannot reset this password**.
+   > **Note:** This is the backup admin account that you may need in a "break the glass" or unlimited admin situation. Thycotic recommends you store the password in a secured physical location such as a safe or locked file cabinet. You can reset the password using an email reset, but **if this password is forgotten or you no longer have access to the email account, Thycotic will cannot reset this password**.
 
 1. Click the blue button that matches the location you just chose. A setup page appears.
 
@@ -65,7 +65,7 @@ After you sign up for a trial, you can choose your URL name and provision your i
 
 1. Click to select the check box to signify agreement.
 
-1. From the dropdown, select **Yes** or **No** to signify your organization’s oversight of EU information.
+1. From the dropdown, select **Yes** or **No** to signify your organization's oversight of EU information.
 
 1. Click the **Accept** button. It may take several minutes for your new SSC to spin up.
 
@@ -97,7 +97,7 @@ To install the Distributed Engine:
 
 1. Approve it by clicking the check box to the right.
 
-1. Validate the engine’s connectivity:
+1. Validate the engine's connectivity:
 
    1. Go to **Admin \> Distributed Engine \> Manage Sites**.
 
@@ -163,7 +163,7 @@ Heartbeat ensures the secrets you have stored have the correct password, and Rem
 
 1. Go to the secret you created for domain synchronization in the previous section or create a new test secret to use.
 
-1. A brand new secret’s **Last Heartbeat** status should be pending or processing. Once heartbeat completes you should one of these statuses:
+1. A brand new secret's **Last Heartbeat** status should be pending or processing. Once heartbeat completes you should one of these statuses:
 
    - **Unable to Connect:** SS could not reach the target machine. This could be a firewall issue or the machine name or IP address is wrong.
    - **Failed:** SS could connect but could not authenticate. This likely means the password on the secret is incorrect.
@@ -185,13 +185,13 @@ Heartbeat ensures the secrets you have stored have the correct password, and Rem
 
 ## Troubleshooting and Resources
 
-#### Get Error: “Site (Default) engines are not currently online” When Saving Domain
+#### Get Error: "Site (Default) engines are not currently online" When Saving Domain
 
 This can occur when SS was not able to complete a round trip with the installed engine service. This validation may take several minutes for SS to perform after the engine has been approved and assigned to the site. To address the issue:
 
 1. On the server you installed engine on, check the logs in the install directory `C:\Program Files\Thycotic Software Ltd\Distributed Engine\log`.
 
-1. If you see a message for “Could not configure, trying in 30 seconds” or a “Bus Broken Down Error” verify that the engine is approved and assigned to your default site.
+1. If you see a message for "Could not configure, trying in 30 seconds" or a "Bus Broken Down Error" verify that the engine is approved and assigned to your default site.
 
 1. Go to the site under **Admin \> Distributed Engine \> Manage Sites**.
 

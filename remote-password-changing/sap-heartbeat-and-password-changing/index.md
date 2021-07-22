@@ -31,7 +31,7 @@ Once these steps are complete, heartbeat and password changing should be working
 
  >**Note**: Accounts can change their own SAP passwords just once per day. This is a restriction in the SAP software that cannot be changed. If an account needs its password to change more than once a day, use a privileged account to perform the reset.
 
-If performing a Heartbeat on an SAP Secret fails with the error, `Exception: PASSWORD_EXPIRED`, it most likely means an administrator has reset the SAP account’s password, and the account must log in and change its own password in SAP.
+If performing a Heartbeat on an SAP Secret fails with the error, `Exception: PASSWORD_EXPIRED`, it most likely means an administrator has reset the SAP account's password, and the account must log in and change its own password in SAP.
 
 ## For Secret Server 8.7.000000 and Below
 

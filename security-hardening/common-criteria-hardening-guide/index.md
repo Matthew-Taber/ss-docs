@@ -19,7 +19,7 @@ and certified as secure by the Common Criteria certification.
 
 This document is intended for use by administrators who are responsible for
 installing, configuring, and operating enterprise infrastructure for their
-organization. To use this guide you must have knowledge of your organization’s
+organization. To use this guide you must have knowledge of your organization's
 network infrastructure, applicable policies, and have administrative access to
 configure your operational environment.
 
@@ -48,13 +48,13 @@ specific configuration.
 Table 1: Guidance Documentation
 
 For more information about Thycotic Secret Server please refer to the Secret
-Server Documentation provided on Thycotic’s Support Portal at:
+Server Documentation provided on Thycotic's Support Portal at:
 
 <https://thycotic.force.com/support/s/secretserver> **UPDATE TO EXTERNAL HOMER**
 
 *\*While many Common Criteria requirements are automatically set as default
 through the Secret Server – Government Edition Installer, for ensuring that all
-of Thycotic’s security best practices are in place, the Security Hardening
+of Thycotic's security best practices are in place, the Security Hardening
 Configuration Settings Report can be found by navigating to the Reports \|
 Security Hardening tab. After installing Secret Server, follow the checklist on
 this page to ensure your environment is as secure as possible:*
@@ -87,7 +87,7 @@ Enterprise or later would be compatible.
 ## Assumptions and Operational Environment
 -------------------------------------------
 
-There are specific conditions that are assumed to exist in the TOE’s Operational
+There are specific conditions that are assumed to exist in the TOE's Operational
 Environment. The following table lists assumptions about the Operational
 Environment as specified by the Protection Profile:
 
@@ -137,7 +137,7 @@ Table 3: Organizational Security Policies
 
 - Microsoft SQL Server 2016 or later
 
-For more information on SQL licensing, see Microsoft’s 2016 editions and components list
+For more information on SQL licensing, see Microsoft's 2016 editions and components list
 
 [here](https://docs.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2016).
 
@@ -200,9 +200,9 @@ detailed report, resolve the reported issues, and rerun the scan.
 
 ![](images/809a3736800032497e943ad5202b18a3.png)
 
-Click **OK** when done to return to the “SQL Server Installation Center” window.
+Click **OK** when done to return to the "SQL Server Installation Center" window.
 
-In the “SQL Server Installation Center” window, click **Installation** then
+In the "SQL Server Installation Center" window, click **Installation** then
 **New SQL Server stand-alone installation or add features to an existing
 installation**
 
@@ -218,24 +218,24 @@ Check the **I accept the license terms**. checkbox and click **Next**.
 
 Wait for the **Rule Check** to run.
 
-At the “Microsoft Update” step, check **Use Microsoft Update to check for
+At the "Microsoft Update" step, check **Use Microsoft Update to check for
 updates (recommended)** unless your software update process does not utilize
 automatic updates from Microsoft and click **Next**.
 
 ![](images/6c928084c2ef8dfc468a13e7446d859f.png)
 
-At the “Product Updates” step leave all defaults and click **Next**.
+At the "Product Updates" step leave all defaults and click **Next**.
 
-Wait for the “Install Setup Files” step to complete. Check that all operations
+Wait for the "Install Setup Files" step to complete. Check that all operations
 pass (with the exception of Windows Firewall, which may return a warning status
-since the database will not be accessed from outside the firewall). The “Install
-Rules” screen (below) will appear upon completion. When the installation is
+since the database will not be accessed from outside the firewall). The "Install
+Rules" screen (below) will appear upon completion. When the installation is
 successful, click **Next**.
 
 ![](images/762e14535ac0b29b8ee198aac1be2132.png)
 
-The only feature in “Feature Selection” necessary for Secret Server is “Database
-Engine Services” (see screenshot below).
+The only feature in "Feature Selection" necessary for Secret Server is "Database
+Engine Services" (see screenshot below).
 
 Unless you are using Geo-Replication (this is not in scope for Common Criteria
 standards) you can leave everything else unchecked. Leave the directory
@@ -243,30 +243,30 @@ locations unchanged and click **Next**.
 
 ![](images/db97f624542b084461ca6a55092192ec.png)
 
-At the “Instance Configuration” step leave “Default instance” selected and click
+At the "Instance Configuration" step leave "Default instance" selected and click
 **Next**.
 
 ![](images/f0031097cd5c48bdf9de993669d7b9a6.png)
 
-At the “Server Configuration” step (screenshot below) leave the defaults and
+At the "Server Configuration" step (screenshot below) leave the defaults and
 click **Next**.
 
 ![](images/82a3f2bd56f706439e87335b0246a91a.png)
 
-At the “Database Engine Configuration” step, make sure that **Windows
-authentication mode** is selected in the “Server Configuration” tab. Scroll down
-and add at least one Local Windows or Active Directory user or group in “Specify
-SQL Server administrators.” Click the **Add Current User** button to find and
+At the "Database Engine Configuration" step, make sure that **Windows
+authentication mode** is selected in the "Server Configuration" tab. Scroll down
+and add at least one Local Windows or Active Directory user or group in "Specify
+SQL Server administrators." Click the **Add Current User** button to find and
 then **Add** the Administrator account.
 
 ![](images/57916221f804192e56930cfed8232515.png)
 
 You can leave the options in the remaining tabs at their default values or
-change the file locations in the “Data Directories” and “TempDB” tabs if you
+change the file locations in the "Data Directories" and "TempDB" tabs if you
 wish to store the database and log data in a different drive or directory. Click
 **Next**.
 
-Wait for the setup wizard to progress to the “Ready to Install” step and click
+Wait for the setup wizard to progress to the "Ready to Install" step and click
 **Install**.
 
 ![](images/6b56c86edbcf7e19316cad01d44ef9aa.png)
@@ -278,7 +278,7 @@ Note that you may need to reboot the computer before proceeding.
 
 ### Installing SQL Server Management Studio
 
-Back in the “SQL Server Installation Center” window, click **Installation** then
+Back in the "SQL Server Installation Center" window, click **Installation** then
 **Install SQL Server Management Tools**
 
 ![](images/45eaf3fe53c0f08bb01265dfd889fe18.png)
@@ -287,7 +287,7 @@ Wait for the web page to load then click the **Download SQL Server Management
 Studio 17.6** link *(note: actual version \# may be different if a newer version
 is available).*
 
-*You may need to ‘enable downloads’ in your browser security settings to
+*You may need to 'enable downloads' in your browser security settings to
 download this file.*
 
 After the download is complete, click **Run** (if using Internet Explorer to
@@ -300,7 +300,7 @@ Click **Install** when the SQL Server Management Studio installer starts.
 
 Wait for the installer to complete. This may take several minutes. When the
 installation has completed, click **Restart** if prompted. Otherwise, click
-**Close** and then close “SQL Server Installation Center.”
+**Close** and then close "SQL Server Installation Center."
 
 ![](images/4e7f228e54059609ea59282bb82aa61e.png)
 
@@ -313,7 +313,7 @@ double-click **Computer Management**.
 
 ![](images/e915ca2d04e1e7ed76fe1bdb69e24820.png)
 
-Expand the “Local Users and Groups” folder, right-click **Users**, and select
+Expand the "Local Users and Groups" folder, right-click **Users**, and select
 **New User…**
 
 ![](images/43865cd9355fd4780343babcd2909260.png)
@@ -321,8 +321,8 @@ Expand the “Local Users and Groups” folder, right-click **Users**, and selec
 Give the user *any desired user name and a very strong password*. This account
 will be added as a user in **SQL Server Management Studio** in the next step and
 its credentials will be saved to an encrypted file during Secret Server setup.
-Uncheck the default “**User must change password at next logon**” and check
-“**Password never expires**.”
+Uncheck the default "**User must change password at next logon**" and check
+"**Password never expires**."
 
 Click **Create** followed by **Close** when done.
 
@@ -334,21 +334,21 @@ Start SQL Server Management Studio. This may take several minutes the first time
 the application is started.
 
 Connect to SQL Server by browsing for the database **Server name** (click the
-drop down box beside **Server name** then “**Browse for more..**” and select the
+drop down box beside **Server name** then "**Browse for more..**" and select the
 name of the database installed). Click **Connect** to login using **Windows
-Authentication** (login as the user that you selected in the “Database Engine
-Configuration” step of the SQL Server installation).
+Authentication** (login as the user that you selected in the "Database Engine
+Configuration" step of the SQL Server installation).
 
-Open the “Security” folder, right-click on **Logins**, and select **New Login…**
+Open the "Security" folder, right-click on **Logins**, and select **New Login…**
 
 ![](images/913d258311bfdfde9eb38490c7a381df.png)
 
-In the “Login – New” dialog, click the **Search** button, enter the full name of
+In the "Login – New" dialog, click the **Search** button, enter the full name of
 the Windows account you created in the previous step, and click **Check Names**.
 If entered correctly, the user name should be underlined. If it is not, correct
 the name and repeat. When the name is entered correctly, click **OK**.
 
-Back in the “Login – New” dialog, click **Server Roles**, check **dbcreator**
+Back in the "Login – New" dialog, click **Server Roles**, check **dbcreator**
 and then click **OK**.
 
 ![](images/ccdc067b516bac6e6cebc3759e654294.png)
@@ -406,7 +406,7 @@ For information about configuring a Windows account for database access, see
 
 You can download the **Government Edition Installer** files from the Thycotic Portal Downloads page after logging into the Thycotic Support Portal.
 
-To meet Common Criteria standards, you must run the ThycoticSetup.exe file as an Administrator on a ‘clean’ Secret Server web
+To meet Common Criteria standards, you must run the ThycoticSetup.exe file as an Administrator on a 'clean' Secret Server web
 server, with a full, licensed version of SQL on the same database.
 
 #### Installer Verification and Authentication
@@ -433,46 +433,46 @@ The second step to take when checking the authenticity of the installer is to
 check the code signing certificate to confirm that it is signed by Thycotic and
 has a valid certificate chain. To do this:
 
-1.  Right-click on ThycoticSetup.exe and select “Properties” from the context
+1.  Right-click on ThycoticSetup.exe and select "Properties" from the context
     menu.
 
-2.  Switch to the “Digital Signatures” tab.  
+2.  Switch to the "Digital Signatures" tab.  
 
 
     ![](images/0f285f8d483b8a5d5627e6ffa0863bfa.png)
 
-3.  Verify that the name of signer is “Thycotic Software” and make note of the
+3.  Verify that the name of signer is "Thycotic Software" and make note of the
     date in the Timestamp. Select that entry in the Signature list and click
-    “Details.”  
+    "Details."  
 
     ![](images/f43039d1de871b345f113d9cfaea7705.png)
 
-4.  Click “View Certificate” to view the signing certificate.  
+4.  Click "View Certificate" to view the signing certificate.  
     
     ![](images/8bef4632522c8e29bd38ff27db422cdc.png)
 
-5.  Verify that the certificate is issued to “Thycotic Software” and that the
-    signing timestamp from the signature list is within the “Valid from” date
+5.  Verify that the certificate is issued to "Thycotic Software" and that the
+    signing timestamp from the signature list is within the "Valid from" date
     range.
 
-6.  Switch to the “Details” tab.  
+6.  Switch to the "Details" tab.  
     
     ![](images/1c0b3a35c3375919655fa9ee73cbe99a.png)
 
-7.  Verify that the “Enhanced Key Usage” field lists that the key is valid for
+7.  Verify that the "Enhanced Key Usage" field lists that the key is valid for
     code signing, as shown above.
 
-8.  Select the “Extended Error Information” field.  
+8.  Select the "Extended Error Information" field.  
     
     ![](images/f8c05c670d762052cec4ee873daad64b.png)
 
-9.  Verify that the certificate’s revocation status is “OK”
+9.  Verify that the certificate's revocation status is "OK"
 
-10. Switch to the “Certification Path” tab.  
+10. Switch to the "Certification Path" tab.  
     
     ![](images/101507a573a993631de845419931d168.png)
 
-11. View each certificate in the chain above “Thycotic Software” and verify that
+11. View each certificate in the chain above "Thycotic Software" and verify that
     the certificates are all valid.
 
 ### Running the Installer
@@ -543,7 +543,7 @@ will not be supported and will not be up to standard for production use.  
 When you arrive at the **Pre-Requisites** window the Thycotic Installer will
 check to make sure that all required conditions are met. If there are issues or
 failures, choose **"Fix Issues"** to automatically install the necessary
-Pre-Requisites. This may take several minutes. If an “Installing Dependencies”
+Pre-Requisites. This may take several minutes. If an "Installing Dependencies"
 windows pops up during this process, close to continue. When successful,
 click **Next.**
 
@@ -554,7 +554,7 @@ click **Next.**
 **Troubleshooting Note:** If the **FIPS Encryption Enabled, Suitable FIPS
 Configuration,** or **HTTPS Binding** settings *Fail* during this Pre-Requisites
 check, click the **Fix Issues** button. After the tests run again, if the
-settings still list as “Failed,” close the installer as directed, and then
+settings still list as "Failed," close the installer as directed, and then
 re-open the Installer. **Run the installer again** and the settings should pass.
 
 If the FIPS Encryption Enabled setting continues to fail the pre-requisite
@@ -628,9 +628,9 @@ successfully, click **Next**.
 
 ![A screenshot of a cell phone Description generated with very high confidence](images/7f1d14e28a28d11dce79462e35d77e06.png)
 
-Verify that “Use only these TLS cipher suites” is selected, along with the six
-checked cipher suites. If not, deselect the toggle for “Use Windows current TLS
-cipher settings” and select **Use only these TLS cipher suites**.
+Verify that "Use only these TLS cipher suites" is selected, along with the six
+checked cipher suites. If not, deselect the toggle for "Use Windows current TLS
+cipher settings" and select **Use only these TLS cipher suites**.
 
 The following TLS cipher suites are required to make sure your Secret Server
 instance's encryption standards are as secure as possible:
@@ -682,8 +682,8 @@ Now** to finish (screenshot below).
 ![A screenshot of a cell phone Description generated with very high confidence](images/cdf7d126b931c1423aee52826f55649e.png)
 
 You can click on the provided URL to navigate directly to your setup landing
-page. Login using the Username and Password that you created on the “Create
-User” installer screen.
+page. Login using the Username and Password that you created on the "Create
+User" installer screen.
 
 #### Additional Permissions for Secret Server Folder
 
@@ -695,8 +695,8 @@ Right-click the folder name and select **Properties \| Security** tab **\|
 Edit** button, then click **Add…** to add the **local user account created for
 the database** in step **2.2.3.1 Add the User Account to SQL Server**.
 
-If not already checked, check the **Allow** boxes beside the “**Read and
-Execute**,” “**List Folder Contents**,” and “**Read**” access permissions above,
+If not already checked, check the **Allow** boxes beside the "**Read and
+Execute**," "**List Folder Contents**," and "**Read**" access permissions above,
 click **Apply**.
 
 # How to Access Your System
@@ -724,7 +724,7 @@ Note: Click-Once launcher is not supported on any non-Windows platform.
 ## Web Interface
 -----------------
 
-To access Secret Server, navigate to your organization’s URL and login using
+To access Secret Server, navigate to your organization's URL and login using
 your administrator credentials. The first time you login your screen will look
 like this:
 
@@ -742,7 +742,7 @@ Once user accounts are configured, both Local accounts and Active Directory
 users will access Secret Server through this login screen. To configure Active
 Directory users, see section 7.1.
 
-You will be directed to Secret Server’s landing page for Administrator accounts.
+You will be directed to Secret Server's landing page for Administrator accounts.
 
 ![A screenshot of a cell phone Description generated with very high confidence](images/01188b95e585d8df3c7fe86a94232608.jpg)
 
@@ -751,17 +751,17 @@ You will be directed to Secret Server’s landing page for Administrator account
 To logout, navigate to the **profile icon** in the upper right-hand corner and
 select **Logout** from the dropdown list. Once user accounts are created in
 Secret Server from the Admin profile, users can login using user-level
-credentials by navigating to your organization’s login URL.
+credentials by navigating to your organization's login URL.
 
 More detailed information for setting up Secret Server including customizing
-your dashboard and creating users can be found in Secret Server’s User Guide:
+your dashboard and creating users can be found in Secret Server's User Guide:
 
 <https://updates.thycotic.net/secretserver/documents/SS_UserGuide.pdf> **CHANGE TO INTERNAL LINK(S)**
 
 ## Local Admin Account
 -----------------------
 
-To create Secret Server’s Local Administrator Account you will be prompted for
+To create Secret Server's Local Administrator Account you will be prompted for
 information through the installer (step 7 in section 2.3.2 of this guide). Save
 the information you provide during this step so that you can login to the
 administrator account when the installer finishes setting up your instance.
@@ -771,8 +771,8 @@ administrator account when the installer finishes setting up your instance.
 ## Installing License Keys
 ---------------------------
 
-After logging into Secret Server with Secret Server’s local administrator
-account, the first thing you will need to do is install your organization’s
+After logging into Secret Server with Secret Server's local administrator
+account, the first thing you will need to do is install your organization's
 license keys. You will need three different license keys, one for the Secret
 Server Edition being used, one for Support, and one for Users. Install your keys
 by navigating to **Admin \| Licenses**, click **Install New License**. To
@@ -806,13 +806,13 @@ By default, Secret Server is configured to notify you immediately when software
 updates are available. To configure this manually, navigate to **Admin \|
 Configuration \| General** tab and **Edit**, then check the box next to **Allow
 Automatic Checks for Updates**. This setting will create a banner at the top of
-your Administrator account’s user screen when a new update is available for
+your Administrator account's user screen when a new update is available for
 download.
 
 ![A screenshot of a cell phone Description generated with very high confidence](images/786f5589942cce20844981a83532adb0.jpg)
 
 If your Secret Server web server has no outbound access, you can elect to
-receive updates through Thycotic’s Support Portal by logging into your Portal
+receive updates through Thycotic's Support Portal by logging into your Portal
 account at **thycotic.force.com**, **CHANGE TO WHAT?** navigating to your Account Settings, and
 signing up for the Thycotic Mailing List.
 
@@ -838,7 +838,7 @@ authentication into Secret Server.
 A local user account is stored and managed by Secret Server. To successfully
 authenticate a local user must login with a matching username and password. When
 using local login, user credentials are checked against the internal authorized
-users’ database.
+users' database.
 
 To **create**, **edit**, or **remove** a local user account you must navigate to
 **Admin \| Users** and locate any users whose Domain is listed as "Local" or
@@ -867,14 +867,14 @@ regulations, Secret Server must be configured to prevent repeated unsuccessful
 attempts at logging in. **Account Lockouts** are used for this purpose.
 Configurable by the Secret Server Administrator, an account becomes inaccessible
 after a limited number of unsuccessful authentication attempts until an
-Administrator unlocks the user’s account.
+Administrator unlocks the user's account.
 
 To configure settings for Account Lockouts, navigate to **Admin \| Configuration
 \| Login** tab, then click **Edit** and adjust the number for **Maximum Login
 Failures**. Default for this setting is five attempts.
 
-To Unlock a user’s account, navigate to **Admin \| Users \| Select the User**
-and click **Edit**. Change the value for “**Locked Out**” from Yes to **No**,
+To Unlock a user's account, navigate to **Admin \| Users \| Select the User**
+and click **Edit**. Change the value for "**Locked Out**" from Yes to **No**,
 then click **Save**.
 
 ### Lockout Window
@@ -884,15 +884,15 @@ means that once a user has locked out their account, they will be able to login
 with the correct credentials after a period of one hour has passed. Account
 lockouts are designed to prevent brute force attacks.
 
-### How to Disable “Allow Remember Me” during Logins
+### How to Disable "Allow Remember Me" during Logins
 
-By default, the Secret Server installer will disable the “Allow Remember Me”
+By default, the Secret Server installer will disable the "Allow Remember Me"
 caching feature during logins, however, to ensure this is feature is disabled,
 navigate to **Admin \| Configuration \| Login** tab, and verify that the first
-setting “**Allow Remember Me**” is set to **No**. If this is set to Yes,
+setting "**Allow Remember Me**" is set to **No**. If this is set to Yes,
 **Edit** the page and uncheck the toggle, then **Save**. Audits for this setting
 are logged under **Admin \| Configuration \| General** tab, by clicking the
-**View Audit** button. To filter log results, search for “**AllowRememberMe**”
+**View Audit** button. To filter log results, search for "**AllowRememberMe**"
 in the search bar.
 
 ## Configuring the Login Banner 
@@ -903,18 +903,18 @@ tab, scroll to the bottom of the page and click the **Login Policy Agreement**
 button, then **Edit** and check the **Enable Login Policy** and **Force Login
 Policy** boxes.
 
-Enabling these boxes will 1) Reveal the **User’s Policy Agreement** on the Login
+Enabling these boxes will 1) Reveal the **User's Policy Agreement** on the Login
 page, and 2) Force users to **Agree** to the policy when logging into Secret
 Server.
 
 ### How to Modify the Login Banner Messaging
 
 To modify the display text from this **Login Policy Agreement**, go to Secret
-Server’s Web Server and open **File Explorer**. Navigate to a text file called
-“**policy.txt**” (default file path location is
+Server's Web Server and open **File Explorer**. Navigate to a text file called
+"**policy.txt**" (default file path location is
 **C:\\inetpub\\wwwroot\\SecretServer\\policy.txt**)
 
-Open this file in Notepad and adjust the text according to your organization’s
+Open this file in Notepad and adjust the text according to your organization's
 policy requirements, then **Save**. The default text reads as follows:
 
 - *Access to this system is restricted to authorized users. Users (authorized
@@ -989,8 +989,8 @@ To edit these settings, click the **Edit** button. By editing a local user you
 may change their **display name**, **email address**, allow **Two Factor**,
 **disable/enable** the account, or **lock/unlock** the account.
 
-You also can **create a new, one-time password** for the user’s account. If you
-change a user’s password they will be prompted for a new password after logging
+You also can **create a new, one-time password** for the user's account. If you
+change a user's password they will be prompted for a new password after logging
 in with the Administrator-created password.
 
 # Managing Domain Users
@@ -1016,7 +1016,7 @@ In order to setup Active Directory in Secret Server, you will need to:
 
 5.  **Turn on Active Directory Sync**
 
-Secret Server relies on a primary “Sync” secret to connect to the LDAPv3 server
+Secret Server relies on a primary "Sync" secret to connect to the LDAPv3 server
 in Active Directory. Once connection has been made to Active Directory through
 this secret, Secret Server needs to know which domain within Active Directory to
 authenticate against, and within that domain which specific Active Directory
@@ -1030,10 +1030,10 @@ does not create, delete, or alter Active Directory Group Policies**.
 Before synchronizing users, you must first create a secret to be used as
 the Sync Secret. This secret should contain **Domain Admin credentials** (or an
 account with appropriate permissions for **Read Access** to all your
-organization’s AD objects).
+organization's AD objects).
 
-From Secret Server’s dashboard you can create this secret through the Create
-Secret Widget. Next to “Create New,” select **Active Directory Account** from
+From Secret Server's dashboard you can create this secret through the Create
+Secret Widget. Next to "Create New," select **Active Directory Account** from
 the dropdown list.
 
 ![A screenshot of a cell phone Description generated with very high confidence](images/060af508e17bb6e2fa233d7a3b7fe1eb.jpg)
@@ -1080,7 +1080,7 @@ Secret Server can synchronize with any number of domains.  
 The Active Directory Sync Secret will be used to synchronize users and groups,
 **it will require permission to search and view the attributes of the users and
 groups.  If you plan on using Discovery (NOTE: Discovery is not under Common
-Criteria’s scope), the account will also need permissions to scan computers on
+Criteria's scope), the account will also need permissions to scan computers on
 the network for accounts.**
 
 ### Configuring TLS with Active Directory
@@ -1104,7 +1104,7 @@ More information for setting up Active Domain with LDAPS can be found at
 
 ### Setup Synchronization Groups
 
-Once the domain has been added, click the “**Edit Synchronization**” button on
+Once the domain has been added, click the "**Edit Synchronization**" button on
 the Active Directory Configuration page.
 
 ![User-added image](images/181b2f2963f6efa21be0629b6fdfabb8.png)
@@ -1181,9 +1181,9 @@ Administrator Role.
 The default role assignment for new users is set by navigating to **Admin \|
 General** tab **\| User Experience** section (scroll to bottom). To ensure that
 no new users are created or imported with any extra privileges, make sure that
-this setting is set to “None.”
+this setting is set to "None."
 
-To edit this default setting, click **Edit** and select “**None**” from the
+To edit this default setting, click **Edit** and select "**None**" from the
 dropdown list as shown by the screenshot below. Then click **Save**.
 
 ![A screenshot of a cell phone Description generated with very high confidence](images/e6e73708cf3ec9f599b198057a6d3d8a.jpg)
@@ -1202,7 +1202,7 @@ The Roles supported in Common Criteria include **Administrator, User,** and
 
 To apply one of these roles, select it from the righthand list and move it to
 the left side under the Assigned box. Ensure that every user only is assigned
-only one of these Roles. If both “Administrator” and “Read Only User” are
+only one of these Roles. If both "Administrator" and "Read Only User" are
 assigned to the same user, the user will maintain full Administrator access to
 Secret Server. Click **Save Changes**:
 
@@ -1317,7 +1317,7 @@ this temporary password they will be prompted to change their password.
 If locked out of the Secret Server Local administrator account and unable to
 request a reset through a linked administrator email account, contact the
 Thycotic Support Team to request a password reset. To do this you will need to
-provide your organization’s **security pin code**.
+provide your organization's **security pin code**.
 
 ## Setting Local User Password History Requirements
 ----------------------------------------------------
@@ -1344,7 +1344,7 @@ Each object that is stored within Secret Server is referred to as a **Secret**.
 Usually, a Secret will be a username and password combination. Other examples of
 Secrets can include SSH keys, contact information, or safe combinations.
 
-To create a Secret, use the “Create Secret” widget.
+To create a Secret, use the "Create Secret" widget.
 
 ![](images/150480aea04fcb8ae4152ef30803e5ad.png)
 
@@ -1426,10 +1426,10 @@ are enabled, users cannot issue commands directly to the target system.
 
 Field Data
 
-Each field in a secret template is either “Text,” “Password,” or “Notes.”
+Each field in a secret template is either "Text," "Password," or "Notes."
 Password fields can be hidden from users and are updated when a password change
-has occurred on that secret’s account. Text fields are the standard field type
-and may include information such as “Domain” or “Username.”
+has occurred on that secret's account. Text fields are the standard field type
+and may include information such as "Domain" or "Username."
 
 Folder
 
@@ -1452,8 +1452,8 @@ applied to individual secrets or folders. Each setting of a secret policy can be
 configured as either default or enforced. Default allows users to later change
 the setting. Enforced locks the settings and cannot be modified on a per-secret
 basis unless the secret is moved out of the folder that has the secret policy
-attached. Secret policy settings include items such as “Remote Password Changing
-Auto Change,” and “Requires Approval for Access.”
+attached. Secret policy settings include items such as "Remote Password Changing
+Auto Change," and "Requires Approval for Access."
 
 Subject Identifier
 
@@ -1464,7 +1464,7 @@ Secret Name
 
 The secret name is the label or title that describes the content of each secret.
 When Secret Server creates secrets automatically, the default naming convention
-is “host/account,” or “domain/account.”
+is "host/account," or "domain/account."
 
 Template:
 
@@ -1472,8 +1472,8 @@ Field Parameters
 
 Field parameters include username, password, and type. Secrets include a
 combination of field parameters that vary with user input. Secret type is
-defined by the template for each secret, such as “Bank Account” or “Active
-Directory Account.” The number of field parameters also are defined at the
+defined by the template for each secret, such as "Bank Account" or "Active
+Directory Account." The number of field parameters also are defined at the
 secret template level.
 
 Password Change Policy
@@ -1491,7 +1491,7 @@ section 9.0 for details on setting password requirements.
 
 Secret Expiration Policy
 
-When a secret reaches its expiration date, it is flagged as “Expired.” If
+When a secret reaches its expiration date, it is flagged as "Expired." If
 automatic password rotation is enabled for that secret, expiration triggers a
 remote password change. Expiration can be changed on each secret, but the
 default expiration period is set at the secret template level.
@@ -1499,7 +1499,7 @@ default expiration period is set at the secret template level.
 Secret Name Pattern
 
 When Secret Server names a secret via the discovery import process, it uses the
-naming convention “hostname/username,” or “domain/username.” This is not
+naming convention "hostname/username," or "domain/username." This is not
 enforced, so users can name secrets whatever they want.
 
 Template Description
@@ -1518,7 +1518,7 @@ Template Status
 
 Like secrets, users can disable secret templates to make them invisible to
 users, unless they chose to view inactive templates. The status is either
-“enabled” or “disabled.”
+"enabled" or "disabled."
 
 Secret Access Policy
 
@@ -1529,8 +1529,8 @@ secret is invisible.
 Secret Modification Policy
 
 Each secret carries individual access permissions that are typically inherited
-from the secret’s folder. These permissions determine not only which users can
-view the secret but also which users are can edit the secret’s data. A user can
+from the secret's folder. These permissions determine not only which users can
+view the secret but also which users are can edit the secret's data. A user can
 have view, edit, or owner permission. With the view permission, a user can view
 but not modify a secret. The edit permission allows the user to modify field
 data. The owner permission allows users to grant or revoke access to other
@@ -1559,7 +1559,7 @@ dropdown menu. Then click **Password Requirements**.
 ![A screenshot of a cell phone Description generated with very high confidence](images/ecd87f6f3340fd6c2723d05c345c7c0d.jpg)
 
 Select the **Default** password requirement from the list to edit **all** your
-organization’s default password requirement settings on secret templates or
+organization's default password requirement settings on secret templates or
 select **Create New** to create a new password requirement specific to this
 template.
 
@@ -1623,7 +1623,7 @@ requirements must be met on the machine being managed:
 
 -   If doing a privileged SSH Key Rotation, where a privileged user sets the key
     for another user, the privileged user must have sudo permissions that do not
-    prompt for a password and the permissions to edit the user’s authorized keys
+    prompt for a password and the permissions to edit the user's authorized keys
     file with sudo.
 
 If a system does not meet these requirements it may still be possible to do key
@@ -1631,7 +1631,7 @@ rotation by modifying the key rotation command sets.
 
 ### Creating a Unix Account (SSH Key Rotation) Secret
 
-Under Secret Server’s Common Criteria compliance standards, you can setup Secret
+Under Secret Server's Common Criteria compliance standards, you can setup Secret
 Server to rotate SSH Keys for Unix Accounts.
 
 To setup a Launcher, you will need:
@@ -1658,7 +1658,7 @@ to assign to this SSH key, if any.
 Click **Generate New SSH Key** to automatically rotate the private and public
 SSH key pairing upon clicking **Save**. This action is a security measure to
 ensure that no one can access your SSH key unless they are doing so through
-Secret Server’s vault.
+Secret Server's vault.
 
 ### Enabling the Launcher
 
@@ -1681,14 +1681,14 @@ Click the SSH secret from your Home Screen and click **View Secret**.
 
 Click on the **PuTTY Launcher** icon.  
 
-The first time you do this you will be prompted by a “**Protocol Handler Failed
-to Launch**” message – select the type of launcher you need and **Run** the .msi
+The first time you do this you will be prompted by a "**Protocol Handler Failed
+to Launch**" message – select the type of launcher you need and **Run** the .msi
 file. Secret Server will download a very small process called a Protocol Handler
 that helps facilitate the connection between your machine and the endpoint.  
 
 ![A screenshot of a cell phone Description generated with very high confidence](images/0ea41fa5057305dc61d39c282ee5d937.jpg)
 
-Once downloaded, close out the “Failed to Launch” window and *refresh your
+Once downloaded, close out the "Failed to Launch" window and *refresh your
 browser page*.
 
 Click on the launcher icon on the secret (and provide the machine name if
@@ -1707,7 +1707,7 @@ Navigate to **Admin \| Remote Password Changing**. Click **Edit**, then check
 
 ### Rotate SSH Key Remotely
 
-Navigate back to the SSH Key Rotation Secret’s **View** screen. Click the
+Navigate back to the SSH Key Rotation Secret's **View** screen. Click the
 **Change Password Remotely** button at the bottom of the screen.
 
 ![A screenshot of a social media post Description generated with very high confidence](images/765165d24cd7b8593f151d55870f121d.png)
@@ -1719,7 +1719,7 @@ Key to remain checked. Click **Change**.
 ![A screenshot of a cell phone Description generated with very high confidence](images/200be869d0446b75d821479d57c71550.png)
 
 You will be directed to a **Password Scheduled for Change** screen, click
-**Back** to return to your secret’s Remote Password Changing tab view, then
+**Back** to return to your secret's Remote Password Changing tab view, then
 navigate to the **General** tab. Verify that a new password is listed. In the
 screenshot below you can see the former passwords listed in the Notes section,
 confirming that the rotation was effective.
@@ -1740,7 +1740,7 @@ selected as the target of the expiration. For example, a Secret template for
 Active Directory accounts might require a change on the password field every 90
 days. If the password remains unchanged past the length of time specified, that
 Secret is considered expired and will appear in the **Expired Secrets** panel on
-either the Dashboard’s Expired Secrets widget or the Home page.
+either the Dashboard's Expired Secrets widget or the Home page.
 
 Secret expiration provides additional security by reminding users when sensitive
 data requires review. This can assist in meeting compliance requirements that
@@ -1863,7 +1863,7 @@ to the bottom of the page and checking the existence of the **Decrypt Key to not
 Use DPAPI** button.
 
 If DPAPI is not enabled in your Secret Server installation, this button will say
-“**Encrypt Key to Use DPAPI**.” To maintain compliance with Common Criteria
+"**Encrypt Key to Use DPAPI**." To maintain compliance with Common Criteria
 standards do not decrypt the Secret Server key.
 
 ### Verify FIPS Mode is Enabled
@@ -1917,14 +1917,14 @@ TLS 1.0 protocol, follow these steps:
     **HKey_Local_Machine\\System\\CurrentControlSet\\Control\\SecurityProviders
     \\SCHANNEL\\Protocols\\TLS 1.0\\Server**  
 
-- \*If the subkeys “Server” or “Client” do not exist, create them under the
+- \*If the subkeys "Server" or "Client" do not exist, create them under the
 - TLS 1.0 key.
 
 1.  On the **Edit** menu for each subkey, click **Add Value**.
 
 2.  In the **Data Type** list for each subkey, click **DWORD**.
 
-3.  In the **Value Name** box for each subkey, type “**Enabled**,” and then
+3.  In the **Value Name** box for each subkey, type "**Enabled**," and then
     click **OK**.  
     
     \*Note If this value is present, double-click the value to edit its current
@@ -2009,7 +2009,7 @@ Follow the steps below to install a certificate in the Trusted Root CA store:
 4.  Click **Next** then select the certificate to import. This is usually a file
     with a file extension of .cer, .crt, .pem, or .pfx and click **Next**.
 
-5.  If prompted, enter the certificate’s password and click **Next**.
+5.  If prompted, enter the certificate's password and click **Next**.
 
 6.  Leave the selected options at the **Certificate Store** step and click
     **Next**.  
@@ -2029,7 +2029,7 @@ Authorities**.
 To install a web certificate for use by IIS:
 
 1.  Open IIS Manager by clicking **Start**, clicking **Run**, typing in
-    “**inetmgr**”, and clicking **OK**.
+    "**inetmgr**", and clicking **OK**.
 
 2.  Click on the server node (one of the root nodes) in the left panel, and
     double click on **Server Certificates**.  
@@ -2040,7 +2040,7 @@ To install a web certificate for use by IIS:
 
     ![A screenshot of a computer Description generated with very high confidence](images/a03d3d244a10754d68d57fed48f216e6.png)
 
-4.  Select the certificate to use, enter the password, select “Web Hosting” in
+4.  Select the certificate to use, enter the password, select "Web Hosting" in
     **Select Certificate Store**, and click **OK**.
 
 Alternatively, to create a self-signed certificate, click **Create Self-Signed
@@ -2067,7 +2067,7 @@ Syslog connections if your LDAPS or Secure TCP Syslog server requires one to be
 used.
 
 You will need to install a Client Certificate on your **web server(s)** in the
-Local Computer’s **Web Hosting** (used by newer versions of IIS) or **Personal**
+Local Computer's **Web Hosting** (used by newer versions of IIS) or **Personal**
 Stores:
 
 1.  On your local machine open **mmc.exe**, select **File**, then **Add/Remove
@@ -2184,7 +2184,7 @@ Transport Security (HSTS) at:
 ---------------------------------------------------
 
 By design, Secret Server locally audits all actions taken within Secret Server.
-Secret Server’s auditing capacity is not configurable. See **Appendix A -
+Secret Server's auditing capacity is not configurable. See **Appendix A -
 Auditable Events** for details on Secret Server items that are audited and
 corresponding user permissions required for accessing audit records.
 
@@ -2198,13 +2198,13 @@ roles to individual users by going to **Admin \| Users** and assigning roles.
     web services API.
 
 -   **User Audit Expire Secrets**  
-    Allows a user to view the “User Audit” report, which shows all secrets that
+    Allows a user to view the "User Audit" report, which shows all secrets that
     have been accessed by a particular user in a specified date range. Also
     allows the user to force expiration on all these secrets, which would make
     Secret Server automatically change the password.
 
 -   **View Configuration Unlimited Admin**  
-    Formerly “View Unlimited Admin Configuration,” allows a user to view the
+    Formerly "View Unlimited Admin Configuration," allows a user to view the
     Unlimited Admin Mode configuration. Also allows a user to view the Unlimited
     Admin Mode audit log.
 
@@ -2245,7 +2245,7 @@ Server.
 -------------------------------------------------
 
 Outside of Secret Server, you can also send audit logs as EVT records to your
-Windows Server’s Windows Event Log locally**.**
+Windows Server's Windows Event Log locally**.**
 
 **Note that the Windows Event Log is tied to the syslog implementation, because
 of this, disabling syslog will disable Windows Event Logs as well**. If
@@ -2338,9 +2338,9 @@ SERVICE or IIS APPPOOL\\SecretServer).
 
 6. Click **Select a principal**.
 
-7. Enter the name of your app pool’s account (see step 1, for example: “IIS
-APPPOOL\\SecretServer”) in the box listed under **Enter the object name to
-select (examples).** Click **Check Names**, Once “SecretServer” (or the name of
+7. Enter the name of your app pool's account (see step 1, for example: "IIS
+APPPOOL\\SecretServer") in the box listed under **Enter the object name to
+select (examples).** Click **Check Names**, Once "SecretServer" (or the name of
 your Secret Server app pool) is listed in the box and underlined, click **OK**
 
 8. Under **Basic permissions:**, check **Read**.
@@ -2378,7 +2378,7 @@ Server logs, see section **12.4 Accessing Windows Event Logs**.
 
 After setting up Windows Event Logs to consume Secret Server logs you can access
 logs for local auditing and troubleshooting purposes through the **Windows Event
-Log Event Viewer** on Secret Server’s local server.
+Log Event Viewer** on Secret Server's local server.
 
 To find the Windows Event Log, open the Windows **Event Viewer** from the local
 server and navigate to **Windows Logs \| Application**. Event Logs for Secret
@@ -2476,11 +2476,11 @@ reestablished.
 
 ### Compatibility Notes Related to Using Client Certificates
 
-1) If you are using a Client Certificate, Secret Server’s IIS AppPool must be
+1) If you are using a Client Certificate, Secret Server's IIS AppPool must be
 granted access to use the certificate using the Windows HTTP Services
 Certificate Configuration Tool (WinHttpCertCfg.exe).  
 Otherwise if Secret Server is configured to use a Client Certificate, and IIS
-doesn’t have permission, you will see errors like this in the logs:  
+doesn't have permission, you will see errors like this in the logs:  
 
 *TLS Error Detected (Authentication Error connecting to IP:PORT) - The
 credentials supplied to the package were not recognized.*  
@@ -2500,12 +2500,12 @@ On the Secret Server side, this shows up like this:
 Authentication failed because the remote party has closed the transport stream.*  
 This is caused because Windows tries to cache secure connections when client
 certificates are in use, but because Syslog-NG has not configured their OpenSSL
-“session id context”, OpenSSL gives this error when it tries to resume a
+"session id context", OpenSSL gives this error when it tries to resume a
 previous session.  
 
 Secret Server will automatically reconnect and resend any missed messages, so
 these errors really should cause no impact. However if you would like, you can
-disable Window’s secure connection caching, by adding the
+disable Window's secure connection caching, by adding the
 [ClientCacheTime](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings)
 setting set to 0 in the Registry, and then doing a reboot. This did not cause
 any significant performance impact in our internal testing, but your mileage may
@@ -2543,7 +2543,7 @@ the TLS connection to the syslog server*
 
 *\*If Secure TCP is used for the Syslog/CEF Protocol, and there are one or more
 Client Certificate Thumbprints entered, Secret Server will check the Local
-Computer’s Web Hosting and Personal certificate store and use the first one it
+Computer's Web Hosting and Personal certificate store and use the first one it
 finds (See section 11.2.3 for Configuring Client Certificates).*
 
 *\*To add Client Certificate Thumbprints, you can copy and paste a list in bulk
@@ -2566,7 +2566,7 @@ To view the logs for any TLS-Connection related errors:
 ![A screenshot of a social media post Description generated with very high confidence](images/71295d7230b97226e3a383beb769273f.png)
 
 *\*For more detailed troubleshooting reporting, reference logs in File Explorer
-on Secret Server’s web server (C:\\inetpub\\wwwroot\\SecretServer\\log)
+on Secret Server's web server (C:\\inetpub\\wwwroot\\SecretServer\\log)
 including SS.log, SS-BSSR.log (Background Scheduler), SS-BSWR.log (Background
 Worker) for any errors that might crop up.*
 

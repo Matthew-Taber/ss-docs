@@ -39,7 +39,7 @@ And these are not:
 
 - `cat sudoku`
 
-- `echo “sudo”`
+- `echo "sudo"`
 
 To create a list of blocked commands:
 
@@ -82,7 +82,7 @@ To create a list of blocked commands:
 
 To enable privilege management for an account:
 
-1. Navigate to a PuTTY secret’s **Settings** tab.
+1. Navigate to a PuTTY secret's **Settings** tab.
 
 1. Go to the **SSH Launcher** section.
 

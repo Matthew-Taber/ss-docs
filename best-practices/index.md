@@ -119,7 +119,7 @@ Answering these helps determine what initial infrastructure is needed for your e
 
 > **Note:** Many customers take a posted variation and alter it to meet their own needs.
 
-When the Professional Services team works with our customers, we gather both architectural and stakeholder requirements to come up with a design that is sized correctly to meet all business needs. If you are planning to design Secret Server’s architecture yourself, we suggest planning additional infrastructure based on feature utilization needs in the following order:
+When the Professional Services team works with our customers, we gather both architectural and stakeholder requirements to come up with a design that is sized correctly to meet all business needs. If you are planning to design Secret Server's architecture yourself, we suggest planning additional infrastructure based on feature utilization needs in the following order:
 
 ### Session Recording
 
@@ -351,7 +351,7 @@ This method, while more convenient, may require additional considerations:
 
 A third option is to create local groups in SS and add AD users to those groups for the purpose of organizing how permissions are assigned to secrets. Many customers who use this setup will create a single AD security group (for example, SecretServerUsers) to use to synchronize their AD users with SS for log on. They then create additional local groups for their users to, which gives them permissions within SS, such as to their teams folder. They may also be added to other SS groups  that provide them with other privileges within the environment. 
 
-This approach is more secure than using only AD groups and users, but  if Active Directory were compromised, intruders may still be able to reset an account password and gain log in access to SS. If secrets are stored in that user’s personal folder, those secrets may be compromised which may lead to lateral movement elsewhere within the organization.
+This approach is more secure than using only AD groups and users, but  if Active Directory were compromised, intruders may still be able to reset an account password and gain log in access to SS. If secrets are stored in that user's personal folder, those secrets may be compromised which may lead to lateral movement elsewhere within the organization.
 
 ### Business Users
 
@@ -362,7 +362,7 @@ Business users are not permitted to manage privileged accounts, such as database
 Business users can:
 
 - Access secrets: They can create, update and delete their own secrets within SS. For example, A user signing up for an online service can use the password generator to create a strong password, store that password in SS, and use the Web Password Filler to log in later. 
-- Request and approve access to secrets:  Non-privileged secrets may need approval workflows. Business users can request access to these secrets and can act as approvers. For example, if access to an organization’s social media accounts requires authorization from a member of the marketing team, a business user can request access to the secret, and another business user can approve access.
+- Request and approve access to secrets:  Non-privileged secrets may need approval workflows. Business users can request access to these secrets and can act as approvers. For example, if access to an organization's social media accounts requires authorization from a member of the marketing team, a business user can request access to the secret, and another business user can approve access.
 - Share secrets with other users: Business users can share non-privileged secrets with other users of SS, whether or not they are business users.
 - Access secrets using the mobile app:  Business users can use the Thycotic PAM application to access and manage their secrets.
 - Use launchers: Business users accessing secured, but not privileged, systems can use SS launchers. For example, a user in a secure network segment who can only access an application via RDP may use an RDP launcher, as long as the tasks they are performing do not require privileged access.
@@ -370,7 +370,7 @@ Business users can:
 
 ## Authentication Strategy
 
-Defining your authentication strategy ensures you have standardized authentication practices in line with your SS RBAC scheme. SS offers a wide variety of authentication options that can add flexibility and security to your end user’s authentication process. 
+Defining your authentication strategy ensures you have standardized authentication practices in line with your SS RBAC scheme. SS offers a wide variety of authentication options that can add flexibility and security to your end user's authentication process. 
 
 ### Strong Authentication
 
@@ -571,7 +571,7 @@ Advanced approval workflows:
 
 - When requiring a multi-tier approval process that involves having more than one individual approve access to a secret
 - When requiring multiple workflow steps, each with different reviewers and a varied number of required approvers
-- When selecting “owners” as a review group
+- When selecting "owners" as a review group
 
 This setting can be turned on under the Security tab for an individual secret, but can also be applied via a secret policy. When enabling "requires approval for access," remember that users will still need to have at least view permission to the secret to request access to it. Once access has been granted to the secret, they have whichever level of permission was assigned to them for the secret (view, edit or owner). The approvers of the secret are specified when enabling the setting, and these individuals will be able to modify the time that the requestor originally submitted their access request for or deny the request altogether.
 
@@ -583,7 +583,7 @@ To require all approvers of a secret to also request access from another approve
 
 Requiring comments to be entered when viewing a secret can be an excellent way to ensure users are accessing a secret for legitimate reasons. You can even view the comments in the audit of the secret to historically track if a secret was accessed for the originally intended purpose. Managers can routinely review these comments and determine where employee training may be required. 
 
-A common example would be enabling require comments on a domain administrator account that is stored in SS: A user may enter a comment that indicates he or she needs to use the domain administrator account to “perform adding a user to a group.” In many cases, a domain administrator account should not be used for this purpose and often this work can be done with a lesser privileged account within the environment.
+A common example would be enabling require comments on a domain administrator account that is stored in SS: A user may enter a comment that indicates he or she needs to use the domain administrator account to "perform adding a user to a group." In many cases, a domain administrator account should not be used for this purpose and often this work can be done with a lesser privileged account within the environment.
 
 Requiring comments can also be combined with [Ticketing System Integration](../ticketing-system-integration/index.md). This is a great way to align secret access with a valid ticket number and a comment. This can help with compliance and track usage of a secret tied to a specific task, which may provide more granular information as to why a secret is needed.
 
@@ -710,7 +710,7 @@ There are many useful built-in reports. For example, a license audit report may 
 
 The [Audit Data Retention](../events-and-alerts/audit-data-retention/index.md) documentation may be helpful for very large environments where there is audit and log retention flexibility. For example, some of these tables within the database are sizeable, so if your environment exceeds 50,000+ secrets, it may be a good idea to make some adjustments. Similarly, you could have a smaller environment, say 25,000+ secrets, but if you are using all SS features heavily, adjustment might be helpful. 
 
-Deleting the data within here should not substitute for a database maintenance plan and should be only considered complimentary to one. Lastly, individual audit tables, such as the “secret audit”, cannot be managed independently outside of this configuration unless adjusting those tables directly within the database. Thus, we do not recommend doing unless under direct instruction of our support or professional services teams.
+Deleting the data within here should not substitute for a database maintenance plan and should be only considered complimentary to one. Lastly, individual audit tables, such as the "secret audit", cannot be managed independently outside of this configuration unless adjusting those tables directly within the database. Thus, we do not recommend doing unless under direct instruction of our support or professional services teams.
 
 ## API and Extensibility
 
@@ -720,7 +720,7 @@ Features like event pipelines can help to organize secrets and users, as well as
 
 ### Running PowerShell with Secret Server
 
-Secret Server’s extensible features almost all use PowerShell from the Web servers or distributed engines to execute code. Create a service account for these tasks and store it in a secure location with the other SS service accounts. Documentation for our [API and Scripting](../api-scripting/index.md) components can be found in our Knowledge Base.
+Secret Server's extensible features almost all use PowerShell from the Web servers or distributed engines to execute code. Create a service account for these tasks and store it in a secure location with the other SS service accounts. Documentation for our [API and Scripting](../api-scripting/index.md) components can be found in our Knowledge Base.
 
 #### PowerShell Runspaces
 
@@ -730,9 +730,9 @@ For scripts executing on the local or default site, SS generates a runspace to l
 
 This runspace is generated using a specified secret credential in all cases. The credentials used are critical in the operations of PowerShell in SS and a least-permissioned approach should be used. 
 
-A domain account, that is, a member of the “remote management users” or “local admin” groups, on the engines or Web servers will have enough permissions to generate the runspace SS needs to execute code. Further restrictions to deny interactive log on can be applied; however, it is important to know what account to use for a least-permissions approach. 
+A domain account, that is, a member of the "remote management users" or "local admin" groups, on the engines or Web servers will have enough permissions to generate the runspace SS needs to execute code. Further restrictions to deny interactive log on can be applied; however, it is important to know what account to use for a least-permissions approach. 
 
-You can simplify the assignment of the privileged account in individual locations in SS by specifying a "site run as" secret. This is a default secret for PowerShell running that prevents you from having to manually associate the secret in each place it is used. We highly recommend to configuring this setting on each site under the site’s settings.
+You can simplify the assignment of the privileged account in individual locations in SS by specifying a "site run as" secret. This is a default secret for PowerShell running that prevents you from having to manually associate the secret in each place it is used. We highly recommend to configuring this setting on each site under the site's settings.
 
 #### CredSSP
 
@@ -744,7 +744,7 @@ However, If CredSSP is required, be very explicit with your delegate computer li
 
 The API is a powerful tool for improving automation and flexibility of your SS deployment. Automation tools can pull dynamic credentials from the vault or leverage the API to create new secrets as part of an automation pipeline. 
 
-If your organization does not have script experts to improve your PAM program’s flexibility, Thycotic Professional Services can help to scope and create custom integrations to address your use cases. Contact your account manager or customer success manager to engage professional services.
+If your organization does not have script experts to improve your PAM program's flexibility, Thycotic Professional Services can help to scope and create custom integrations to address your use cases. Contact your account manager or customer success manager to engage professional services.
 
 #### API Authentication
 
