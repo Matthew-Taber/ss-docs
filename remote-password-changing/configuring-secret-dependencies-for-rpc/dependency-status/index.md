@@ -31,7 +31,7 @@ For example, given this scenario:
 - Windows domain account DOM\svc_app1 has dependencies as outlined above.
 - Linux OS login svc_app2 on LinSRV1 runs a daemon local to that system.
 - Database login svc_db1 on DBSRV1 is consumed by a billing application.
-- A dependency exists where the account’s password can also be pushed into the configuration file of an application running as user svc_app2 on LinSRV1.
+- A dependency exists where the account's password can also be pushed into the configuration file of an application running as user svc_app2 on LinSRV1.
 
 Accounts DOM\svc_app1, svc_app2 and svc_db1 would all have the same password when the password is rotated. The system can re-sync passwords of all members of the account cluster in case one of the members runs out of sync for whatever reason, such as restoring from a backup.
 

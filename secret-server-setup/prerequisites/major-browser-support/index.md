@@ -19,4 +19,4 @@ Opera| Not supported | Not supported
 
 ## Using Chrome to Access Secret Server
 
-The Chrome extension prompts users for “tabs” permissions, which Chrome uses to detect your browsing history, including what tabs you open and the URLs they open to. Secret Server uses the tabs permission function only to clear passwords on exit. No history is recorded.
+The Chrome extension prompts users for "tabs" permissions, which Chrome uses to detect your browsing history, including what tabs you open and the URLs they open to. Secret Server uses the tabs permission function only to clear passwords on exit. No history is recorded.

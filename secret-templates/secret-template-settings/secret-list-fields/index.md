@@ -6,10 +6,10 @@
 
 ## Overview
 
-With secret template list fields, administrators can create new lists that can be shared by multiple secrets. Clicking on an existing list goes to the details page for that list where the user can set the list’s name,
+With secret template list fields, administrators can create new lists that can be shared by multiple secrets. Clicking on an existing list goes to the details page for that list where the user can set the list's name,
 description, and the options available in the list. 
 
-You can optionally group list options by category, which make using very large lists easier. For instance, a list of machines might have the machines categorized by function, such as “Web Server” or “Database Server.” You could also use categories for locations, such as “London,” “New York,” or “Tokyo.” 
+You can optionally group list options by category, which make using very large lists easier. For instance, a list of machines might have the machines categorized by function, such as "Web Server" or "Database Server." You could also use categories for locations, such as "London," "New York," or "Tokyo." 
 
 List categories are displayed on the secret and on the launcher dialog with the options sorted alphabetically within categories, which are also sorted alphabetically. Options
 can be duplicated in multiple categories and will show up in each one. In addition to manually adding categories and options, you can upload a file containing the list options. 
