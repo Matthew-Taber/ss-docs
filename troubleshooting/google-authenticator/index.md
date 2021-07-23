@@ -8,7 +8,7 @@ Google Authenticator relies on time to create tokens. If Secret Server's clock i
 
 ## Solution A (preferred)
 
-Ensure that Secret Server's clock is accurate and synchronized with the device running Google Authenticator. Set the web servers to synchronize their clocks with an accurate Domain Controller clock or with an NTP server.
+Ensure that Secret Server's clock is accurate and synchronized with the device running Google Authenticator. Set the web servers to synchronize their clocks with an accurate domain controller clock or with an NTP server.
 
 ## Solution B
 
@@ -20,4 +20,4 @@ By default the leniency value for token time accuracy is zero, which means the t
 
 1. Change the leniency value. We recommend setting this value to no higher than 2.
 
-1. Recycle your IIS Application Pool. You must recycle your IIS Application Pool for the setting to take effect.
+1. Recycle your IIS application pool. You must recycle your IIS application pool for the setting to take effect.
