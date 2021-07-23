@@ -9,7 +9,7 @@
 
 ## Introduction
 
-SS can allow users to enter a ticket number when viewing a secret. This number can be validated through a regular expression, and can also be marked as required, if needed. SS can integrate with third party ticket systems. For more information on the ticket system integration, see below for more information.
+SS can allow users to enter a ticket number when viewing a secret. This number can be validated through a regular expression, and can also be marked as required, if needed. SS can integrate with third party ticket systems. See below for more information.
 
 ## Ticket System Tab
 
@@ -66,11 +66,3 @@ Secret Server can integrate into third-party ticket systems as well. Those suppo
 - [ManageEngine](./manageengine-servicedesk/index.md)
 - [PowerShell](./powershell-integration/index.md)
 - [ServiceNow](./servicenow-integration/index.md)
-
-## View Ticket URL Template Format
-
-The Ticket URL Format field can be edited on the Ticketing System Integration tab of the configuration  page.
-
-This field specifies the URL used when displaying a link to a ticket in the audit log. In this field, the $TICKETID parameter is replaced by the ticket number that is entered by the user.
-
-For example, if you specify the view ticket URL template as `http://myticketingsystem/ticket.aspx?ticketid=$TICKETID`, and Bob enters 5125-242 as the ticket number, a link will appear in the audit log to `http://myticketingsystem/ticket.aspx?ticketid=5125-242`.
