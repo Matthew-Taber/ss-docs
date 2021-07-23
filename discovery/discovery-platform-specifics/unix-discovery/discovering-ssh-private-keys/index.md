@@ -32,7 +32,7 @@ To view the scanners:
 
 1. Click the **SSH Public Key Scanner**.
 
-1. Click the **Add Secret** link and choose secret(s) that have Unix sudo or su permissions for the host range selected in the discovery source. These permissions are necessary to navigate each user’s home directory on a machine in search of SSH public key entries in the user’s `<user home directory>/.ssh/authorized_keys` file. 
+1. Click the **Add Secret** link and choose secret(s) that have Unix sudo or su permissions for the host range selected in the discovery source. These permissions are necessary to navigate each user's home directory on a machine in search of SSH public key entries in the user's `<user home directory>/.ssh/authorized_keys` file. 
 
 ## Task 3: Importing SSH Public Keys
 
@@ -98,7 +98,7 @@ To Import an SSH public key or keys:
 
    ![image-20210618134157720](images/image-20210618134157720.png)
 
-1. Click the **Add Secret** link to choose a Unix sudo or su secret to take over the public key on the account. This removes the public key from the user’s authorized keys file and adds a new random SSH key.
+1. Click the **Add Secret** link to choose a Unix sudo or su secret to take over the public key on the account. This removes the public key from the user's authorized keys file and adds a new random SSH key.
 
 1. Click the **Next** button, the **Key Rotation** page appears:
 

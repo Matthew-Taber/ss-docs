@@ -113,7 +113,7 @@ The Login tab contains the following options:
 
 - **Allow AutoComplete:** AutoComplete is a feature provided by most Web browsers to automatically remember and prefill forms for you. This can be a great security concern since they typically do not save the data in a secure manner. You can enable or disable Web browser prefill on the Login page by using this option.
 - **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
-- **Allow Two-Factor Remember Me:** Allow users to elect to remember them on SS with two-factor authentication enabled. See “Allow Remember Me.”
+- **Allow Two-Factor Remember Me:** Allow users to elect to remember them on SS with two-factor authentication enabled. See "Allow Remember Me."
 - **API Hostname:** Duo API host.
 - **Attempt User Password:** SS normally passes the domain, username, and password to the RADIUS server.  This setting ensures the user is asked for their password instead.
 - **Cache AD Credentials for When Engines Are Offline:** Store Active Directory credentials in a local encrypted location.
@@ -146,7 +146,7 @@ The Security tab contains the following configuration options:
 - **Additional Certificate Chain Policy Options:** Valid values for certificate chain policy options are any of the values in the Microsoft enumerations [listed here](../../authentication/x509-certificate/index.md).
 - **Allow HTTP Get:** Allows the HTTP Get verb for Web services. This allows REST-style calls to many Web service methods but reduces security.
 - **Apply TLS Certificate Chain Policy and Error Auditing:** Add audits for TLS certificate validation. Auditing will apply to all Active Directory domains using LDAPS and Syslog using TLS. The default policy is very strict.
-- **Enable Database Integrity Monitoring:** Database Integrity Monitoring is a SS tool for detecting changes made to primary database tables outside SS’s user interface.  It sends e-mails to configured addresses when it detects database changes made outside of SS.
+- **Enable Database Integrity Monitoring:** Database Integrity Monitoring is a SS tool for detecting changes made to primary database tables outside SS's user interface.  It sends e-mails to configured addresses when it detects database changes made outside of SS.
 - **Enable FIPS Compliance:** See [FIPS Compliance](#FIPS-Compliance).
 - **Enable File Restrictions:** Allow administrators to configure what kind of file attachments can be uploaded to secrets. This helps protect users from being tricked into downloading a malicious secret attachment. The file extension can be specified, such as:
   *.7z, *.bmp, *.ca-bundle, *.cer, *.config, *.crt, *.csr, *.csv, *.dat, *.doc, *.docx, *.gif, *.gz, *.id-rsa, *.jpeg, *.jpg, *.json, *.key, *.lic, *.p7b, *.pcf, *.pdf

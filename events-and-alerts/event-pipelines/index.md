@@ -213,7 +213,7 @@ The user tasks are:
 
 #### Event User
 
-An event user is the user making the action. For example: Admin updated user Jane’s email. Admin is the event user.
+An event user is the user making the action. For example: Admin updated user Jane's email. Admin is the event user.
 
 #### Event Variable
 
@@ -221,7 +221,7 @@ An event variable is a place holder for a piece of information that will manifes
 
 #### Target User
 
-A target user is the affected user. Example: Admin updated user Jane’s email. Jane is the target user.
+A target user is the affected user. Example: Admin updated user Jane's email. Jane is the target user.
 
 #### Triggers
 
