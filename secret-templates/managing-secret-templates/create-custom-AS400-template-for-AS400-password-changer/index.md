@@ -83,7 +83,7 @@ For unique IBM iSeries environments, the IBM iSeries password changer offers ext
 | \<Delete\> | Delete a character under the cursor; can be used with \<MoveCursor(#, #)\> | |
 | \<DeleteField\> | Delete the entire text input or field. | |
 | \<DeleteWord\> | Delete the current word if available, otherwise delete the previous word. | |
-| \<Disconnect\> | Disconnect the password changer’s connection to the mainframe. | |
+| \<Disconnect\> | Disconnect the password changer's connection to the mainframe. | |
 | \<Down\> | Move cursor down. | |
 | \<Enter\> | Send the Enter key press command. | |
 | \<Erase\> | Erase previous character on a selected text input. | \<Erase\> |

@@ -5,7 +5,7 @@
 
 ##  Introduction
 
-The “SAP SNC Account” secret template is an expansion on the original "SAP Account" secret template. It takes advantage of SAP’s Secure Network Communication (SNC), which is a protocol that encrypts communication between Secret Server and an SAP Server. The SAP SNC Account template includes all the original fields from the SAP Account secret, adding a few more as well.
+The "SAP SNC Account" secret template is an expansion on the original "SAP Account" secret template. It takes advantage of SAP's Secure Network Communication (SNC), which is a protocol that encrypts communication between Secret Server and an SAP Server. The SAP SNC Account template includes all the original fields from the SAP Account secret, adding a few more as well.
 
 ##  New Template Fields
 
@@ -86,7 +86,7 @@ In addition to the SAP NCO DLL files, you need to obtain the SAP Cryptographic L
 
 1. Open SAP Trust Manager (STRUST).
 
-1. Download your SAP’s server certificate from the STRUST transaction. Assuming you setup your SAP server correctly, this should be located in the  **SNC SAPCryptolib** folder.
+1. Download your SAP's server certificate from the STRUST transaction. Assuming you setup your SAP server correctly, this should be located in the  **SNC SAPCryptolib** folder.
 
 1. If nothing exists under SNC SAPCryptolib, right click on the folder and select **Create** to create a new PSE under **SNC SAPCryptolib**.  
 
@@ -107,7 +107,7 @@ In addition to the SAP NCO DLL files, you need to obtain the SAP Cryptographic L
 
 ### Personal Security Environment Setup
 
-As with your SAP server setup, you should consult the latest SAP documentation for more information when setting up your Personal Security Environment (PSE). These instructions are provided to illustrate the options to configure the SAP SNC Account secret template in Secret Server, but SAP’s documentation may provide more information about your options pertaining to the creation of a PSE. To set up your PSE:
+As with your SAP server setup, you should consult the latest SAP documentation for more information when setting up your Personal Security Environment (PSE). These instructions are provided to illustrate the options to configure the SAP SNC Account secret template in Secret Server, but SAP's documentation may provide more information about your options pertaining to the creation of a PSE. To set up your PSE:
 
 1. In your client environment (your Secret Server or distributed engine server), create a directory to stage your setup. For example, I used `C:\SAPSNC`.
 
@@ -119,7 +119,7 @@ As with your SAP server setup, you should consult the latest SAP documentation f
    - SECUDIR should be the directory you just created (for instance `C:\SAPSNC`)
    - SNC_LIB should be the full path of the SAP Encryption library (for instance `C:\SAPSNC\sapcrypto.dll`).
    
-1. Following SAP’s instructions, use SAPGENPSE (or other tools that SAP may provide) to generate the PSE, including the cred_v2 file and the X.509 certificate. See [Configuring the Use of the SAP Cryptographic Library for SNC](https://help.sap.com/doc/207c4450a13d471c9af2c83b0631d532/1511%20002/en-US/frameset.htm?4145453c3ff4110ee10000000a11405a.html). For example, you could run these commands from a command prompt window with Administrator permissions in the `C:\SAPSNC` directory:
+1. Following SAP's instructions, use SAPGENPSE (or other tools that SAP may provide) to generate the PSE, including the cred_v2 file and the X.509 certificate. See [Configuring the Use of the SAP Cryptographic Library for SNC](https://help.sap.com/doc/207c4450a13d471c9af2c83b0631d532/1511%20002/en-US/frameset.htm?4145453c3ff4110ee10000000a11405a.html). For example, you could run these commands from a command prompt window with Administrator permissions in the `C:\SAPSNC` directory:
 
    `sapgenpse get_pse -p target.pse -x <PASSWORD> <DISTINGUISHED NAME>`
 
@@ -131,15 +131,15 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
    `sapgenpse export_own_cert -o target.crt -p target.pse -x <PASSWORD>`
 
-1. When you create the server credentials with the sapgenpse “seclogin” command,  specify a Windows or Active Directory user for the credentials. You have two options here:
+1. When you create the server credentials with the sapgenpse "seclogin" command,  specify a Windows or Active Directory user for the credentials. You have two options here:
    - Specify the same user who runs your Secret Server or distributed engine as the one who is allowed to use the PSE you just setup. This is the easier option.
-   - Specify a different Windows or Active Directory user. If you choose this option, you need to also create a secret for that user in Secret Server as either a Windows or Active Directory secret. Add this secret to your SAP SNC secret’s associated secrets. 
+   - Specify a different Windows or Active Directory user. If you choose this option, you need to also create a secret for that user in Secret Server as either a Windows or Active Directory secret. Add this secret to your SAP SNC secret's associated secrets. 
 
 > **Note:** For more information about using the SAPGENPSE tool, see [Creating the Server's Credentials Using SAPGENPSE](https://help.sap.com/doc/saphelp_nw73ehp1/7.31.19/en-US/32/ce2e3ad962a51ae10000000a11402f/frameset.htm).
 
 ### Importing PSE information to the SAP GUI
 
-1. As above, refer to SAP’s documentation for details on getting your PSE recognized by your SAP server. This is just an example.
+1. As above, refer to SAP's documentation for details on getting your PSE recognized by your SAP server. This is just an example.
 
 1. Import the certificate you created above ('target.crt' in my example) through the STRUST transaction in the SAP GUI:
 
@@ -169,13 +169,13 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
 1. Go to the **SU01** function.
 
-1. Type your SAP user’s name in the **User** text box. 
+1. Type your SAP user's name in the **User** text box. 
 
    ![img](images/clip_image009.png)
 
 1. Click the pencil icon to edit.
 
-1. In the **SNC** tab, define the SNC name using the syntax: `p:<YOUR USER’S DISTINGUISHED NAME>`.
+1. In the **SNC** tab, define the SNC name using the syntax: `p:<YOUR USER'S DISTINGUISHED NAME>`.
 
    ![img](images/clip_image011.png)
 
@@ -235,7 +235,7 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
 1. The **System ID** should match the system ID of your SAP instance. The **SNC name** should be the distinguished name of the server. There should only be one entry in this table for the server.
 
-1. Confirm that a “Canonical name defined” message appears.
+1. Confirm that a "Canonical name defined" message appears.
 
 1. Save and exit
 
@@ -243,7 +243,7 @@ As with your SAP server setup, you should consult the latest SAP documentation f
 
 SAP SNC Account secrets are created in the same way as the original SAP Account secrets but have additional fields, as described above. For details that apply to both the SAP Account and SAP SNC Account secrets, see [SAP Heartbeat and Password Changing](../../../../remote-password-changing/sap-heartbeat-and-password-changing/index.md).
 
-If your PSE was created for a Windows or Active Directory user other than the one who runs Secret Server or distributed engine, you need to add that user to your SAP SNC Account secret’s associated users. To do this, add your user as either a Windows Account or an Active Directory secret. Next, open your SAP SNC Account secret and navigate to the Remote Password Changing tab to add that secret as an Associated Secret
+If your PSE was created for a Windows or Active Directory user other than the one who runs Secret Server or distributed engine, you need to add that user to your SAP SNC Account secret's associated users. To do this, add your user as either a Windows Account or an Active Directory secret. Next, open your SAP SNC Account secret and navigate to the Remote Password Changing tab to add that secret as an Associated Secret
 
 If you do not use single sign-on or if you choose to use the username and password without the X.509 certificate for authentication, the X.509 certificate may be omitted. 
 

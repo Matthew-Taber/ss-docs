@@ -1,40 +1,62 @@
 [title]: # (Adding, Activating, Converting, and Deleting Licenses)
-[tags]: # (license,add,delete,activate,convert,activation)
+[tags]: # (license,add,delete,activate,convert,activation,bulk license)
 [priority]: # (1000)
 
 # Adding, Activating, Converting, and Deleting Licenses
 
-This section explains how to add and activate Secret Server licenses online and offline, how to delete licenses, and how to convert from a trial license.
+This section explains how to add and activate Secret Server licenses (both online and offline) how to delete licenses, and how to convert from a trial license.
 
 >**Note**: For more information on understanding Secret Server licensing, see the [Licensing](../../licensing/index.md) page.
 
-## Adding Secret Server Licenses
+## Adding and Activating Secret Server Licenses Online or Offline
 
 1. Log on to Secret Server as an administrator.
 
-1. Go to **Admin \> Licenses**.
+1. Go to **Admin \> Licenses**. The Licenses page appears:
 
-1. In the **Licenses** dialog, click **Install New License**.
+   ![image-20210722133138658](images/image-20210722133138658.png)
 
-1. In the **License Edit** dialog, enter your **License Name** and **License Key**.
+1. Click the **Install New License** button. The Install New License popup appears:
 
-1. Click **Save**.
+   ![image-20210722133303876](images/image-20210722133303876.png)
 
-1. If you have one or more other licenses to add, click **Add Another License**.
+1. Click to select **Single Entry** in the **Entry Type** selection button.
 
-## Activating Secret Server Licenses
+   > **Note:** If you have numerous licenses, you can click the license **Bulk Entry** selection instead. It allows you to paste an entire licensing email or a formatted list of licenses, adding all licenses in a few clicks. For a small number of licenses, especially if you are new to the process, we recommend using single entry, which provides better feedback on what you are doing.
 
-After you add one or more non-evaluation licenses, you must activate the license or licenses using the steps below:
+1. Type (or paste) the **License Name** and **License Key** for the license that you received from your account manager.
 
-1. When you have finished adding your licenses, click **License Activation**.
+1. Click the **Install** button. The License Installed Successfully popup appears:
 
-1. Enter your name, email address, and phone number. This information is sent to Thycotic and is stored for internal Thycotic purposes only.
+   ![image-20210722140505704](images/image-20210722140505704.png)
 
-1. If your server has outbound network access, click **Activate**.
+1. If you have another license, click the **Install Another License** button to repeat the process.
 
-1. If your server has no outbound network access, click **Activate Offline**.
+1. Click the **Continue with Activation** button. The License Activation page appears:
 
-Your activation is complete.
+   ![image-20210722142407395](images/image-20210722142407395.png)
+
+1. Ensure your name, email address, and phone number are present and correct.
+
+1. If you have an internet connection and want to activate **online**:
+
+   1. Click the **Activation Type** dropdown list and select **Online**.
+   1. Click the **Activate** button. An Activation Successful popup briefly appears and then disappears, and you are returned to the Licenses page where your new license now appears. The procedure is complete. **Do not do the remaining steps**.
+
+1. If you do not have an internet connection and want to activate **offline**:
+
+   1. Click the **Activation Type** dropdown list and select **Offline**. The Offline Activation section appears:
+
+      ![image-20210722153016917](images/image-20210722153016917.png)
+
+   1. Click the **Copy to Clipboard** link to copy the text in the **Request** text box.
+   1. Click on the **Activation Center** link in the **Obtain Response** section. The License Activation Center page appears. Do not close the Secret Server browser tab. 
+   1. Paste the copied text into the text box.
+   1. Click the **Activate** button. Activation Successful! appears at the top of the page and the text box now contains the activation confirmation.
+   1. Copy the entire text box contents.
+   1. Return to Secret Server License Activation page and paste the response into the **Response** text area.
+   1. Click the **Activate** button. An Activation Successful popup briefly appears and then disappears, and you are returned to the Licenses page where your new license now appears.
+
 
 >**Note**: For more information on activating Secret Server licenses, see the [License Activation FAQ](../licensing-faq/index.md).
 
@@ -50,7 +72,7 @@ If you need help and your Secret Server has a current support license for each u
 
 ## Converting Evaluation Licenses
 
-If you had evaluation licenses initially but you recently purchased Secret Server, you need to remove all evaluation licenses before you install your purchased licenses. Follow the steps below, under **Deleting Secret Server Licenses**.
+If you had evaluation licenses initially and you recently purchased Secret Server, you need to remove all evaluation licenses before you install your purchased licenses. Follow the steps below, under **Deleting Secret Server Licenses**.
 
 ## Deleting Secret Server Licenses
 
