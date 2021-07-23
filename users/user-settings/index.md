@@ -1,6 +1,7 @@
 [title]: # (User Settings)
 [tags]: # (Users)
 [priority]: #
+[redirect]: # (SSUserSettings)
 
 # User Settings
 
