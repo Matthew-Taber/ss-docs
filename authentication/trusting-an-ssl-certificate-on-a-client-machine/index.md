@@ -17,13 +17,13 @@ Make sure that the host to which the certificate is issued is the same as the ho
 1. Click **Continue to this website** if you are prompted.
 
 1. Click the **Certificate Error** icon next to the navigation bar.
-1. Click **View certificate**. The value next to **Issued to** should match the host name for your website. For example, if your website is `https://www.mydomain.local/SecretServer`, it should say **Issued to:** `www.mydomain.local`. If these fields do not match, the client will not be able to fully trust the certificate.
+1. Click the **View certificate** button. The value next to **Issued to** should match the host name for your website. For example, if your website is `https://www.mydomain.local/SecretServer`, it should say **Issued to:** `www.mydomain.local`. If these fields do not match, the client will not be able to fully trust the certificate.
 
 ## Step 2: Transfer a copy from your server to the client computer
 
 Obtain a copy of the certificate file and transfer it to the client computer:
 
-1. On the server where Secret Server is installed, find **Run** from the start menu or screen and type in `mmc`, then hit Enter.
+1. On the server where Secret Server is installed, find **Run** from the start menu or screen and type in `mmc`, then click the **Enter** button.
 1. From the **File** menu, select **Add/Remove Snap-in**.
 1. Select the **Certificates** snap-in, then click the right arrow button to add it.
 1. In the window that appears, select **Computer Account**.
@@ -33,20 +33,20 @@ Obtain a copy of the certificate file and transfer it to the client computer:
 1. Right-click the certificate that Secret Server uses.
 1. Click **All tasks**.
 1. Select **Export**.
-1. Keep clicking **Next** to accept defaults in the wizard. 
-1. Enter a filename.
-1. Click **Finish**. The certificate has now been exported.
+1. Keep clicking the **Next** button to accept defaults in the wizard.
+1. Type in a filename.
+1. Click the **Finish** button. The certificate has now been exported.
 
 >**Note:** If you have Firefox, the certificate can be saved to your client computer by viewing and exporting it after navigating to the website.
 
 ## Step 3: Install the certificate on the client computer
 
-1. On the client computer, find **Run** from the start menu or screen and type in `mmc`, then hit Enter.
+1. On the client computer, find **Run** from the start menu or screen and type in `mmc`, then hit the **Enter** button.
 1. From the **File** menu, select **Add/Remove Snap-in**.
 1. Select the **Certificates** snap-in, then click the right arrow button to add it.
-1. In the window that appears, select **My user account**,
-1. Click **Finish**.
-1. Expand the **Trusted Root Certification Authorities** folder
+1. In the window that appears, select **My user account**.
+1. Click the **Finish** button.
+1. Expand the **Trusted Root Certification Authorities** folder.
 1. Right-click the **Certificates** folder and select **All Tasks \> Import**.
 1. Click **Next** and **Yes** to accept default settings for all steps of the wizard.
 1. When prompted for the certificate file, select the file you saved in the previous Step 2.
