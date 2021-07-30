@@ -1,6 +1,7 @@
 [title]: # (SSH Command Menus)
 [tags]: # (SSH Proxy,Networking,command menu)
 [priority]: # (1000)
+[redirect]: # (SecretServerSshCommandMenuKB)
 
 # SSH Command Menus
 
