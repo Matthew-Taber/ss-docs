@@ -1,6 +1,7 @@
 [title]: # (Exporting and Importing Settings)
 [tags]: # (Administration, settings, importing, exporting, JSON)
 [priority]: # (1000)
+[redirect]: # (SSExportImport)
 
 # Exporting and Importing Secret Server Settings
 
