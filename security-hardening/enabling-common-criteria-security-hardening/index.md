@@ -72,10 +72,15 @@ One way to change the cipher suites on a computer is to use the free IIS Crypto 
 1. Download the GUI version of the tool at:
    <https://www.nartac.com/Products/IISCrypto/Download>
 1. Run the tool:
+
    ![1560275880708](images/1560275880708.png)
+
 1. Click **Cipher Suites** button on the left. The Cipher Suites window appears:
+
    ![1560276174698](images/1560276174698.png)
+
 1. Click the ![1560276784209](images/1560276784209.png) **Uncheck All** button to uncheck all cipher suites.
+
 1. Find and click to select the suites in the list above.
 1. Click the **Apply** button.
 
@@ -136,6 +141,7 @@ To hide the application version number in the application header and footer:
 1. Click the **Edit** button. The Configuration page appears:
 
     ![1560283657563](images/1560283657563.png)
+
 1. Click the **Security** tab.
 1. In the **Web Services** section of the page, click to select the **Hide Secret Server Version Numbers** check box.
 1. Click the **Save** button.
@@ -192,9 +198,11 @@ To use Windows authentication to access the SQL database, you should create a se
     1. Expand the **Local Policies** folder (not shown).
 
     1. Click to select the **User Rights Assignment** folder.
+
        ![1563386991975](images/1563386991975.png)
 
     1. Right-click **Log on as a batch job** in the right panel and select **Properties**.
+    
        ![1563387126426](images/1563387126426.png)
 
     1. Click the **Add User or Group** button.
