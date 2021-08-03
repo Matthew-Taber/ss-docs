@@ -1,6 +1,6 @@
-[title]: # (Secret Server Cloud Quick Start)
-[tags]: # (secret server cloud, quick start)
-[priority]: # (1000)
+[title]: # "Secret Server Cloud Quick Start"
+[tags]: # "secret server cloud, quick start"
+[priority]: # "1000"
 
 # Secret Server Cloud Quick Start
 
@@ -73,7 +73,7 @@ After you sign up for a trial, you can choose your URL name and provision your i
 
 ### Distributed Engine
 
-All interaction between the SSC tenant and your on premises network uses our distributed engine service to communicate. The work tasks that distributed engine completes includes Active Directory authentication, password changing, and heartbeat. The machine where the engine is installed must be able to communicate outbound on ports 443 and 9354.
+All interaction between the SSC tenant and your on premises network uses our distributed engine service to communicate. The work tasks that distributed engine completes includes Active Directory authentication, password changing, and heartbeat. The machine where the engine is installed must be able to communicate outbound on port 443.
 
 >  **Note:** For more information, see the [Distributed Engine Overview](https://updates.thycotic.net/links.ashx?EngineWhitePaper) (KBA).
 

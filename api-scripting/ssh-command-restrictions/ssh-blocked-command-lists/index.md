@@ -1,6 +1,6 @@
-[title]: # (SSH Blocked Command Lists)
-[tags]: # (SSH Proxy,Networking,command menu,blocked commands)
-[priority]: # (1000)
+[title]: # "SSH Blocked Command Lists"
+[tags]: # "SSH Proxy,Networking,command menu,blocked commands"
+[priority]: # "1000"
 
 # SSH Blocked Command Lists
 
@@ -18,7 +18,7 @@ Upon launching a secret with an assigned SSH command blocklist, each command sen
 
 System requirements:
 
-- Secret Server 10.11 or later
+- Secret Server 10.9.000064 or later
 - Secret Server Platinum Edition license or Secret Server Professional and Unix SUPM license
 - SSH proxy must be enabled
 

@@ -1,7 +1,7 @@
-[title]: # (Managing Multiple Secret Server Instances with Protocol Handlers and Launchers)
-[tags]: # (Launcher,protocol handler,auto-update,backward,forward)
-[priority]: # (1000)
-[display]: # (all)
+[title]: # "Managing Multiple Secret Server Instances with Protocol Handlers and Launchers"
+[tags]: # "Launcher,protocol handler,auto-update,backward,forward"
+[priority]: # "1000"
+[display]: # "all"
 
 # Managing Multiple Secret Server Instances with Protocol Handlers and Launchers
 
@@ -13,11 +13,11 @@ To enable Secret Server to simultaneously support multiple versions of the proto
 
 ## Prerequisites
 
-* Secret Server Cloud 10.5.000010+
+* Secret Server Cloud 10.8+
 
-* Secret Server On-Premises 10.6+
+* Secret Server On-Premises 10.8+
 
-* Protocol Handler 6.0.0.0 or higher on your PC
+* Protocol Handler 6.0.0.23 or higher on your PC
 
 ## Setup Steps and Configuration
 
