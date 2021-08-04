@@ -1,4 +1,4 @@
-[title]: # (Deleting and Undeleting Secrets)
+[title]: # (Deactivating and Reactivating Secrets)
 [tags]: # (Secret)
 [priority]: # (1000)
 
@@ -16,7 +16,7 @@ To deactivate a secret:
 
 1. The secret is logically deleted and hidden from users who do not have a role containing the View Deactivated Secrets permission.
 
-   > Note: SS uses deactivations to maintain the audit history for all data. However, deactivated secrets are still accessible by administrators (like a permanent Recycle Bin) to ensure that audit history is maintained and to support recovery. A user must have the View Deactivated Secrets permission in addition to Owner permission on a secret to access the secret View page for a deactivated secret. For more information about these permissions, see [Roles](../../../roles/index.md) and [Sharing a Secret](../sharing-secrets/index.md).
+   > **Note:** SS uses deactivations to maintain the audit history for all data. However, deactivated secrets are still accessible by administrators (like a permanent Recycle Bin) to ensure that audit history is maintained and to support recovery. A user must have the View Deactivated Secrets permission in addition to Owner permission on a secret to access the secret View page for a deactivated secret. For more information about these permissions, see [Roles](../../../roles/index.md) and [Sharing a Secret](../sharing-secrets/index.md).
 
 To reactivate a secret:
 
