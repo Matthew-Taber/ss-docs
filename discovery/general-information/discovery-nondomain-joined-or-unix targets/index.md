@@ -15,11 +15,11 @@ When running discovery on non-domain joined targets or Unix targets, there are t
 
 ## Setting Credentials on a Discovery Scanner
 
-1. In a Discovery Source, click the Edit icon on a Scanner. A **Find Local Accounts** window opens.
+1. In a Discovery Source, click the Edit icon on a Scanner. A Find Local Accounts window opens.
 1. In the **Secret Credentials** section, choose among the following options:
-   1. Click **Add Secret** to specify a default credential.
-   1. Click **Add Secret Search Filter** to specify an existing Secret Search Filter.
-   1. Click **Create Secret Search Filter** to create a new Secret Search Filter.
+   * Click **Add Secret** to specify a default credential.
+   * Click **Add Secret Search Filter** to specify an existing Secret Search Filter.
+   * Click **Create Secret Search Filter** to create a new Secret Search Filter.
 
    ![secret-credentials](images/secret-credentials.png)
 
@@ -28,16 +28,16 @@ Secret Server will try the secrets and Secret Search Filters in sequence until i
 ## Creating a Secret Search Filter
 
 1. In the **Secret Credentials** section, click **Create Secret Search Filter**.
-1. In the **New Secret Search Filter** window, specify a **Secret Name Pattern** and settings as described below:
+1. In the **New Secret Search Filter** window, specify a Secret Name Pattern and settings as described below:
 
    ![new-secret-search-filter](images/new-secret-search-filter.png)
 
-   * **Secret Name Pattern**. This is the pattern Secret Server will search for. The search is dynamic based on the target. In the example depicted in the screen shot, if scanning a machine named `appserver01`, Secret Server will also search for a secret named `appserver01\system`.
-   * **Secret Template**. Specify the template that returned secrets should be based on. In the example depicted in teh screen shot, only secrets based on the Oracle Account template will be returned.
-   * **Folder**. The folder to search within.
-   * **Include Subfolders**. Whether the search should include only the specified folder, or the subfolders as well.
-   * **Allow Partial Match**. By default the secret name must be an exact match to the Secret Name Pattern. Partial matches will return Secret Names that contain the pattern.
-   * **Expect Single**. If there should be only one result returned but more than one is returned, Secret Server will log an error to the discovery log.
+   * **Secret Name Pattern**. Specifies the pattern that Secret Server will search for. The search is dynamic based on the target. In the example depicted in the screen shot, if scanning a machine named `appserver01`, Secret Server will also search for a secret named `appserver01\system`.
+   * **Secret Template**. Specifies the template that returned secrets should be based on. In the example depicted in the screen shot, only secrets based on the Oracle Account template will be returned.
+   * **Folder**. Specifies the folder to search within.
+   * **Include Subfolders**. Specifies that the search should include not only the specified folder, but the subfolders as well.
+   * **Allow Partial Match**. Specifies that Secret Names will be returned if they partially match the pattern. By default the secret name must be an exact match to the Secret Name Pattern.
+   * **Expect Single**. Specifies that only one result should be returned. If more than one is returned, Secret Server will log an error to the discovery log.
 
 1. Click **OK** and go back to your Discovery Source.
 1. Click **Add Secret Search Filter** and select the filter you just created.
