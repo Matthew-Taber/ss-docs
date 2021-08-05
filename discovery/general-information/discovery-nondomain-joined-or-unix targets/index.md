@@ -21,7 +21,7 @@ When running discovery on non-domain joined targets or Unix targets, there are t
 
    ![secret-credentials](images/secret-credentials2.png)
 
-1. In the Settings window under **Secret Credentials**, choose among the following options:
+1. In the Settings window, under **Secret Credentials**, choose among the following options:
 
    * Click **Add Secret** to specify a default credential.
    * Click **Add Secret Search Filter** to specify an existing secret search filter.
