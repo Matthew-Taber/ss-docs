@@ -24,7 +24,7 @@ When running discovery on non-domain joined targets or Unix targets, there are t
    * Click **Add Secret Search Filter** to specify an existing secret search filter.
    * Click **Create Secret Search Filter** to create a new secret search filter.
 
-   ![secret-credentials](images/secret-credentials.png)
+   ![secret-credentials](images/secret-credentials2.png)
 
 Secret Server will try the secrets and secret search filters in sequence until it finds a match.
 
