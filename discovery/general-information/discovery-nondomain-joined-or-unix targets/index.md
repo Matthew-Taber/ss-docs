@@ -17,7 +17,7 @@ When running discovery on non-domain joined targets or Unix targets, there are t
 
 ## Setting Credentials on a Discovery Scanner
 
-1. In a discovery source, click the Edit icon on a Scanner. A Find Local Accounts window opens.
+1. In a discovery source, click the Edit icon on a scanner. A Find Local Accounts window opens.
 1. In the **Secret Credentials** section, choose among the following options:
 
    * Click **Add Secret** to specify a default credential.
@@ -31,7 +31,7 @@ Secret Server will try the secrets and secret search filters in sequence until i
 ## Creating a Secret Search Filter
 
 1. In the **Secret Credentials** section, click **Create Secret Search Filter**.
-1. In the **New Secret Search Filter** window, specify a secret name pattern and settings as described below:
+1. In the New Secret Search Filter window, specify a secret name pattern and settings as described below:
 
    ![new-secret-search-filter](images/new-secret-search-filter.png)
 
