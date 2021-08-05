@@ -17,23 +17,25 @@ When running discovery on non-domain joined targets or Unix targets, there are t
 
 ## Setting Credentials on a Discovery Scanner
 
-1. In a discovery source, click the Edit icon on a scanner. A Find Local Accounts window opens.
-1. In the **Secret Credentials** section, choose among the following options:
+1. In a discovery source, click the Edit icon on a scanner.
+
+   ![secret-credentials](images/secret-credentials2.png)
+
+1. In the Settings window under **Secret Credentials**, choose among the following options:
 
    * Click **Add Secret** to specify a default credential.
    * Click **Add Secret Search Filter** to specify an existing secret search filter.
    * Click **Create Secret Search Filter** to create a new secret search filter.
-
-   ![secret-credentials](images/secret-credentials2.png)
 
 Secret Server will try the secrets and secret search filters in sequence until it finds a match.
 
 ## Creating a Secret Search Filter
 
 1. In the **Secret Credentials** section, click **Create Secret Search Filter**.
-1. In the New Secret Search Filter window, specify a secret name pattern and settings as described below:
 
    ![new-secret-search-filter](images/new-secret-search-filter.png)
+
+1. In the New Secret Search Filter window, specify a secret name pattern and settings as described below:
 
    * **Secret Name Pattern**: Specifies the pattern that Secret Server will search for. The search is dynamic based on the target. In the example depicted in the screen shot, if scanning a machine named `appserver01`, Secret Server will also search for a secret named `appserver01\system`.
    * **Secret Template**: Specifies the template that returned secrets should be based on. In the example depicted in the screen shot, only secrets based on the Oracle Account template will be returned.
