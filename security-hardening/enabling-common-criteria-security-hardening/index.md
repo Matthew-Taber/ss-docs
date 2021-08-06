@@ -1,6 +1,7 @@
 [title]: # (Enabling Common Criteria Security Hardening)
 [tags]: # (Common Criteria,Security Hardening)
 [priority]: # (1000)
+[display]: # (none)
 
 # Enabling Common Criteria Security Hardening
 

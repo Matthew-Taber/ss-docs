@@ -1,6 +1,6 @@
-[title]: # "SSH Blocked Command Lists"
-[tags]: # "SSH Proxy,Networking,command menu,blocked commands"
-[priority]: # "1000"
+[title]: # (SSH Blocked Command Lists)
+[tags]: # (SSH Proxy,Networking,command menu,blocked commands)
+[priority]: # (1000)
 
 # SSH Blocked Command Lists
 

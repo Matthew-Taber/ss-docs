@@ -35,7 +35,6 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 
 - [Best Practices](./best-practices/index.md)
 - [Discovery Best Practices](./discovery/discovery-best-practices/index.md)
-
 - [Secret Server Government Edition—Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf) (PDF)
 - [Security Hardening Guide](./security-hardening/security-hardening-guide/index.md)
 
@@ -66,14 +65,14 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 ### Secret Society (Forum)
 
 - [Forum](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server) (legacy—replaced by Secret Society)
-- [Thycotic Secret Society](https://thycotic.com/community/secret-society/): An Educational Community, replacing the Forum.
-
-### Developer Resources
-
-[Developer Resources](./developer-resources/index.md)
+- [Thycotic Secret Society](https://thycotic.com/community/secret-society/): An educational community, replacing the Forum.
 
 ### Video Tutorials
 
 > **Note:** Some of these tutorials feature legacy versions of SS.
 
 [Video Tutorials](https://thycotic.force.com/support/s/videos)
+
+## Developer Resources
+
+[Developer Resources](./developer-resources/index.md)

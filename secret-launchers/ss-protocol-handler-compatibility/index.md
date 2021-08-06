@@ -1,7 +1,7 @@
-[title]: # "Managing Multiple Secret Server Instances with Protocol Handlers and Launchers"
-[tags]: # "Launcher,protocol handler,auto-update,backward,forward"
-[priority]: # "1000"
-[display]: # "all"
+[title]: # (Managing Multiple Secret Server Instances with Protocol Handlers and Launchers)
+[tags]: # (Launcher,protocol handler,auto-update,backward,forward)
+[priority]: # (1000)
+[display]: # (all)
 
 # Managing Multiple Secret Server Instances with Protocol Handlers and Launchers
 

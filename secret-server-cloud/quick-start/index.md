@@ -1,6 +1,6 @@
-[title]: # "Secret Server Cloud Quick Start"
-[tags]: # "secret server cloud, quick start"
-[priority]: # "1000"
+[title]: # (Secret Server Cloud Quick Start)
+[tags]: # (secret server cloud, quick start)
+[priority]: # (1000)
 
 # Secret Server Cloud Quick Start
 
