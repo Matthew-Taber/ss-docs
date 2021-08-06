@@ -31,4 +31,4 @@ To hide the server type, remove the line, `Server: Microsoft-HTTPAPI/2.0` (added
 >**Note**: Although there are other methods for hiding the server type, we strongly recommend updating the Windows registry using the procedure below. Do not simply remove the server header variable. Doing so will cause parts of Secret Server to malfunction.
 
 1. Navigate to **Computer \> HKEY_LOCAL_MACHINE  \> SYSTEM  \> CurrentControlSet \> Services \> HTTP  \> Parameters**.
-1. Change the **DisableServerHeader (REG_DWORD type)** registry key from `0` to `1`.
+1. Change the **DisableServerHeader (REG_DWORD type)** registry key from 0 to 1.

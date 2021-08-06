@@ -245,6 +245,10 @@ Allows a user to assign Secret Policies to folders and Secrets.
 
 Allows a user to login with local account without using SAML.
 
+**Bypass Direct API Authentication Restriction**
+
+Blocks a non-application user from accessing the API.
+
 **Copy Secret**
 
 Allows a user to copy secrets when that user also has Own Secret role permission.
