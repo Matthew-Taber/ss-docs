@@ -13,11 +13,11 @@ To enable Secret Server to simultaneously support multiple versions of the proto
 
 ## Prerequisites
 
-* Secret Server Cloud 10.5.000010+
+* Secret Server Cloud 10.8+
 
-* Secret Server On-Premises 10.6+
+* Secret Server On-Premises 10.8+
 
-* Protocol Handler 6.0.0.0 or higher on your PC
+* Protocol Handler 6.0.0.23 or higher on your PC
 
 ## Setup Steps and Configuration
 

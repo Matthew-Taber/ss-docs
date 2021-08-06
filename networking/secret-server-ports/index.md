@@ -1,6 +1,7 @@
 [title]: # (Ports Used by Secret Server)
 [tags]: # (Ports, Networking)
-[priority]: #
+[priority]: # (1000)
+[redirect]: # (TP-SSPorts)
 
 # Ports Used by Secret Server
 
