@@ -223,7 +223,7 @@ Allows users to manage workflows (advanced access management).
 
 **Advanced Import**
 
-Allows a user to import Secrets from an XML file. Users with the this  permission can import groups, folders, site connectors, sites, and  secret templates, without having to create a secret. Users must have the Secret Server permissions needed for the objects listed in the XML.
+Allows a user to import Secrets from an XML file. Users with this permission can import groups, folders, site connectors, sites, and  secret templates, without having to create a secret. Users must have the Secret Server permissions needed for the objects listed in the XML.
 
 **Allow Access Challenge**
 
